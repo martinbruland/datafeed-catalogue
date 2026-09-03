@@ -1,0 +1,82 @@
+{
+  "id": "github-person",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "A person on GitHub",
+    "gives": "How many follow a GitHub account, and how many public repositories it has.",
+    "example": "128 followers, 24 repositories",
+    "from": "GitHub",
+    "cadence": "Updated about every hour.",
+    "asks": "The account's name."
+  },
+  "questions": [
+    {
+      "name": "user",
+      "label": "Account",
+      "help": "The name in the account's address, such as octocat.",
+      "type": "text",
+      "default": "octocat"
+    }
+  ],
+  "attribution": "Account data from GitHub, within its public rate limit",
+  "terms": {
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "checked": "2026-09-03",
+    "note": "Public data; sixty requests an hour without signing in, so the hourly interval stays."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{user} on GitHub",
+    "source": {
+      "url": "https://api.github.com/users/{user}",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "followers",
+        "path": [
+          "followers"
+        ],
+        "kind": "number"
+      },
+      {
+        "name": "repositories",
+        "path": [
+          "public_repos"
+        ],
+        "kind": "number"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "followers"
+        },
+        "secondary": {
+          "key": "repositories"
+        },
+        "picture": {
+          "picture": {
+            "illustration": "person"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

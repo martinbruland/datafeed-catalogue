@@ -1,0 +1,89 @@
+{
+  "id": "github-release",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Latest release of a project",
+    "gives": "The newest release of a project on GitHub, and when it came out.",
+    "example": "v2.4.1, 3 days ago",
+    "from": "GitHub",
+    "cadence": "Updated about every hour.",
+    "asks": "The project's owner and name."
+  },
+  "questions": [
+    {
+      "name": "owner",
+      "label": "Owner",
+      "help": "The account that owns the project, such as apple.",
+      "type": "text",
+      "default": "apple"
+    },
+    {
+      "name": "repo",
+      "label": "Project",
+      "help": "The project's name, such as swift.",
+      "type": "text",
+      "default": "swift"
+    }
+  ],
+  "attribution": "Release data from GitHub, within its public rate limit",
+  "terms": {
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "checked": "2026-09-03",
+    "note": "Public data; sixty requests an hour without signing in, so the hourly interval stays."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{owner}/{repo} release",
+    "source": {
+      "url": "https://api.github.com/repos/{owner}/{repo}/releases/latest",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "version",
+        "path": [
+          "tag_name"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "published",
+        "path": [
+          "published_at"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "version"
+        },
+        "secondary": {
+          "key": "published"
+        },
+        "picture": {
+          "picture": {
+            "illustration": "shippingbox"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

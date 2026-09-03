@@ -1,0 +1,86 @@
+{
+  "id": "next-public-holiday",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "The next public holiday",
+    "gives": "The name and date of the next public holiday in a country.",
+    "example": "Første juledag, in 3 months",
+    "from": "Nager.Date, a free public-holiday service",
+    "cadence": "Changes when a holiday passes.",
+    "asks": "Which country."
+  },
+  "questions": [
+    {
+      "name": "country",
+      "label": "Country",
+      "help": "The country whose holidays count.",
+      "type": "choice",
+      "choices": [
+        "NO",
+        "SE",
+        "DK",
+        "FI",
+        "GB",
+        "DE",
+        "US"
+      ],
+      "default": "NO"
+    }
+  ],
+  "attribution": "Public holidays from Nager.Date, MIT licensed",
+  "terms": {
+    "url": "https://date.nager.at/Api",
+    "checked": "2026-09-03",
+    "note": "Free, no registration; the service asks for fair use."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Next holiday in {country}",
+    "source": {
+      "url": "https://date.nager.at/api/v3/NextPublicHolidays/{country}",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "holiday",
+        "path": [
+          0,
+          "localName"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "when",
+        "path": [
+          0,
+          "date"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "holiday"
+        },
+        "primary": {
+          "key": "when"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🎉"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 21600
+    }
+  }
+}

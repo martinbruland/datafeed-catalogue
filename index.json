@@ -29,6 +29,24 @@
       "file": "entries/city-bikes-bergen.json"
     },
     {
+      "id": "daily-joke",
+      "name": "A dad joke",
+      "kind": "item",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/daily-joke.json"
+    },
+    {
+      "id": "earthquake-this-week",
+      "name": "The biggest earthquake this week",
+      "kind": "item",
+      "category": "nature",
+      "region": "global",
+      "version": 1,
+      "file": "entries/earthquake-this-week.json"
+    },
+    {
       "id": "exchange-rate",
       "name": "Exchange rate",
       "kind": "source",
@@ -36,6 +54,24 @@
       "region": "global",
       "version": 1,
       "file": "entries/exchange-rate.json"
+    },
+    {
+      "id": "github-person",
+      "name": "A person on GitHub",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/github-person.json"
+    },
+    {
+      "id": "github-release",
+      "name": "Latest release of a project",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/github-release.json"
     },
     {
       "id": "github-repository",
@@ -47,6 +83,42 @@
       "file": "entries/github-repository.json"
     },
     {
+      "id": "moon-tonight",
+      "name": "The moon tonight",
+      "kind": "source",
+      "category": "nature",
+      "region": "global",
+      "version": 1,
+      "file": "entries/moon-tonight.json"
+    },
+    {
+      "id": "next-public-holiday",
+      "name": "The next public holiday",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/next-public-holiday.json"
+    },
+    {
+      "id": "norges-bank-rate",
+      "name": "Norges Bank's rate",
+      "kind": "source",
+      "category": "money",
+      "region": "no",
+      "version": 1,
+      "file": "entries/norges-bank-rate.json"
+    },
+    {
+      "id": "npm-downloads",
+      "name": "Downloads of a package",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/npm-downloads.json"
+    },
+    {
       "id": "power-price-norway",
       "name": "Power price now",
       "kind": "source",
@@ -54,6 +126,24 @@
       "region": "no",
       "version": 1,
       "file": "entries/power-price-norway.json"
+    },
+    {
+      "id": "pypi-version",
+      "name": "Latest version of a Python package",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/pypi-version.json"
+    },
+    {
+      "id": "rain-next-hour",
+      "name": "Rain in the next hour",
+      "kind": "source",
+      "category": "weather",
+      "region": "no",
+      "version": 1,
+      "file": "entries/rain-next-hour.json"
     },
     {
       "id": "space-station",
@@ -81,6 +171,15 @@
       "region": "global",
       "version": 1,
       "file": "entries/weather-now.json"
+    },
+    {
+      "id": "weather-tomorrow",
+      "name": "Weather this time tomorrow",
+      "kind": "source",
+      "category": "weather",
+      "region": "global",
+      "version": 1,
+      "file": "entries/weather-tomorrow.json"
     }
   ]
 }

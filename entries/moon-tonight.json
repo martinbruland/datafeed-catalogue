@@ -1,0 +1,108 @@
+{
+  "id": "moon-tonight",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "global",
+  "plain": {
+    "name": "The moon tonight",
+    "gives": "Where the moon is in its cycle where you are, and when it rises.",
+    "example": "252° round the cycle, rising 18:55",
+    "from": "The Norwegian Meteorological Institute, who also make Yr",
+    "cadence": "Once a day.",
+    "asks": "The place, as a point on the map."
+  },
+  "questions": [
+    {
+      "name": "place",
+      "label": "Place",
+      "help": "Where it is read; your current location by default.",
+      "type": "location"
+    }
+  ],
+  "attribution": "Weather data from MET Norway, licensed CC BY 4.0",
+  "terms": {
+    "url": "https://api.met.no/doc/TermsOfService",
+    "checked": "2026-09-03",
+    "note": "Free with attribution; every request must identify the app in the User-Agent header; at most one request per place every ten minutes."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Moon tonight",
+    "source": {
+      "url": "https://api.met.no/weatherapi/sunrise/3.0/moon",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "lat",
+          "value": "{place.lat}"
+        },
+        {
+          "name": "lon",
+          "value": "{place.lon}"
+        },
+        {
+          "name": "date",
+          "value": "{today-iso}"
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "phase",
+        "path": [
+          "properties",
+          "moonphase"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 0,
+            "unit": "°"
+          }
+        }
+      },
+      {
+        "name": "rises",
+        "path": [
+          "properties",
+          "moonrise",
+          "time"
+        ],
+        "kind": "timestamp",
+        "format": {
+          "moment": {
+            "relative": false
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "phase"
+        },
+        "secondary": {
+          "key": "rises"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌙"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 21600
+    }
+  }
+}

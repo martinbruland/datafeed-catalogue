@@ -1,0 +1,89 @@
+{
+  "id": "pypi-version",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Latest version of a Python package",
+    "gives": "The newest version of a package on the Python package index.",
+    "example": "2.34.2",
+    "from": "The Python Package Index",
+    "cadence": "Changes when a version is published.",
+    "asks": "The package's name."
+  },
+  "questions": [
+    {
+      "name": "package",
+      "label": "Package",
+      "help": "The package's name on PyPI, such as requests.",
+      "type": "text",
+      "default": "requests"
+    }
+  ],
+  "attribution": "Package data from PyPI, run by the Python Software Foundation",
+  "terms": {
+    "url": "https://policies.python.org/pypi.org/Terms-of-Service/",
+    "checked": "2026-09-03",
+    "note": "Public data, free to read; the index asks callers to identify themselves."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{package} on PyPI",
+    "source": {
+      "url": "https://pypi.org/pypi/{package}/json",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "version",
+        "path": [
+          "info",
+          "version"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "summary",
+        "path": [
+          "info",
+          "summary"
+        ],
+        "kind": "text",
+        "format": {
+          "text": {
+            "maxLength": 60
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "version"
+        },
+        "secondary": {
+          "key": "summary"
+        },
+        "picture": {
+          "picture": {
+            "illustration": "cube"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}
