@@ -1,0 +1,122 @@
+{
+  "id": "avalanche-warning",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "no",
+  "plain": {
+    "name": "Avalanche danger today",
+    "gives": "Today's avalanche danger level for a Norwegian mountain region, from 1 low to 5 very high, with the forecaster's headline.",
+    "example": "Level 2, Moderate",
+    "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
+    "cadence": "Once a day in season, around 16:00 for the next day; no rating in summer.",
+    "asks": "Which region."
+  },
+  "questions": [
+    {
+      "name": "region",
+      "label": "Region",
+      "help": "The avalanche region as Varsom names it.",
+      "type": "choice",
+      "choices": [
+        "3003",
+        "3006",
+        "3007",
+        "3009",
+        "3010",
+        "3011",
+        "3012",
+        "3013",
+        "3014",
+        "3015",
+        "3016",
+        "3017",
+        "3018",
+        "3022",
+        "3023",
+        "3024",
+        "3027",
+        "3028",
+        "3029",
+        "3031",
+        "3032",
+        "3034",
+        "3035",
+        "3037"
+      ],
+      "default": "3031"
+    }
+  ],
+  "attribution": "Avalanche warnings from NVE and Varsom, licensed NLOD",
+  "terms": {
+    "url": "https://api.nve.no/doc/",
+    "checked": "2026-09-03",
+    "note": "Norwegian Licence for Open Government Data; link to the service where the data is shown; data is as-is."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Avalanche danger",
+    "source": {
+      "url": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.2/api/AvalancheWarningByRegion/Simple/{region}/2/{today-iso}/{today-iso}",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "level",
+        "path": [
+          0,
+          "DangerLevel"
+        ],
+        "kind": "number"
+      },
+      {
+        "name": "headline",
+        "path": [
+          0,
+          "MainText"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "region",
+        "path": [
+          0,
+          "RegionName"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "validTo",
+        "path": [
+          0,
+          "ValidTo"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "region"
+        },
+        "primary": {
+          "key": "level"
+        },
+        "secondary": {
+          "key": "headline"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🏔"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

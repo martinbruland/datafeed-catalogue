@@ -2,6 +2,15 @@
   "version": 1,
   "entries": [
     {
+      "id": "avalanche-warning",
+      "name": "Avalanche danger today",
+      "kind": "source",
+      "category": "nature",
+      "region": "no",
+      "version": 1,
+      "file": "entries/avalanche-warning.json"
+    },
+    {
       "id": "exchange-rate",
       "name": "Exchange rate",
       "kind": "source",
