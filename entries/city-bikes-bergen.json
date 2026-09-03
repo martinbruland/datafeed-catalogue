@@ -1,0 +1,88 @@
+{
+  "id": "city-bikes-bergen",
+  "kind": "source",
+  "version": 1,
+  "category": "transport",
+  "region": "no",
+  "plain": {
+    "name": "Bikes at my station",
+    "gives": "How many city bikes and free docks a Bergen Bysykkel station has right now.",
+    "example": "7 bikes, 5 docks",
+    "from": "Bergen Bysykkel",
+    "cadence": "Every few minutes, as bikes come and go.",
+    "asks": "Which station, by its number."
+  },
+  "questions": [
+    {
+      "name": "station",
+      "label": "Station",
+      "help": "The station's number, shown on the station and in the Bysykkel app; Torgallmenningen is 175.",
+      "type": "number",
+      "default": "175"
+    }
+  ],
+  "attribution": "Live station data from Bergen Bysykkel, licensed NLOD 2.0",
+  "terms": {
+    "url": "https://bergenbysykkel.no/apne-data/sanntid",
+    "checked": "2026-09-03",
+    "note": "NLOD 2.0; every request carries a Client-Identifier header naming the app."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Bikes at station {station}",
+    "source": {
+      "url": "https://gbfs.urbansharing.com/bergenbysykkel.no/station_status.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Client-Identifier",
+          "value": {
+            "literal": "martinbruland-datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "bikes",
+        "path": [
+          "data",
+          "stations",
+          0,
+          "num_bikes_available"
+        ],
+        "kind": "number"
+      },
+      {
+        "name": "docks",
+        "path": [
+          "data",
+          "stations",
+          0,
+          "num_docks_available"
+        ],
+        "kind": "number"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "bikes"
+        },
+        "secondary": {
+          "key": "docks"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🚲"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 300
+    }
+  }
+}

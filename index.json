@@ -2,6 +2,15 @@
   "version": 1,
   "entries": [
     {
+      "id": "air-quality-norway",
+      "name": "Air quality now",
+      "kind": "source",
+      "category": "weather",
+      "region": "no",
+      "version": 1,
+      "file": "entries/air-quality-norway.json"
+    },
+    {
       "id": "avalanche-warning",
       "name": "Avalanche danger today",
       "kind": "source",
@@ -9,6 +18,15 @@
       "region": "no",
       "version": 1,
       "file": "entries/avalanche-warning.json"
+    },
+    {
+      "id": "city-bikes-bergen",
+      "name": "Bikes at my station",
+      "kind": "source",
+      "category": "transport",
+      "region": "no",
+      "version": 1,
+      "file": "entries/city-bikes-bergen.json"
     },
     {
       "id": "exchange-rate",
@@ -36,6 +54,15 @@
       "region": "no",
       "version": 1,
       "file": "entries/power-price-norway.json"
+    },
+    {
+      "id": "space-station",
+      "name": "Where the space station is",
+      "kind": "item",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/space-station.json"
     },
     {
       "id": "sun-today",

@@ -1,0 +1,109 @@
+{
+  "id": "air-quality-norway",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "no",
+  "plain": {
+    "name": "Air quality now",
+    "gives": "The latest fine-dust reading for a Norwegian town and how the air is rated, from low to very high.",
+    "example": "12.4 µg/m³, low",
+    "from": "NILU, the Norwegian air research institute",
+    "cadence": "Every hour.",
+    "asks": "Which town."
+  },
+  "questions": [
+    {
+      "name": "area",
+      "label": "Town",
+      "help": "The town as NILU names it, in lowercase: bergen, oslo, trondheim, stavanger, tromsø, drammen, kristiansand.",
+      "type": "choice",
+      "choices": [
+        "bergen",
+        "oslo",
+        "trondheim",
+        "stavanger",
+        "tromsø",
+        "drammen",
+        "kristiansand"
+      ],
+      "default": "bergen"
+    }
+  ],
+  "attribution": "Air quality from NILU (api.nilu.no)",
+  "terms": {
+    "url": "https://api.nilu.no/",
+    "checked": "2026-09-03",
+    "note": "Data may be used with other data but not modified; api.nilu.no must be referenced where it is shown."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Air in {area}",
+    "source": {
+      "url": "https://api.nilu.no/aq/utd",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "areas",
+          "value": "{area}"
+        },
+        {
+          "name": "components",
+          "value": "pm10"
+        }
+      ],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "value",
+        "path": [
+          0,
+          "value"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "µg/m³"
+          }
+        }
+      },
+      {
+        "name": "station",
+        "path": [
+          0,
+          "station"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "at",
+        "path": [
+          0,
+          "toTime"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "station"
+        },
+        "primary": {
+          "key": "value"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌫"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}
