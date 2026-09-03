@@ -65,6 +65,10 @@ def check_entry(path):
         problems += fail(path.name, f"placeholders without a question: {sorted(used - names)}")
     if names - used:
         problems += fail(path.name, f"questions never used: {sorted(names - used)}")
+    for key in definition.get("extraction", []):
+        for segment in key.get("path", []):
+            if isinstance(segment, dict) and set(segment) != {"where", "is"}:
+                problems += fail(path.name, f"path segment {segment} must be a key, an index, or {{where, is}}")
     if entry.get("kind") == "item" and not definition.get("placement", {}).get("areas"):
         problems += fail(path.name, "an item entry needs placed areas")
     return problems

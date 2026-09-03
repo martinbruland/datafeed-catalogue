@@ -34,6 +34,14 @@ key, or path:
 | `cadence` | How often it changes. |
 | `asks` | The questions the entry will ask, in one sentence, or "Nothing." |
 
+## A path that finds a list element
+
+A path segment is a key or an index. It may also be an object,
+`{"where": "station_id", "is": "175"}`, which picks the first element of
+a list whose field `where` equals `is`, compared as text, so a question's
+answer can choose the element: `["data", "stations", {"where":
+"station_id", "is": "{station}"}, "num_bikes_available"]`.
+
 ## Placeholders
 
 `{name}` in the definition's `source.url`, in a parameter's `value`, or in
