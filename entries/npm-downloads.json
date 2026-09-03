@@ -1,0 +1,77 @@
+{
+  "id": "npm-downloads",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Downloads of a package",
+    "gives": "How many times a JavaScript package was downloaded in the last week.",
+    "example": "171 637 376 downloads",
+    "from": "The npm registry",
+    "cadence": "Once a day.",
+    "asks": "The package's name."
+  },
+  "questions": [
+    {
+      "name": "package",
+      "label": "Package",
+      "help": "The package's name on npm, such as react.",
+      "type": "text",
+      "default": "react"
+    }
+  ],
+  "attribution": "Download counts from the npm registry",
+  "terms": {
+    "url": "https://docs.npmjs.com/policies/terms",
+    "checked": "2026-09-03",
+    "note": "Public registry data, free to read."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{package} downloads",
+    "source": {
+      "url": "https://api.npmjs.org/downloads/point/last-week/{package}",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "downloads",
+        "path": [
+          "downloads"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 0
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "small",
+      "areas": {
+        "primary": {
+          "key": "downloads"
+        },
+        "picture": {
+          "picture": {
+            "illustration": "arrow.down.circle"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 21600
+    }
+  }
+}

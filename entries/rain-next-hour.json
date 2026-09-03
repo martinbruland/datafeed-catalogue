@@ -1,0 +1,124 @@
+{
+  "id": "rain-next-hour",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "no",
+  "plain": {
+    "name": "Rain in the next hour",
+    "gives": "How much rain is expected where you are in the coming hour, and how hard it falls right now.",
+    "example": "0.4 mm coming, 0.1 mm/h now",
+    "from": "The Norwegian Meteorological Institute, who also make Yr",
+    "cadence": "Updated every five minutes.",
+    "asks": "The place, as a point on the map."
+  },
+  "questions": [
+    {
+      "name": "place",
+      "label": "Place",
+      "help": "Where it is read; your current location by default.",
+      "type": "location"
+    }
+  ],
+  "attribution": "Weather data from MET Norway, licensed CC BY 4.0",
+  "terms": {
+    "url": "https://api.met.no/doc/TermsOfService",
+    "checked": "2026-09-03",
+    "note": "Free with attribution; every request must identify the app in the User-Agent header; at most one request per place every ten minutes. The nowcast covers the Nordic countries."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Rain next hour",
+    "source": {
+      "url": "https://api.met.no/weatherapi/nowcast/2.0/complete",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "lat",
+          "value": "{place.lat}"
+        },
+        {
+          "name": "lon",
+          "value": "{place.lon}"
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "coming",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "data",
+          "next_1_hours",
+          "details",
+          "precipitation_amount"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "mm"
+          }
+        }
+      },
+      {
+        "name": "now",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "data",
+          "instant",
+          "details",
+          "precipitation_rate"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "mm/h"
+          }
+        }
+      },
+      {
+        "name": "at",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "time"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "coming"
+        },
+        "secondary": {
+          "key": "now"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌧"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 600
+    }
+  }
+}

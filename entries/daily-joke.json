@@ -1,0 +1,70 @@
+{
+  "id": "daily-joke",
+  "kind": "item",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "A dad joke",
+    "gives": "A new joke every hour, for the whole family.",
+    "example": "Why did the scarecrow win an award? He was outstanding in his field.",
+    "from": "icanhazdadjoke",
+    "cadence": "A new one every hour.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "Jokes from icanhazdadjoke.com",
+  "terms": {
+    "url": "https://icanhazdadjoke.com/api",
+    "checked": "2026-09-03",
+    "note": "Free, no registration; every request must identify the app in the User-Agent header."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Dad joke",
+    "source": {
+      "url": "https://icanhazdadjoke.com/",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        },
+        {
+          "name": "Accept",
+          "value": {
+            "literal": "application/json"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "joke",
+        "path": [
+          "joke"
+        ],
+        "kind": "text"
+      }
+    ],
+    "placement": {
+      "size": "large",
+      "areas": {
+        "primary": {
+          "key": "joke"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "😄"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

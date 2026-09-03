@@ -1,0 +1,94 @@
+{
+  "id": "norges-bank-rate",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "no",
+  "plain": {
+    "name": "Norges Bank's rate",
+    "gives": "What one unit of a currency costs in kroner, at the central bank's daily rate.",
+    "example": "9.30 kroner",
+    "from": "Norges Bank",
+    "cadence": "Once every weekday afternoon.",
+    "asks": "Which currency."
+  },
+  "questions": [
+    {
+      "name": "currency",
+      "label": "Currency",
+      "help": "The currency priced in kroner.",
+      "type": "choice",
+      "choices": [
+        "USD",
+        "EUR",
+        "GBP",
+        "SEK",
+        "DKK"
+      ],
+      "default": "USD"
+    }
+  ],
+  "attribution": "Exchange rates from Norges Bank, used with attribution",
+  "terms": {
+    "url": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
+    "checked": "2026-09-03",
+    "note": "Open data, free to use with Norges Bank named as the source."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{currency} in kroner",
+    "source": {
+      "url": "https://data.norges-bank.no/api/data/EXR/B.{currency}.NOK.SP",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "format",
+          "value": "sdmx-json"
+        },
+        {
+          "name": "lastNObservations",
+          "value": "1"
+        }
+      ],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "rate",
+        "path": [
+          "data",
+          "dataSets",
+          0,
+          "series",
+          "0:0:0:0",
+          "observations",
+          "0",
+          0
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 2,
+            "unit": "kr"
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "small",
+      "areas": {
+        "primary": {
+          "key": "rate"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "💱"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}
