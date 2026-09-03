@@ -1,0 +1,95 @@
+{
+  "id": "space-station",
+  "kind": "item",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Where the space station is",
+    "gives": "The International Space Station's position over the Earth right now, and how fast it is going.",
+    "example": "51.2°, -12.8°, 27,600 km/h",
+    "from": "Where the ISS at",
+    "cadence": "Every second, if you keep pulling.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "Position from wheretheiss.at",
+  "terms": {
+    "url": "https://wheretheiss.at/w/developer",
+    "checked": "2026-09-03",
+    "note": "About one request a second; no licence stated on the page, so the entry stays until one is found."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Space station",
+    "source": {
+      "url": "https://api.wheretheiss.at/v1/satellites/25544",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "latitude",
+        "path": [
+          "latitude"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "°"
+          }
+        }
+      },
+      {
+        "name": "longitude",
+        "path": [
+          "longitude"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "°"
+          }
+        }
+      },
+      {
+        "name": "speed",
+        "path": [
+          "velocity"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 0,
+            "unit": "km/h"
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "large",
+      "areas": {
+        "title": {
+          "key": "latitude"
+        },
+        "primary": {
+          "key": "longitude"
+        },
+        "secondary": {
+          "key": "speed"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🛰"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 60
+    }
+  }
+}
