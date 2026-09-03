@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "id": "exchange-rate",
+      "name": "Exchange rate",
+      "kind": "source",
+      "category": "money",
+      "region": "global",
+      "version": 1,
+      "file": "entries/exchange-rate.json"
+    },
+    {
+      "id": "github-repository",
+      "name": "A repository on GitHub",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/github-repository.json"
+    },
+    {
+      "id": "power-price-norway",
+      "name": "Power price now",
+      "kind": "source",
+      "category": "energy",
+      "region": "no",
+      "version": 1,
+      "file": "entries/power-price-norway.json"
+    },
+    {
+      "id": "sun-today",
+      "name": "Sunrise and sunset",
+      "kind": "source",
+      "category": "nature",
+      "region": "global",
+      "version": 1,
+      "file": "entries/sun-today.json"
+    },
+    {
+      "id": "weather-now",
+      "name": "Weather right now",
+      "kind": "source",
+      "category": "weather",
+      "region": "global",
+      "version": 1,
+      "file": "entries/weather-now.json"
+    }
+  ]
+}

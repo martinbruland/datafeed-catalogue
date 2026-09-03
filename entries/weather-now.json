@@ -1,0 +1,124 @@
+{
+  "id": "weather-now",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "global",
+  "plain": {
+    "name": "Weather right now",
+    "gives": "The temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
+    "example": "14.2 °C, wind 3.4 m/s",
+    "from": "The Norwegian Meteorological Institute, who also make Yr",
+    "cadence": "Updated about every hour.",
+    "asks": "The place, as a point on the map."
+  },
+  "questions": [
+    {
+      "name": "place",
+      "label": "Place",
+      "help": "Where the weather is read; your current location by default.",
+      "type": "location"
+    }
+  ],
+  "attribution": "Weather data from MET Norway, licensed CC BY 4.0",
+  "terms": {
+    "url": "https://api.met.no/doc/TermsOfService",
+    "checked": "2026-09-03",
+    "note": "Free with attribution; every request must identify the app in the User-Agent header; at most one request per place every ten minutes."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Weather now",
+    "source": {
+      "url": "https://api.met.no/weatherapi/locationforecast/2.0/compact",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "lat",
+          "value": "{place.lat}"
+        },
+        {
+          "name": "lon",
+          "value": "{place.lon}"
+        }
+      ],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [
+      {
+        "name": "temperature",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "data",
+          "instant",
+          "details",
+          "air_temperature"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "°C"
+          }
+        }
+      },
+      {
+        "name": "wind",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "data",
+          "instant",
+          "details",
+          "wind_speed"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 1,
+            "unit": "m/s"
+          }
+        }
+      },
+      {
+        "name": "at",
+        "path": [
+          "properties",
+          "timeseries",
+          0,
+          "time"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "temperature"
+        },
+        "secondary": {
+          "key": "wind"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌤"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

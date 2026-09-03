@@ -1,0 +1,87 @@
+{
+  "id": "power-price-norway",
+  "kind": "source",
+  "version": 1,
+  "category": "energy",
+  "region": "no",
+  "plain": {
+    "name": "Power price now",
+    "gives": "The price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
+    "example": "1.42 kr",
+    "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
+    "cadence": "A new price every hour; tomorrow's prices arrive around 13:00.",
+    "asks": "Which price area you live in."
+  },
+  "questions": [
+    {
+      "name": "area",
+      "label": "Price area",
+      "help": "Norway has five: NO1 east, NO2 south, NO3 mid, NO4 north, NO5 west.",
+      "type": "choice",
+      "choices": [
+        "NO1",
+        "NO2",
+        "NO3",
+        "NO4",
+        "NO5"
+      ],
+      "default": "NO5"
+    }
+  ],
+  "attribution": "Prices from Hva koster strømmen (hvakosterstrommen.no)",
+  "terms": {
+    "url": "https://www.hvakosterstrommen.no/strompris-api",
+    "checked": "2026-09-03",
+    "note": "Free and open; the site asks to be credited with a link."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Power price {area}",
+    "source": {
+      "url": "https://www.hvakosterstrommen.no/api/v1/prices/{today}_{area}.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "now",
+        "path": [
+          0,
+          "NOK_per_kWh"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 2,
+            "unit": "kr"
+          }
+        }
+      },
+      {
+        "name": "from",
+        "path": [
+          0,
+          "time_start"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "small",
+      "areas": {
+        "primary": {
+          "key": "now"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "⚡️"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

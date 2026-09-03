@@ -1,0 +1,104 @@
+{
+  "id": "sun-today",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "global",
+  "plain": {
+    "name": "Sunrise and sunset",
+    "gives": "When the sun rises and sets where you are today, and how long the day is.",
+    "example": "Up 06:41, down 20:32",
+    "from": "Sunrise-Sunset.org",
+    "cadence": "Once a day.",
+    "asks": "The place, as a point on the map."
+  },
+  "questions": [
+    {
+      "name": "place",
+      "label": "Place",
+      "help": "Where the sun is watched; your current location by default.",
+      "type": "location"
+    }
+  ],
+  "attribution": "Sun times from sunrise-sunset.org",
+  "terms": {
+    "url": "https://sunrise-sunset.org/api",
+    "checked": "2026-09-03",
+    "note": "Free for reasonable volumes; attribution with a link is required."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Sun today",
+    "source": {
+      "url": "https://api.sunrise-sunset.org/v2",
+      "method": "GET",
+      "parameters": [
+        {
+          "name": "lat",
+          "value": "{place.lat}"
+        },
+        {
+          "name": "lng",
+          "value": "{place.lon}"
+        },
+        {
+          "name": "date",
+          "value": "{today-iso}"
+        }
+      ],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "sunrise",
+        "path": [
+          "sunrise"
+        ],
+        "kind": "timestamp",
+        "format": {
+          "moment": {
+            "relative": false
+          }
+        }
+      },
+      {
+        "name": "sunset",
+        "path": [
+          "sunset"
+        ],
+        "kind": "timestamp",
+        "format": {
+          "moment": {
+            "relative": false
+          }
+        }
+      },
+      {
+        "name": "dayLength",
+        "path": [
+          "day_length"
+        ],
+        "kind": "number"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "sunrise"
+        },
+        "primary": {
+          "key": "sunset"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌅"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

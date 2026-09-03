@@ -1,0 +1,90 @@
+{
+  "id": "github-repository",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "A repository on GitHub",
+    "gives": "How many stars a repository has, how many issues are open, and when it was last pushed to.",
+    "example": "12 stars, 3 issues, pushed 2 hours ago",
+    "from": "GitHub",
+    "cadence": "Whenever someone stars, opens an issue, or pushes.",
+    "asks": "The repository's owner and name, and, for a private one, a token kept in your Keychain."
+  },
+  "questions": [
+    {
+      "name": "owner",
+      "label": "Owner",
+      "help": "The person or organization the repository belongs to.",
+      "type": "text"
+    },
+    {
+      "name": "repository",
+      "label": "Repository",
+      "help": "The repository's name.",
+      "type": "text"
+    }
+  ],
+  "attribution": "Data from GitHub",
+  "terms": {
+    "url": "https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api",
+    "checked": "2026-09-03",
+    "note": "Public repositories without a token: sixty requests an hour per address; a token raises it and opens private repositories."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{owner}/{repository}",
+    "source": {
+      "url": "https://api.github.com/repos/{owner}/{repository}",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "stars",
+        "path": [
+          "stargazers_count"
+        ],
+        "kind": "number"
+      },
+      {
+        "name": "issues",
+        "path": [
+          "open_issues_count"
+        ],
+        "kind": "number"
+      },
+      {
+        "name": "pushed",
+        "path": [
+          "pushed_at"
+        ],
+        "kind": "timestamp"
+      }
+    ],
+    "placement": {
+      "size": "large",
+      "areas": {
+        "title": {
+          "key": "stars"
+        },
+        "primary": {
+          "key": "issues"
+        },
+        "footer": {
+          "key": "pushed"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "⭐️"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

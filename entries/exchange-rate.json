@@ -1,0 +1,98 @@
+{
+  "id": "exchange-rate",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "global",
+  "plain": {
+    "name": "Exchange rate",
+    "gives": "What one unit of a currency costs in another, from the European Central Bank's daily rates.",
+    "example": "11.64 NOK",
+    "from": "Frankfurter, which relays the European Central Bank",
+    "cadence": "Once every weekday afternoon.",
+    "asks": "Which two currencies."
+  },
+  "questions": [
+    {
+      "name": "from",
+      "label": "From",
+      "help": "The currency you have, as three letters.",
+      "type": "choice",
+      "choices": [
+        "EUR",
+        "USD",
+        "GBP",
+        "SEK",
+        "DKK",
+        "NOK",
+        "CHF",
+        "JPY"
+      ],
+      "default": "EUR"
+    },
+    {
+      "name": "to",
+      "label": "To",
+      "help": "The currency you want, as three letters.",
+      "type": "choice",
+      "choices": [
+        "NOK",
+        "EUR",
+        "USD",
+        "GBP",
+        "SEK",
+        "DKK",
+        "CHF",
+        "JPY"
+      ],
+      "default": "NOK"
+    }
+  ],
+  "attribution": "Rates from Frankfurter and the European Central Bank",
+  "terms": {
+    "url": "https://frankfurter.dev/",
+    "checked": "2026-09-03",
+    "note": "Open source, no quotas, commercial use allowed; the ECB's data terms apply to the rates."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "{from} to {to}",
+    "source": {
+      "url": "https://api.frankfurter.dev/v2/rate/{from}/{to}",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [
+      {
+        "name": "rate",
+        "path": [
+          "rate"
+        ],
+        "kind": "number",
+        "format": {
+          "number": {
+            "decimals": 2,
+            "unit": "{to}"
+          }
+        }
+      }
+    ],
+    "placement": {
+      "size": "small",
+      "areas": {
+        "primary": {
+          "key": "rate"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "💱"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}
