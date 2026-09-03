@@ -1,14 +1,14 @@
 {
-  "id": "city-bikes-bergen",
+  "id": "city-bikes-oslo",
   "kind": "source",
-  "version": 2,
+  "version": 1,
   "category": "transport",
   "region": "no",
   "plain": {
-    "name": "Bikes at my station",
-    "gives": "How many city bikes and free docks a Bergen Bysykkel station has right now.",
+    "name": "Bikes at my Oslo station",
+    "gives": "How many city bikes and free docks an Oslo Bysykkel station has right now.",
     "example": "7 bikes, 5 docks",
-    "from": "Bergen Bysykkel",
+    "from": "Oslo Bysykkel",
     "cadence": "Every few minutes, as bikes come and go.",
     "asks": "Which station, by its number."
   },
@@ -16,14 +16,14 @@
     {
       "name": "station",
       "label": "Station",
-      "help": "The station's number, shown on the station and in the Bysykkel app; Torgallmenningen is 36.",
+      "help": "The station's number, shown in the Bysykkel app; Aker brygge is 377.",
       "type": "number",
-      "default": "36"
+      "default": "377"
     }
   ],
-  "attribution": "Live station data from Bergen Bysykkel, licensed NLOD 2.0",
+  "attribution": "Live station data from Oslo Bysykkel, licensed NLOD 2.0",
   "terms": {
-    "url": "https://bergenbysykkel.no/apne-data/sanntid",
+    "url": "https://oslobysykkel.no/apne-data/sanntid",
     "checked": "2026-09-03",
     "note": "NLOD 2.0; every request carries a Client-Identifier header naming the app."
   },
@@ -31,7 +31,7 @@
     "schemaVersion": 1,
     "name": "Bikes at station {station}",
     "source": {
-      "url": "https://gbfs.urbansharing.com/bergenbysykkel.no/station_status.json",
+      "url": "https://gbfs.urbansharing.com/oslobysykkel.no/station_status.json",
       "method": "GET",
       "parameters": [],
       "headers": [
