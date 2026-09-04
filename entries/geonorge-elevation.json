@@ -1,7 +1,7 @@
 {
   "id": "geonorge-elevation",
   "kind": "source",
-  "version": 3,
+  "version": 4,
   "category": "nature",
   "region": "no",
   "plain": {
@@ -43,7 +43,7 @@
         }
       ],
       "headers": [],
-      "docs": "https://ws.geonorge.no/hoydedata/v1/"
+      "docs": "https://ws.geonorge.no/hoydedata/v1/openapi.json"
     },
     "extraction": [],
     "placement": {
