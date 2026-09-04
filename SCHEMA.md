@@ -9,7 +9,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | Key | What it holds |
 | --- | --- |
 | `id` | Lowercase letters, digits, and hyphens; the file's name. |
-| `kind` | `source`, `query`, or `item`: how much is filled in. A source has questions and no placement; a query has its parameters filled; an item has a placement too. |
+| `kind` | `item` or `source`, in the app's words a **tile** or a **source** (2026-09-04). A tile comes with its values chosen and a layout, and is added as it is or adjusted first. A source is the connection alone, the address with its headers and terms, with no extraction and no placed areas; the app builds a tile from it. `query` is accepted for older entries and read as a tile. |
 | `version` | An integer, raised on every change, so the app can offer updates. |
 | `category` | One of `transport`, `energy`, `weather`, `nature`, `money`, `code`, `fun`. |
 | `region` | `no` for a Norwegian source, `global` otherwise. |

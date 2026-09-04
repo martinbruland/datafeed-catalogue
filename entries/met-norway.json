@@ -1,0 +1,47 @@
+{
+  "id": "met-norway",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "global",
+  "plain": {
+    "name": "The Norwegian weather service",
+    "gives": "Forecasts, nowcasts, sunrise and moon times, air quality, and weather warnings for any place, from the institute behind Yr.",
+    "example": "Any value the forecast holds",
+    "from": "The Norwegian Meteorological Institute",
+    "cadence": "Hourly forecasts, nowcasts every five minutes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Weather data from MET Norway, licensed CC BY 4.0",
+  "terms": {
+    "url": "https://api.met.no/doc/TermsOfService",
+    "checked": "2026-09-03",
+    "note": "Free with attribution; every request must identify the app in the User-Agent header; at most one request per place every ten minutes."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "The Norwegian weather service",
+    "source": {
+      "url": "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.39&lon=5.32",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

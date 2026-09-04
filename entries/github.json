@@ -1,0 +1,47 @@
+{
+  "id": "github",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "GitHub",
+    "gives": "Anything public on GitHub: a person, a project, its releases, its issues.",
+    "example": "Stars, issues, releases, followers",
+    "from": "GitHub",
+    "cadence": "Live, within sixty requests an hour without signing in.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Public data from GitHub, within its public rate limit",
+  "terms": {
+    "url": "https://docs.github.com/en/site-policy/github-terms/github-terms-of-service",
+    "checked": "2026-09-03",
+    "note": "Public data; sixty requests an hour without signing in."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "GitHub",
+    "source": {
+      "url": "https://api.github.com/repos/apple/swift",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}
