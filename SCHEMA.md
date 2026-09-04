@@ -24,7 +24,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 `index.json` lists every entry once with its `id`, `name`, `kind`,
 `category`, `region`, `version`, and `file`, and, copied from the entry so
 the app can show a tile as a preview without fetching it, the entry's
-`example`, its `from`, and its `picture` when the placement has one. The
+`example`, its `gives`, its `from`, and its `picture` when the placement has one. The
 check refuses an index whose copies differ from the entries.
 
 ## The six plain fields
