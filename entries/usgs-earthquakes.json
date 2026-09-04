@@ -1,6 +1,6 @@
 {
   "id": "usgs-earthquakes",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "nature",
   "region": "global",

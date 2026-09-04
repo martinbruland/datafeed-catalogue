@@ -1,6 +1,6 @@
 {
   "id": "nobel-prize",
-  "kind": "source",
+  "kind": "api",
   "version": 3,
   "category": "fun",
   "region": "global",

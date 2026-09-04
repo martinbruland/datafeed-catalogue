@@ -1,6 +1,6 @@
 {
   "id": "github",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "code",
   "region": "global",

@@ -9,7 +9,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | Key | What it holds |
 | --- | --- |
 | `id` | Lowercase letters, digits, and hyphens; the file's name. |
-| `kind` | `source`, `query`, or `template`, the catalogue's three lists for the three questions (2026-09-04): a **source** is where the data comes from, the connection alone, the address with its headers and terms, with no extraction and no placed areas, and the app builds a tile from it; a **query** is what intel, a source plus the values picked and formatted, with a suggested look in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a look alone, which any query can wear. `item` is accepted for older entries and read as a query. |
+| `kind` | `api`, `operation`, or `template`, the catalogue's three lists for the three questions (OpenAPI's words since 2026-09-05): an **api** is where the data comes from, the server alone, the URL with its headers and terms, with no extraction and no placed areas, and the app builds a tile from it; an **operation** is what intel, an API plus the properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any operation can wear. The app still reads `source`, `query`, and `item` from older catalogues. |
 | `version` | An integer, raised on every change, so the app can offer updates. |
 | `category` | One of `transport`, `energy`, `weather`, `nature`, `money`, `code`, `fun`. |
 | `region` | `no` for a Norwegian source, `global` otherwise. |

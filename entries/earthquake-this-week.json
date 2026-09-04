@@ -1,6 +1,6 @@
 {
   "id": "earthquake-this-week",
-  "kind": "query",
+  "kind": "operation",
   "version": 1,
   "category": "nature",
   "region": "global",

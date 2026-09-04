@@ -1,6 +1,6 @@
 {
   "id": "wikipedia-pageviews",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "fun",
   "region": "global",

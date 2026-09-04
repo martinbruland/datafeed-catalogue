@@ -4,7 +4,7 @@
     {
       "id": "air-quality-norway",
       "name": "Air quality now",
-      "kind": "query",
+      "kind": "operation",
       "category": "weather",
       "region": "no",
       "version": 2,
@@ -19,7 +19,7 @@
     {
       "id": "avalanche-warning",
       "name": "Avalanche danger today",
-      "kind": "query",
+      "kind": "operation",
       "category": "nature",
       "region": "no",
       "version": 2,
@@ -57,7 +57,7 @@
     {
       "id": "brreg",
       "name": "Norwegian companies",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "no",
       "version": 2,
@@ -69,7 +69,7 @@
     {
       "id": "catfact",
       "name": "Cat facts",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -81,7 +81,7 @@
     {
       "id": "city-bikes-bergen",
       "name": "Bikes at my station",
-      "kind": "query",
+      "kind": "operation",
       "category": "transport",
       "region": "no",
       "version": 3,
@@ -96,7 +96,7 @@
     {
       "id": "city-bikes-oslo",
       "name": "Bikes at my Oslo station",
-      "kind": "query",
+      "kind": "operation",
       "category": "transport",
       "region": "no",
       "version": 2,
@@ -111,7 +111,7 @@
     {
       "id": "cloudflare-status",
       "name": "Cloudflare's status",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -123,7 +123,7 @@
     {
       "id": "coinbase",
       "name": "Coinbase prices",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "global",
       "version": 2,
@@ -135,7 +135,7 @@
     {
       "id": "coingecko",
       "name": "Crypto prices",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "global",
       "version": 3,
@@ -147,7 +147,7 @@
     {
       "id": "daily-joke",
       "name": "A dad joke",
-      "kind": "query",
+      "kind": "operation",
       "category": "fun",
       "region": "global",
       "version": 1,
@@ -162,7 +162,7 @@
     {
       "id": "earthquake-this-week",
       "name": "The biggest earthquake this week",
-      "kind": "query",
+      "kind": "operation",
       "category": "nature",
       "region": "global",
       "version": 1,
@@ -177,7 +177,7 @@
     {
       "id": "entur-journey-planner",
       "name": "Departures in Norway",
-      "kind": "source",
+      "kind": "api",
       "category": "transport",
       "region": "no",
       "version": 1,
@@ -189,7 +189,7 @@
     {
       "id": "entur-places",
       "name": "Stops and places in Norway",
-      "kind": "source",
+      "kind": "api",
       "category": "transport",
       "region": "no",
       "version": 3,
@@ -237,7 +237,7 @@
     {
       "id": "exchange-rate",
       "name": "Exchange rate",
-      "kind": "query",
+      "kind": "operation",
       "category": "money",
       "region": "global",
       "version": 2,
@@ -252,7 +252,7 @@
     {
       "id": "frankfurter",
       "name": "Exchange rates",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "global",
       "version": 3,
@@ -264,7 +264,7 @@
     {
       "id": "geonorge-addresses",
       "name": "Norwegian addresses",
-      "kind": "source",
+      "kind": "api",
       "category": "nature",
       "region": "no",
       "version": 4,
@@ -276,7 +276,7 @@
     {
       "id": "geonorge-elevation",
       "name": "Height above the sea",
-      "kind": "source",
+      "kind": "api",
       "category": "nature",
       "region": "no",
       "version": 4,
@@ -288,7 +288,7 @@
     {
       "id": "github-person",
       "name": "A person on GitHub",
-      "kind": "query",
+      "kind": "operation",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -303,7 +303,7 @@
     {
       "id": "github-release",
       "name": "Latest release of a project",
-      "kind": "query",
+      "kind": "operation",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -318,7 +318,7 @@
     {
       "id": "github-repository",
       "name": "A repository on GitHub",
-      "kind": "query",
+      "kind": "operation",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -333,7 +333,7 @@
     {
       "id": "github-status",
       "name": "GitHub's status",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -345,7 +345,7 @@
     {
       "id": "github",
       "name": "GitHub",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -357,7 +357,7 @@
     {
       "id": "hacker-news",
       "name": "Hacker News",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -369,7 +369,7 @@
     {
       "id": "hva-koster-strommen",
       "name": "Norwegian power prices",
-      "kind": "source",
+      "kind": "api",
       "category": "energy",
       "region": "no",
       "version": 2,
@@ -381,7 +381,7 @@
     {
       "id": "icanhazdadjoke",
       "name": "Dad jokes",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -393,7 +393,7 @@
     {
       "id": "met-norway",
       "name": "The Norwegian weather service",
-      "kind": "source",
+      "kind": "api",
       "category": "weather",
       "region": "global",
       "version": 3,
@@ -405,7 +405,7 @@
     {
       "id": "minecraft-server",
       "name": "A Minecraft server",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -417,7 +417,7 @@
     {
       "id": "moon-tonight",
       "name": "The moon tonight",
-      "kind": "query",
+      "kind": "operation",
       "category": "nature",
       "region": "global",
       "version": 2,
@@ -432,7 +432,7 @@
     {
       "id": "nager-date",
       "name": "Public holidays",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -444,7 +444,7 @@
     {
       "id": "next-departures",
       "name": "Next departure",
-      "kind": "query",
+      "kind": "operation",
       "category": "transport",
       "region": "no",
       "version": 1,
@@ -459,7 +459,7 @@
     {
       "id": "next-public-holiday",
       "name": "The next public holiday",
-      "kind": "query",
+      "kind": "operation",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -474,7 +474,7 @@
     {
       "id": "nilu",
       "name": "Air quality in Norway",
-      "kind": "source",
+      "kind": "api",
       "category": "weather",
       "region": "no",
       "version": 3,
@@ -486,7 +486,7 @@
     {
       "id": "nobel-prize",
       "name": "Nobel Prizes",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 3,
@@ -498,7 +498,7 @@
     {
       "id": "norges-bank-rate",
       "name": "Norges Bank's rate",
-      "kind": "query",
+      "kind": "operation",
       "category": "money",
       "region": "no",
       "version": 2,
@@ -513,7 +513,7 @@
     {
       "id": "norges-bank",
       "name": "Norges Bank's exchange rates",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "no",
       "version": 3,
@@ -525,7 +525,7 @@
     {
       "id": "npm-downloads",
       "name": "Downloads of a package",
-      "kind": "query",
+      "kind": "operation",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -540,7 +540,7 @@
     {
       "id": "npm-registry",
       "name": "npm downloads",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -579,7 +579,7 @@
     {
       "id": "open-meteo",
       "name": "Weather anywhere",
-      "kind": "source",
+      "kind": "api",
       "category": "weather",
       "region": "global",
       "version": 3,
@@ -591,7 +591,7 @@
     {
       "id": "openai-status",
       "name": "OpenAI's status",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -638,7 +638,7 @@
     {
       "id": "power-price-norway",
       "name": "Power price now",
-      "kind": "query",
+      "kind": "operation",
       "category": "energy",
       "region": "no",
       "version": 2,
@@ -653,7 +653,7 @@
     {
       "id": "pypi-version",
       "name": "Latest version of a Python package",
-      "kind": "query",
+      "kind": "operation",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -668,7 +668,7 @@
     {
       "id": "pypi",
       "name": "Python packages",
-      "kind": "source",
+      "kind": "api",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -680,7 +680,7 @@
     {
       "id": "rain-next-hour",
       "name": "Rain in the next hour",
-      "kind": "query",
+      "kind": "operation",
       "category": "weather",
       "region": "no",
       "version": 2,
@@ -695,7 +695,7 @@
     {
       "id": "space-station",
       "name": "Where the space station is",
-      "kind": "query",
+      "kind": "operation",
       "category": "fun",
       "region": "global",
       "version": 1,
@@ -710,7 +710,7 @@
     {
       "id": "steam-players",
       "name": "Players on Steam",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 3,
@@ -722,7 +722,7 @@
     {
       "id": "sun-today",
       "name": "Sunrise and sunset",
-      "kind": "query",
+      "kind": "operation",
       "category": "nature",
       "region": "global",
       "version": 2,
@@ -737,7 +737,7 @@
     {
       "id": "sunrise-sunset",
       "name": "Sunrise and sunset",
-      "kind": "source",
+      "kind": "api",
       "category": "nature",
       "region": "global",
       "version": 3,
@@ -749,7 +749,7 @@
     {
       "id": "themealdb",
       "name": "A random meal",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -788,7 +788,7 @@
     {
       "id": "urban-sharing-bikes",
       "name": "City bikes in Norway",
-      "kind": "source",
+      "kind": "api",
       "category": "transport",
       "region": "no",
       "version": 2,
@@ -800,7 +800,7 @@
     {
       "id": "usgs-earthquakes",
       "name": "Earthquakes from the USGS",
-      "kind": "source",
+      "kind": "api",
       "category": "nature",
       "region": "global",
       "version": 2,
@@ -812,7 +812,7 @@
     {
       "id": "varsom",
       "name": "Avalanche warnings",
-      "kind": "source",
+      "kind": "api",
       "category": "nature",
       "region": "no",
       "version": 2,
@@ -824,7 +824,7 @@
     {
       "id": "weather-now",
       "name": "Weather right now",
-      "kind": "query",
+      "kind": "operation",
       "category": "weather",
       "region": "global",
       "version": 2,
@@ -839,7 +839,7 @@
     {
       "id": "weather-tomorrow",
       "name": "Weather this time tomorrow",
-      "kind": "query",
+      "kind": "operation",
       "category": "weather",
       "region": "global",
       "version": 2,
@@ -854,7 +854,7 @@
     {
       "id": "where-the-iss-at",
       "name": "The space station",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -866,7 +866,7 @@
     {
       "id": "wikipedia-pageviews",
       "name": "Wikipedia page views",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -878,7 +878,7 @@
     {
       "id": "yahoo-finance",
       "name": "Stock prices",
-      "kind": "source",
+      "kind": "api",
       "category": "money",
       "region": "global",
       "version": 3,
@@ -890,7 +890,7 @@
     {
       "id": "wikimedia-stream",
       "name": "Wikipedia edits, live",
-      "kind": "source",
+      "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 1,
@@ -902,7 +902,7 @@
     {
       "id": "latest-wikipedia-edit",
       "name": "The latest Wikipedia edit",
-      "kind": "query",
+      "kind": "operation",
       "category": "fun",
       "region": "global",
       "version": 1,

@@ -1,6 +1,6 @@
 {
   "id": "wikimedia-stream",
-  "kind": "source",
+  "kind": "api",
   "version": 1,
   "category": "fun",
   "region": "global",

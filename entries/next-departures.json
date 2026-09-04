@@ -1,6 +1,6 @@
 {
   "id": "next-departures",
-  "kind": "query",
+  "kind": "operation",
   "version": 1,
   "category": "transport",
   "region": "no",

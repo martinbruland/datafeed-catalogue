@@ -1,6 +1,6 @@
 {
   "id": "geonorge-addresses",
-  "kind": "source",
+  "kind": "api",
   "version": 4,
   "category": "nature",
   "region": "no",

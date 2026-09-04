@@ -1,6 +1,6 @@
 {
   "id": "yahoo-finance",
-  "kind": "source",
+  "kind": "api",
   "version": 3,
   "category": "money",
   "region": "global",
