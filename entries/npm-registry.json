@@ -1,0 +1,46 @@
+{
+  "id": "npm-registry",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "npm downloads",
+    "gives": "How often a package on npm was downloaded in the last day, week, or month.",
+    "example": "1 234 567 downloads last week",
+    "from": "The npm registry",
+    "cadence": "Once a day.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Download counts from the npm registry",
+  "terms": {
+    "url": "https://docs.npmjs.com/policies/terms",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "npm downloads",
+    "source": {
+      "url": "https://api.npmjs.org/downloads/point/last-week/react",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

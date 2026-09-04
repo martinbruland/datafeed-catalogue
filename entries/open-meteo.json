@@ -1,0 +1,40 @@
+{
+  "id": "open-meteo",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "global",
+  "plain": {
+    "name": "Weather anywhere",
+    "gives": "Current weather and forecasts for any place on Earth: temperature, wind, rain, and more, no sign-up.",
+    "example": "18.3 °C, wind 4 m/s",
+    "from": "Open-Meteo",
+    "cadence": "Every hour.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Weather from Open-Meteo",
+  "terms": {
+    "url": "https://open-meteo.com/en/terms",
+    "checked": "2026-09-04",
+    "note": "Free for non-commercial use; up to ten thousand requests a day."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Weather anywhere",
+    "source": {
+      "url": "https://api.open-meteo.com/v1/forecast?latitude=60.39&longitude=5.32&current=temperature_2m,wind_speed_10m",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "wikipedia-pageviews",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Wikipedia page views",
+    "gives": "How many times a Wikipedia article was read on a day, in any language.",
+    "example": "Norway: 4 512 views yesterday",
+    "from": "Wikimedia, who run Wikipedia",
+    "cadence": "Once a day, the day after.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Page views from Wikimedia",
+  "terms": {
+    "url": "https://wikimedia.org/api/rest_v1/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Wikipedia page views",
+    "source": {
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Norway/daily/2026080100/2026080200",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

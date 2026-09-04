@@ -1,0 +1,39 @@
+{
+  "id": "nobel-prize",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Nobel Prizes",
+    "gives": "Every Nobel Prize and laureate, by year and category.",
+    "example": "Physics 2025",
+    "from": "The Nobel Prize",
+    "cadence": "When a prize is announced.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Prize data from nobelprize.org",
+  "terms": {
+    "url": "https://www.nobelprize.org/about/developer-zone-2/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Nobel Prizes",
+    "source": {
+      "url": "https://api.nobelprize.org/2.1/nobelPrizes?limit=1&sort=desc",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

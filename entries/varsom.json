@@ -1,0 +1,39 @@
+{
+  "id": "varsom",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "no",
+  "plain": {
+    "name": "Avalanche warnings",
+    "gives": "Today's avalanche danger level and its text for every Norwegian region.",
+    "example": "Danger level 3, considerable",
+    "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
+    "cadence": "Once a day in the season.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Avalanche warnings from NVE and Varsom",
+  "terms": {
+    "url": "https://api.nve.no/doc/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Avalanche warnings",
+    "source": {
+      "url": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.2/api/AvalancheWarningByRegion/Simple/3003/2/2026-09-04/2026-09-04",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}
