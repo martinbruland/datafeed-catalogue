@@ -1,0 +1,40 @@
+{
+  "id": "norges-bank",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "no",
+  "plain": {
+    "name": "Norges Bank's exchange rates",
+    "gives": "Every exchange rate the central bank publishes, per day, in the SDMX form.",
+    "example": "Any currency against the krone",
+    "from": "Norges Bank",
+    "cadence": "Once every weekday afternoon.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Exchange rates from Norges Bank, used with attribution",
+  "terms": {
+    "url": "https://www.norges-bank.no/en/topics/Statistics/open-data/",
+    "checked": "2026-09-03",
+    "note": "Open data, free to use with Norges Bank named as the source."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Norges Bank's exchange rates",
+    "source": {
+      "url": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=sdmx-json&lastNObservations=1",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

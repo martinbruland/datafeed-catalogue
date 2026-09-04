@@ -70,7 +70,9 @@ def check_entry(path):
             if isinstance(segment, dict) and set(segment) != {"where", "is"}:
                 problems += fail(path.name, f"path segment {segment} must be a key, an index, or {{where, is}}")
     if entry.get("kind") == "item" and not definition.get("placement", {}).get("areas"):
-        problems += fail(path.name, "an item entry needs placed areas")
+        problems += fail(path.name, "a tile entry needs placed areas")
+    if entry.get("kind") == "source" and (definition.get("extraction") or definition.get("placement", {}).get("areas")):
+        problems += fail(path.name, "a source entry is the connection alone: no extraction, no placed areas")
     return problems
 
 def main():

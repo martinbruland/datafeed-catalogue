@@ -1,0 +1,40 @@
+{
+  "id": "hva-koster-strommen",
+  "kind": "source",
+  "version": 1,
+  "category": "energy",
+  "region": "no",
+  "plain": {
+    "name": "Norwegian power prices",
+    "gives": "The hourly power price for each of the five Norwegian price areas, today and tomorrow after 13:00.",
+    "example": "Every hour's price",
+    "from": "Hva koster strømmen",
+    "cadence": "Once a day, the next day's prices in the afternoon.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Power prices from hvakosterstrommen.no",
+  "terms": {
+    "url": "https://www.hvakosterstrommen.no/strompris-api",
+    "checked": "2026-09-03",
+    "note": "Free, with a link back."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Norwegian power prices",
+    "source": {
+      "url": "https://www.hvakosterstrommen.no/api/v1/prices/{today}_NO5.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "nager-date",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Public holidays",
+    "gives": "The public holidays of a hundred countries, this year and next.",
+    "example": "Name and date of each holiday",
+    "from": "Nager.Date, a free public-holiday service",
+    "cadence": "Changes when a holiday passes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Public holidays from Nager.Date, MIT licensed",
+  "terms": {
+    "url": "https://date.nager.at/Api",
+    "checked": "2026-09-03",
+    "note": "Free, no registration; the service asks for fair use."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Public holidays",
+    "source": {
+      "url": "https://date.nager.at/api/v3/NextPublicHolidays/NO",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

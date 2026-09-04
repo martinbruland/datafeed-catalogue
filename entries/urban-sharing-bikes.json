@@ -1,0 +1,47 @@
+{
+  "id": "urban-sharing-bikes",
+  "kind": "source",
+  "version": 1,
+  "category": "transport",
+  "region": "no",
+  "plain": {
+    "name": "City bikes in Norway",
+    "gives": "Every station of Bergen, Oslo, and Trondheim Bysykkel, with its bikes and docks right now.",
+    "example": "Bikes and docks at any station",
+    "from": "Urban Sharing, who run the Bysykkel systems",
+    "cadence": "Every few minutes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Live station data from Urban Sharing, licensed NLOD 2.0",
+  "terms": {
+    "url": "https://bergenbysykkel.no/apne-data/sanntid",
+    "checked": "2026-09-03",
+    "note": "NLOD 2.0; every request carries a Client-Identifier header naming the app."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "City bikes in Norway",
+    "source": {
+      "url": "https://gbfs.urbansharing.com/bergenbysykkel.no/station_status.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Client-Identifier",
+          "value": {
+            "literal": "martinbruland-datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

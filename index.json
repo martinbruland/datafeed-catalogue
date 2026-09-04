@@ -4,62 +4,62 @@
     {
       "id": "air-quality-norway",
       "name": "Air quality now",
-      "kind": "source",
+      "kind": "item",
       "category": "weather",
       "region": "no",
-      "version": 1,
+      "version": 2,
       "file": "entries/air-quality-norway.json",
       "example": "12.4 µg/m³, low",
       "from": "NILU, the Norwegian air research institute",
+      "gives": "The latest fine-dust reading for a Norwegian town and how the air is rated, from low to very high.",
       "picture": {
         "emoji": "🌫"
-      },
-      "gives": "The latest fine-dust reading for a Norwegian town and how the air is rated, from low to very high."
+      }
     },
     {
       "id": "avalanche-warning",
       "name": "Avalanche danger today",
-      "kind": "source",
+      "kind": "item",
       "category": "nature",
       "region": "no",
-      "version": 1,
+      "version": 2,
       "file": "entries/avalanche-warning.json",
       "example": "Level 2, Moderate",
       "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
+      "gives": "Today's avalanche danger level for a Norwegian mountain region, from 1 low to 5 very high, with the forecaster's headline.",
       "picture": {
         "emoji": "🏔"
-      },
-      "gives": "Today's avalanche danger level for a Norwegian mountain region, from 1 low to 5 very high, with the forecaster's headline."
+      }
     },
     {
       "id": "city-bikes-bergen",
       "name": "Bikes at my station",
-      "kind": "source",
+      "kind": "item",
       "category": "transport",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/city-bikes-bergen.json",
       "example": "7 bikes, 5 docks",
       "from": "Bergen Bysykkel",
+      "gives": "How many city bikes and free docks a Bergen Bysykkel station has right now.",
       "picture": {
         "emoji": "🚲"
-      },
-      "gives": "How many city bikes and free docks a Bergen Bysykkel station has right now."
+      }
     },
     {
       "id": "city-bikes-oslo",
       "name": "Bikes at my Oslo station",
-      "kind": "source",
+      "kind": "item",
       "category": "transport",
       "region": "no",
-      "version": 1,
+      "version": 2,
       "file": "entries/city-bikes-oslo.json",
       "example": "7 bikes, 5 docks",
       "from": "Oslo Bysykkel",
+      "gives": "How many city bikes and free docks an Oslo Bysykkel station has right now.",
       "picture": {
         "emoji": "🚲"
-      },
-      "gives": "How many city bikes and free docks an Oslo Bysykkel station has right now."
+      }
     },
     {
       "id": "daily-joke",
@@ -71,10 +71,10 @@
       "file": "entries/daily-joke.json",
       "example": "Why did the scarecrow win an award? He was outstanding in his field.",
       "from": "icanhazdadjoke",
+      "gives": "A new joke every hour, for the whole family.",
       "picture": {
         "emoji": "😄"
-      },
-      "gives": "A new joke every hour, for the whole family."
+      }
     },
     {
       "id": "earthquake-this-week",
@@ -86,175 +86,235 @@
       "file": "entries/earthquake-this-week.json",
       "example": "6.1 near Tonga",
       "from": "The United States Geological Survey",
+      "gives": "The strongest significant earthquake of the past seven days, and where it struck.",
       "picture": {
         "emoji": "🌍"
-      },
-      "gives": "The strongest significant earthquake of the past seven days, and where it struck."
+      }
     },
     {
       "id": "exchange-rate",
       "name": "Exchange rate",
-      "kind": "source",
+      "kind": "item",
       "category": "money",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/exchange-rate.json",
       "example": "11.64 NOK",
       "from": "Frankfurter, which relays the European Central Bank",
+      "gives": "What one unit of a currency costs in another, from the European Central Bank's daily rates.",
       "picture": {
         "emoji": "💱"
-      },
-      "gives": "What one unit of a currency costs in another, from the European Central Bank's daily rates."
+      }
     },
     {
       "id": "github-person",
       "name": "A person on GitHub",
-      "kind": "source",
+      "kind": "item",
       "category": "code",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/github-person.json",
       "example": "128 followers, 24 repositories",
       "from": "GitHub",
+      "gives": "How many follow a GitHub account, and how many public repositories it has.",
       "picture": {
         "illustration": "person"
-      },
-      "gives": "How many follow a GitHub account, and how many public repositories it has."
+      }
     },
     {
       "id": "github-release",
       "name": "Latest release of a project",
-      "kind": "source",
+      "kind": "item",
       "category": "code",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/github-release.json",
       "example": "v2.4.1, 3 days ago",
       "from": "GitHub",
+      "gives": "The newest release of a project on GitHub, and when it came out.",
       "picture": {
         "illustration": "shippingbox"
-      },
-      "gives": "The newest release of a project on GitHub, and when it came out."
+      }
     },
     {
       "id": "github-repository",
       "name": "A repository on GitHub",
-      "kind": "source",
+      "kind": "item",
       "category": "code",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/github-repository.json",
       "example": "12 stars, 3 issues, pushed 2 hours ago",
       "from": "GitHub",
+      "gives": "How many stars a repository has, how many issues are open, and when it was last pushed to.",
       "picture": {
         "emoji": "⭐️"
-      },
-      "gives": "How many stars a repository has, how many issues are open, and when it was last pushed to."
+      }
     },
     {
-      "id": "moon-tonight",
-      "name": "The moon tonight",
-      "kind": "source",
-      "category": "nature",
-      "region": "global",
-      "version": 1,
-      "file": "entries/moon-tonight.json",
-      "example": "252° round the cycle, rising 18:55",
-      "from": "The Norwegian Meteorological Institute, who also make Yr",
-      "picture": {
-        "emoji": "🌙"
-      },
-      "gives": "Where the moon is in its cycle where you are, and when it rises."
-    },
-    {
-      "id": "next-public-holiday",
-      "name": "The next public holiday",
-      "kind": "source",
-      "category": "fun",
-      "region": "global",
-      "version": 1,
-      "file": "entries/next-public-holiday.json",
-      "example": "Første juledag, in 3 months",
-      "from": "Nager.Date, a free public-holiday service",
-      "picture": {
-        "emoji": "🎉"
-      },
-      "gives": "The name and date of the next public holiday in a country."
-    },
-    {
-      "id": "norges-bank-rate",
-      "name": "Norges Bank's rate",
-      "kind": "source",
-      "category": "money",
-      "region": "no",
-      "version": 1,
-      "file": "entries/norges-bank-rate.json",
-      "example": "9.30 kroner",
-      "from": "Norges Bank",
-      "picture": {
-        "emoji": "💱"
-      },
-      "gives": "What one unit of a currency costs in kroner, at the central bank's daily rate."
-    },
-    {
-      "id": "npm-downloads",
-      "name": "Downloads of a package",
+      "id": "github",
+      "name": "GitHub",
       "kind": "source",
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/npm-downloads.json",
-      "example": "171 637 376 downloads",
-      "from": "The npm registry",
-      "picture": {
-        "illustration": "arrow.down.circle"
-      },
-      "gives": "How many times a JavaScript package was downloaded in the last week."
+      "file": "entries/github.json",
+      "example": "Stars, issues, releases, followers",
+      "from": "GitHub",
+      "gives": "Anything public on GitHub: a person, a project, its releases, its issues."
     },
     {
-      "id": "power-price-norway",
-      "name": "Power price now",
+      "id": "hva-koster-strommen",
+      "name": "Norwegian power prices",
       "kind": "source",
       "category": "energy",
       "region": "no",
       "version": 1,
+      "file": "entries/hva-koster-strommen.json",
+      "example": "Every hour's price",
+      "from": "Hva koster strømmen",
+      "gives": "The hourly power price for each of the five Norwegian price areas, today and tomorrow after 13:00."
+    },
+    {
+      "id": "met-norway",
+      "name": "The Norwegian weather service",
+      "kind": "source",
+      "category": "weather",
+      "region": "global",
+      "version": 1,
+      "file": "entries/met-norway.json",
+      "example": "Any value the forecast holds",
+      "from": "The Norwegian Meteorological Institute",
+      "gives": "Forecasts, nowcasts, sunrise and moon times, air quality, and weather warnings for any place, from the institute behind Yr."
+    },
+    {
+      "id": "moon-tonight",
+      "name": "The moon tonight",
+      "kind": "item",
+      "category": "nature",
+      "region": "global",
+      "version": 2,
+      "file": "entries/moon-tonight.json",
+      "example": "252° round the cycle, rising 18:55",
+      "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "gives": "Where the moon is in its cycle where you are, and when it rises.",
+      "picture": {
+        "emoji": "🌙"
+      }
+    },
+    {
+      "id": "nager-date",
+      "name": "Public holidays",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/nager-date.json",
+      "example": "Name and date of each holiday",
+      "from": "Nager.Date, a free public-holiday service",
+      "gives": "The public holidays of a hundred countries, this year and next."
+    },
+    {
+      "id": "next-public-holiday",
+      "name": "The next public holiday",
+      "kind": "item",
+      "category": "fun",
+      "region": "global",
+      "version": 2,
+      "file": "entries/next-public-holiday.json",
+      "example": "Første juledag, in 3 months",
+      "from": "Nager.Date, a free public-holiday service",
+      "gives": "The name and date of the next public holiday in a country.",
+      "picture": {
+        "emoji": "🎉"
+      }
+    },
+    {
+      "id": "norges-bank-rate",
+      "name": "Norges Bank's rate",
+      "kind": "item",
+      "category": "money",
+      "region": "no",
+      "version": 2,
+      "file": "entries/norges-bank-rate.json",
+      "example": "9.30 kroner",
+      "from": "Norges Bank",
+      "gives": "What one unit of a currency costs in kroner, at the central bank's daily rate.",
+      "picture": {
+        "emoji": "💱"
+      }
+    },
+    {
+      "id": "norges-bank",
+      "name": "Norges Bank's exchange rates",
+      "kind": "source",
+      "category": "money",
+      "region": "no",
+      "version": 1,
+      "file": "entries/norges-bank.json",
+      "example": "Any currency against the krone",
+      "from": "Norges Bank",
+      "gives": "Every exchange rate the central bank publishes, per day, in the SDMX form."
+    },
+    {
+      "id": "npm-downloads",
+      "name": "Downloads of a package",
+      "kind": "item",
+      "category": "code",
+      "region": "global",
+      "version": 2,
+      "file": "entries/npm-downloads.json",
+      "example": "171 637 376 downloads",
+      "from": "The npm registry",
+      "gives": "How many times a JavaScript package was downloaded in the last week.",
+      "picture": {
+        "illustration": "arrow.down.circle"
+      }
+    },
+    {
+      "id": "power-price-norway",
+      "name": "Power price now",
+      "kind": "item",
+      "category": "energy",
+      "region": "no",
+      "version": 2,
       "file": "entries/power-price-norway.json",
       "example": "1.42 kr",
       "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
+      "gives": "The price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
       "picture": {
         "emoji": "⚡️"
-      },
-      "gives": "The price of electricity this hour in your part of Norway, in kroner per kilowatt hour."
+      }
     },
     {
       "id": "pypi-version",
       "name": "Latest version of a Python package",
-      "kind": "source",
+      "kind": "item",
       "category": "code",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/pypi-version.json",
       "example": "2.34.2",
       "from": "The Python Package Index",
+      "gives": "The newest version of a package on the Python package index.",
       "picture": {
         "illustration": "cube"
-      },
-      "gives": "The newest version of a package on the Python package index."
+      }
     },
     {
       "id": "rain-next-hour",
       "name": "Rain in the next hour",
-      "kind": "source",
+      "kind": "item",
       "category": "weather",
       "region": "no",
-      "version": 1,
+      "version": 2,
       "file": "entries/rain-next-hour.json",
       "example": "0.4 mm coming, 0.1 mm/h now",
       "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "gives": "How much rain is expected where you are in the coming hour, and how hard it falls right now.",
       "picture": {
         "emoji": "🌧"
-      },
-      "gives": "How much rain is expected where you are in the coming hour, and how hard it falls right now."
+      }
     },
     {
       "id": "space-station",
@@ -266,55 +326,79 @@
       "file": "entries/space-station.json",
       "example": "51.2°, -12.8°, 27,600 km/h",
       "from": "Where the ISS at",
+      "gives": "The International Space Station's position over the Earth right now, and how fast it is going.",
       "picture": {
         "emoji": "🛰"
-      },
-      "gives": "The International Space Station's position over the Earth right now, and how fast it is going."
+      }
     },
     {
       "id": "sun-today",
       "name": "Sunrise and sunset",
+      "kind": "item",
+      "category": "nature",
+      "region": "global",
+      "version": 2,
+      "file": "entries/sun-today.json",
+      "example": "Up 06:41, down 20:32",
+      "from": "Sunrise-Sunset.org",
+      "gives": "When the sun rises and sets where you are today, and how long the day is.",
+      "picture": {
+        "emoji": "🌅"
+      }
+    },
+    {
+      "id": "urban-sharing-bikes",
+      "name": "City bikes in Norway",
+      "kind": "source",
+      "category": "transport",
+      "region": "no",
+      "version": 1,
+      "file": "entries/urban-sharing-bikes.json",
+      "example": "Bikes and docks at any station",
+      "from": "Urban Sharing, who run the Bysykkel systems",
+      "gives": "Every station of Bergen, Oslo, and Trondheim Bysykkel, with its bikes and docks right now."
+    },
+    {
+      "id": "usgs-earthquakes",
+      "name": "Earthquakes from the USGS",
       "kind": "source",
       "category": "nature",
       "region": "global",
       "version": 1,
-      "file": "entries/sun-today.json",
-      "example": "Up 06:41, down 20:32",
-      "from": "Sunrise-Sunset.org",
-      "picture": {
-        "emoji": "🌅"
-      },
-      "gives": "When the sun rises and sets where you are today, and how long the day is."
+      "file": "entries/usgs-earthquakes.json",
+      "example": "Magnitude, place, and time of each quake",
+      "from": "The United States Geological Survey",
+      "gives": "Every earthquake of the past hour, day, week, or month, as the survey records them."
     },
     {
       "id": "weather-now",
       "name": "Weather right now",
-      "kind": "source",
+      "kind": "item",
       "category": "weather",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/weather-now.json",
       "example": "14.2 °C, wind 3.4 m/s",
       "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "gives": "The temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
       "picture": {
         "emoji": "🌤"
-      },
-      "gives": "The temperature and wind where you are, from the Norwegian weather service's forecast for this hour."
+      }
     },
     {
       "id": "weather-tomorrow",
       "name": "Weather this time tomorrow",
-      "kind": "source",
+      "kind": "item",
       "category": "weather",
       "region": "global",
-      "version": 1,
+      "version": 2,
       "file": "entries/weather-tomorrow.json",
       "example": "11.8 °C, wind 5.2 m/s",
       "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "gives": "The temperature and wind where you are, twenty-four hours from now.",
       "picture": {
         "emoji": "🌥"
-      },
-      "gives": "The temperature and wind where you are, twenty-four hours from now."
+      }
     }
   ]
 }

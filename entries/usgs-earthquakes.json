@@ -1,0 +1,40 @@
+{
+  "id": "usgs-earthquakes",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "global",
+  "plain": {
+    "name": "Earthquakes from the USGS",
+    "gives": "Every earthquake of the past hour, day, week, or month, as the survey records them.",
+    "example": "Magnitude, place, and time of each quake",
+    "from": "The United States Geological Survey",
+    "cadence": "Every few minutes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Earthquake data from the USGS, in the public domain",
+  "terms": {
+    "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php",
+    "checked": "2026-09-03",
+    "note": "US government data, public domain; the feed asks not to be polled more often than every few minutes."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Earthquakes from the USGS",
+    "source": {
+      "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

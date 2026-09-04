@@ -1,7 +1,7 @@
 {
   "id": "power-price-norway",
-  "kind": "source",
-  "version": 1,
+  "kind": "item",
+  "version": 2,
   "category": "energy",
   "region": "no",
   "plain": {
