@@ -11,4 +11,4 @@ repository's raw files, so an entry publishes without an app release.
   every pull request.
 
 What the app is and how it reads the catalogue is decided in the app's
-repository (`martinbruland/datafeed`, `docs/ITEM.md`) and its Planner area.
+repository (`martinbruland/datafeed`, `docs/TILE.md`) and its Planner area.
