@@ -1,7 +1,7 @@
 {
   "id": "wikipedia-pageviews",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -32,7 +32,8 @@
             "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://wikimedia.org/api/rest_v1/#/Pageviews%20data"
     },
     "extraction": [],
     "placement": {

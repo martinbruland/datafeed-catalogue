@@ -1,7 +1,7 @@
 {
   "id": "github",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "code",
   "region": "global",
   "plain": {
@@ -33,7 +33,8 @@
             "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://docs.github.com/en/rest"
     },
     "extraction": [],
     "placement": {

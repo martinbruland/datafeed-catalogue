@@ -1,7 +1,7 @@
 {
   "id": "nobel-prize",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -34,7 +34,8 @@
           "value": "desc"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://app.swaggerhub.com/apis/NobelMedia/NobelMasterData/2.1"
     },
     "extraction": [],
     "placement": {

@@ -1,7 +1,7 @@
 {
   "id": "steam-players",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -30,7 +30,8 @@
           "value": "730"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://partner.steamgames.com/doc/webapi/ISteamUserStats"
     },
     "extraction": [],
     "placement": {

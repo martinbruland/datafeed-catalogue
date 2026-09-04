@@ -62,6 +62,15 @@ a list whose field `where` equals `is`, compared as text, so a question's
 answer can choose the element: `["data", "stations", {"where":
 "station_id", "is": "{station}"}, "num_bikes_available"]`.
 
+## A source that sends, and where it explains itself
+
+A definition's `source` may carry `"method": "POST"` with a `body`, JSON as
+text, which the app sends with the request; a question's `{name}` in the
+body is filled the way it is in the address, and the headers should name
+the content type. A `source` may carry `docs`, the address where the
+source explains itself, its documentation or an OpenAPI file, which the
+app shows in Explore and on a tile's detail.
+
 ## Placeholders
 
 `{name}` in the definition's `source.url`, in a parameter's `value`, or in

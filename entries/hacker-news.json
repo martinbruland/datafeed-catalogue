@@ -1,7 +1,7 @@
 {
   "id": "hacker-news",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "code",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://hacker-news.firebaseio.com/v0/item/8863.json",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://github.com/HackerNews/API"
     },
     "extraction": [],
     "placement": {

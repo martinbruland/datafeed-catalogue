@@ -1,7 +1,7 @@
 {
   "id": "minecraft-server",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://api.mcsrvstat.us/3/hypixel.net",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://api.mcsrvstat.us/"
     },
     "extraction": [],
     "placement": {

@@ -1,7 +1,7 @@
 {
   "id": "geonorge-addresses",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "nature",
   "region": "no",
   "plain": {
@@ -34,7 +34,8 @@
           "value": "1"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://ws.geonorge.no/adresser/v1/"
     },
     "extraction": [],
     "placement": {

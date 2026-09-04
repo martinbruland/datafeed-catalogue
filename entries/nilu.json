@@ -1,7 +1,7 @@
 {
   "id": "nilu",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "no",
   "plain": {
@@ -35,7 +35,8 @@
           "value": "pm10"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://api.nilu.no/"
     },
     "extraction": [],
     "placement": {

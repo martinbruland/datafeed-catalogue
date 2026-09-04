@@ -1,7 +1,7 @@
 {
   "id": "urban-sharing-bikes",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -33,7 +33,8 @@
             "literal": "martinbruland-datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://oslobysykkel.no/apne-data/sanntid"
     },
     "extraction": [],
     "placement": {

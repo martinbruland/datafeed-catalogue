@@ -1,7 +1,7 @@
 {
   "id": "coinbase",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "money",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://api.coinbase.com/v2/prices/BTC-NOK/spot",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://docs.cdp.coinbase.com/coinbase-app/docs/api-prices"
     },
     "extraction": [],
     "placement": {

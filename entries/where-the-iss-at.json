@@ -1,7 +1,7 @@
 {
   "id": "where-the-iss-at",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://api.wheretheiss.at/v1/satellites/25544",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://wheretheiss.at/w/developer"
     },
     "extraction": [],
     "placement": {
