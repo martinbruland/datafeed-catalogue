@@ -1,7 +1,7 @@
 {
   "id": "coingecko",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "money",
   "region": "global",
   "plain": {
@@ -23,9 +23,22 @@
     "schemaVersion": 1,
     "name": "Crypto prices",
     "source": {
-      "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=nok&include_24hr_change=true",
+      "url": "https://api.coingecko.com/api/v3/simple/price",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "ids",
+          "value": "bitcoin"
+        },
+        {
+          "name": "vs_currencies",
+          "value": "nok"
+        },
+        {
+          "name": "include_24hr_change",
+          "value": "true"
+        }
+      ],
       "headers": []
     },
     "extraction": [],

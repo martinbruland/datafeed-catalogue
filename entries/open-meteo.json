@@ -1,7 +1,7 @@
 {
   "id": "open-meteo",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "weather",
   "region": "global",
   "plain": {
@@ -23,9 +23,22 @@
     "schemaVersion": 1,
     "name": "Weather anywhere",
     "source": {
-      "url": "https://api.open-meteo.com/v1/forecast?latitude=60.39&longitude=5.32&current=temperature_2m,wind_speed_10m",
+      "url": "https://api.open-meteo.com/v1/forecast",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "latitude",
+          "value": "60.39"
+        },
+        {
+          "name": "longitude",
+          "value": "5.32"
+        },
+        {
+          "name": "current",
+          "value": "temperature_2m,wind_speed_10m"
+        }
+      ],
       "headers": []
     },
     "extraction": [],

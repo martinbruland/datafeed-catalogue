@@ -1,7 +1,7 @@
 {
   "id": "norges-bank",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "money",
   "region": "no",
   "plain": {
@@ -23,9 +23,18 @@
     "schemaVersion": 1,
     "name": "Norges Bank's exchange rates",
     "source": {
-      "url": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP?format=sdmx-json&lastNObservations=1",
+      "url": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "format",
+          "value": "sdmx-json"
+        },
+        {
+          "name": "lastNObservations",
+          "value": "1"
+        }
+      ],
       "headers": []
     },
     "extraction": [],
