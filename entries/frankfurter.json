@@ -1,7 +1,7 @@
 {
   "id": "frankfurter",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "global",
   "plain": {
@@ -26,7 +26,7 @@
       "method": "GET",
       "parameters": [],
       "headers": [],
-      "docs": "https://frankfurter.dev/"
+      "docs": "https://api.frankfurter.dev/v2/openapi.json"
     },
     "extraction": [],
     "placement": {
