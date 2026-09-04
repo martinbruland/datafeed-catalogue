@@ -1,6 +1,6 @@
 {
   "id": "city-bikes-bergen",
-  "kind": "item",
+  "kind": "query",
   "version": 3,
   "category": "transport",
   "region": "no",

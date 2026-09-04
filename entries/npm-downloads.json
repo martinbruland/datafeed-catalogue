@@ -1,6 +1,6 @@
 {
   "id": "npm-downloads",
-  "kind": "item",
+  "kind": "query",
   "version": 2,
   "category": "code",
   "region": "global",

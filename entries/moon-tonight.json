@@ -1,6 +1,6 @@
 {
   "id": "moon-tonight",
-  "kind": "item",
+  "kind": "query",
   "version": 2,
   "category": "nature",
   "region": "global",

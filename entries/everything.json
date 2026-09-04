@@ -1,0 +1,48 @@
+{
+  "id": "everything",
+  "kind": "template",
+  "version": 1,
+  "category": "look",
+  "region": "global",
+  "plain": {
+    "name": "Everything",
+    "gives": "Four values with their names: a title, a main value, a second value, and a footer.",
+    "example": "Bikes at Torget · 7 · 3 free docks · updated just now",
+    "from": "Any source, through any query.",
+    "cadence": "With the query it wears.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "A look from the datafeed catalogue",
+  "terms": {
+    "url": "https://github.com/martinbruland/datafeed-catalogue",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "placement": {
+      "size": "large",
+      "areas": {
+        "title": {
+          "key": "first"
+        },
+        "primary": {
+          "key": "second"
+        },
+        "secondary": {
+          "key": "third"
+        },
+        "footer": {
+          "key": "fourth"
+        }
+      },
+      "names": true
+    }
+  },
+  "sample": {
+    "first": "Bikes at Torget",
+    "second": "7",
+    "third": "3 free docks",
+    "fourth": "Updated just now"
+  }
+}

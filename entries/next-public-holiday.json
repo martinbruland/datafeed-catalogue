@@ -1,6 +1,6 @@
 {
   "id": "next-public-holiday",
-  "kind": "item",
+  "kind": "query",
   "version": 2,
   "category": "fun",
   "region": "global",

@@ -4,7 +4,7 @@
     {
       "id": "air-quality-norway",
       "name": "Air quality now",
-      "kind": "item",
+      "kind": "query",
       "category": "weather",
       "region": "no",
       "version": 2,
@@ -19,7 +19,7 @@
     {
       "id": "avalanche-warning",
       "name": "Avalanche danger today",
-      "kind": "item",
+      "kind": "query",
       "category": "nature",
       "region": "no",
       "version": 2,
@@ -32,9 +32,32 @@
       }
     },
     {
+      "id": "big-number",
+      "name": "Big number",
+      "kind": "template",
+      "category": "look",
+      "region": "global",
+      "version": 1,
+      "file": "entries/big-number.json",
+      "example": "1 234",
+      "from": "Any source, through any query.",
+      "gives": "One value, as large as the tile allows, and nothing else.",
+      "placement": {
+        "size": "small",
+        "areas": {
+          "primary": {
+            "key": "first"
+          }
+        }
+      },
+      "sample": {
+        "first": "1 234"
+      }
+    },
+    {
       "id": "city-bikes-bergen",
       "name": "Bikes at my station",
-      "kind": "item",
+      "kind": "query",
       "category": "transport",
       "region": "no",
       "version": 3,
@@ -49,7 +72,7 @@
     {
       "id": "city-bikes-oslo",
       "name": "Bikes at my Oslo station",
-      "kind": "item",
+      "kind": "query",
       "category": "transport",
       "region": "no",
       "version": 2,
@@ -64,7 +87,7 @@
     {
       "id": "daily-joke",
       "name": "A dad joke",
-      "kind": "item",
+      "kind": "query",
       "category": "fun",
       "region": "global",
       "version": 1,
@@ -79,7 +102,7 @@
     {
       "id": "earthquake-this-week",
       "name": "The biggest earthquake this week",
-      "kind": "item",
+      "kind": "query",
       "category": "nature",
       "region": "global",
       "version": 1,
@@ -92,9 +115,45 @@
       }
     },
     {
+      "id": "everything",
+      "name": "Everything",
+      "kind": "template",
+      "category": "look",
+      "region": "global",
+      "version": 1,
+      "file": "entries/everything.json",
+      "example": "Bikes at Torget · 7 · 3 free docks · updated just now",
+      "from": "Any source, through any query.",
+      "gives": "Four values with their names: a title, a main value, a second value, and a footer.",
+      "placement": {
+        "size": "large",
+        "areas": {
+          "title": {
+            "key": "first"
+          },
+          "primary": {
+            "key": "second"
+          },
+          "secondary": {
+            "key": "third"
+          },
+          "footer": {
+            "key": "fourth"
+          }
+        },
+        "names": true
+      },
+      "sample": {
+        "first": "Bikes at Torget",
+        "second": "7",
+        "third": "3 free docks",
+        "fourth": "Updated just now"
+      }
+    },
+    {
       "id": "exchange-rate",
       "name": "Exchange rate",
-      "kind": "item",
+      "kind": "query",
       "category": "money",
       "region": "global",
       "version": 2,
@@ -109,7 +168,7 @@
     {
       "id": "github-person",
       "name": "A person on GitHub",
-      "kind": "item",
+      "kind": "query",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -124,7 +183,7 @@
     {
       "id": "github-release",
       "name": "Latest release of a project",
-      "kind": "item",
+      "kind": "query",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -139,7 +198,7 @@
     {
       "id": "github-repository",
       "name": "A repository on GitHub",
-      "kind": "item",
+      "kind": "query",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -190,7 +249,7 @@
     {
       "id": "moon-tonight",
       "name": "The moon tonight",
-      "kind": "item",
+      "kind": "query",
       "category": "nature",
       "region": "global",
       "version": 2,
@@ -217,7 +276,7 @@
     {
       "id": "next-public-holiday",
       "name": "The next public holiday",
-      "kind": "item",
+      "kind": "query",
       "category": "fun",
       "region": "global",
       "version": 2,
@@ -232,7 +291,7 @@
     {
       "id": "norges-bank-rate",
       "name": "Norges Bank's rate",
-      "kind": "item",
+      "kind": "query",
       "category": "money",
       "region": "no",
       "version": 2,
@@ -259,7 +318,7 @@
     {
       "id": "npm-downloads",
       "name": "Downloads of a package",
-      "kind": "item",
+      "kind": "query",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -272,9 +331,71 @@
       }
     },
     {
+      "id": "number-with-caption",
+      "name": "Number with caption",
+      "kind": "template",
+      "category": "look",
+      "region": "global",
+      "version": 1,
+      "file": "entries/number-with-caption.json",
+      "example": "Bergen · 12.4 µg/m³",
+      "from": "Any source, through any query.",
+      "gives": "One value with a line above it saying what it is.",
+      "placement": {
+        "size": "medium",
+        "areas": {
+          "title": {
+            "key": "second"
+          },
+          "primary": {
+            "key": "first"
+          }
+        }
+      },
+      "sample": {
+        "first": "12.4 µg/m³",
+        "second": "Bergen"
+      }
+    },
+    {
+      "id": "picture-and-value",
+      "name": "Picture and value",
+      "kind": "template",
+      "category": "look",
+      "region": "global",
+      "version": 1,
+      "file": "entries/picture-and-value.json",
+      "example": "🌤 Oslo · 18 °C",
+      "from": "Any source, through any query.",
+      "gives": "A picture on the left, a value on the right, and a line saying what it is.",
+      "picture": {
+        "emoji": "🌤"
+      },
+      "placement": {
+        "size": "medium",
+        "areas": {
+          "title": {
+            "key": "second"
+          },
+          "primary": {
+            "key": "first"
+          },
+          "picture": {
+            "picture": {
+              "emoji": "🌤"
+            }
+          }
+        }
+      },
+      "sample": {
+        "first": "18 °C",
+        "second": "Oslo"
+      }
+    },
+    {
       "id": "power-price-norway",
       "name": "Power price now",
-      "kind": "item",
+      "kind": "query",
       "category": "energy",
       "region": "no",
       "version": 2,
@@ -289,7 +410,7 @@
     {
       "id": "pypi-version",
       "name": "Latest version of a Python package",
-      "kind": "item",
+      "kind": "query",
       "category": "code",
       "region": "global",
       "version": 2,
@@ -304,7 +425,7 @@
     {
       "id": "rain-next-hour",
       "name": "Rain in the next hour",
-      "kind": "item",
+      "kind": "query",
       "category": "weather",
       "region": "no",
       "version": 2,
@@ -319,7 +440,7 @@
     {
       "id": "space-station",
       "name": "Where the space station is",
-      "kind": "item",
+      "kind": "query",
       "category": "fun",
       "region": "global",
       "version": 1,
@@ -334,7 +455,7 @@
     {
       "id": "sun-today",
       "name": "Sunrise and sunset",
-      "kind": "item",
+      "kind": "query",
       "category": "nature",
       "region": "global",
       "version": 2,
@@ -344,6 +465,33 @@
       "gives": "When the sun rises and sets where you are today, and how long the day is.",
       "picture": {
         "emoji": "🌅"
+      }
+    },
+    {
+      "id": "two-values",
+      "name": "Two values",
+      "kind": "template",
+      "category": "look",
+      "region": "global",
+      "version": 1,
+      "file": "entries/two-values.json",
+      "example": "98 200 · +1.2 %",
+      "from": "Any source, through any query.",
+      "gives": "A main value with a second one under it, such as a price and its change.",
+      "placement": {
+        "size": "medium",
+        "areas": {
+          "primary": {
+            "key": "first"
+          },
+          "secondary": {
+            "key": "second"
+          }
+        }
+      },
+      "sample": {
+        "first": "98 200",
+        "second": "+1.2 %"
       }
     },
     {
@@ -373,7 +521,7 @@
     {
       "id": "weather-now",
       "name": "Weather right now",
-      "kind": "item",
+      "kind": "query",
       "category": "weather",
       "region": "global",
       "version": 2,
@@ -388,7 +536,7 @@
     {
       "id": "weather-tomorrow",
       "name": "Weather this time tomorrow",
-      "kind": "item",
+      "kind": "query",
       "category": "weather",
       "region": "global",
       "version": 2,

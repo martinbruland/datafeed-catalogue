@@ -1,6 +1,6 @@
 {
   "id": "avalanche-warning",
-  "kind": "item",
+  "kind": "query",
   "version": 2,
   "category": "nature",
   "region": "no",
