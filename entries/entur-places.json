@@ -1,0 +1,47 @@
+{
+  "id": "entur-places",
+  "kind": "source",
+  "version": 1,
+  "category": "transport",
+  "region": "no",
+  "plain": {
+    "name": "Stops and places in Norway",
+    "gives": "Any stop, station, or place in Norway by name, with its identity for a departure board and its coordinates.",
+    "example": "Danmarksplass, NSR:StopPlace:30826",
+    "from": "Entur, on behalf of Norway's public transport",
+    "cadence": "When the stop register changes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Places from Entur's geocoder",
+  "terms": {
+    "url": "https://developer.entur.org/pages-intro-authentication",
+    "checked": "2026-09-04",
+    "note": "Entur asks for a client name header on every request."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Stops and places in Norway",
+    "source": {
+      "url": "https://api.entur.io/geocoder/v1/autocomplete?text=Danmarksplass&size=1",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "ET-Client-Name",
+          "value": {
+            "literal": "martinbruland-datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 86400
+    }
+  }
+}

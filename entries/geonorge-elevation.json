@@ -1,0 +1,39 @@
+{
+  "id": "geonorge-elevation",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "no",
+  "plain": {
+    "name": "Height above the sea",
+    "gives": "The elevation of any point in Norway, from Kartverket's terrain model.",
+    "example": "Ulriken: 643 m",
+    "from": "Kartverket, through Geonorge",
+    "cadence": "Never; the ground stays put.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Elevation from Kartverket (Geonorge)",
+  "terms": {
+    "url": "https://www.geonorge.no/en/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Height above the sea",
+    "source": {
+      "url": "https://ws.geonorge.no/hoydedata/v1/punkt?nord=60.39&ost=5.32&koordsys=4326&geojson=false",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 86400
+    }
+  }
+}

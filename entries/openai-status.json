@@ -1,0 +1,39 @@
+{
+  "id": "openai-status",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "OpenAI's status",
+    "gives": "Whether OpenAI's services are up, and the words it uses for it.",
+    "example": "All Systems Operational",
+    "from": "OpenAI's status page",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Status from status.openai.com",
+  "terms": {
+    "url": "https://status.openai.com/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "OpenAI's status",
+    "source": {
+      "url": "https://status.openai.com/api/v2/status.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 600
+    }
+  }
+}

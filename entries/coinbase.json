@@ -1,0 +1,39 @@
+{
+  "id": "coinbase",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "global",
+  "plain": {
+    "name": "Coinbase prices",
+    "gives": "The spot price of a coin in any currency, from Coinbase.",
+    "example": "BTC 1 012 300 NOK",
+    "from": "Coinbase",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Prices from Coinbase",
+  "terms": {
+    "url": "https://www.coinbase.com/legal/api",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Coinbase prices",
+    "source": {
+      "url": "https://api.coinbase.com/v2/prices/BTC-NOK/spot",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 300
+    }
+  }
+}

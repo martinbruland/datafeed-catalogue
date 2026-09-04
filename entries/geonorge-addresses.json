@@ -1,0 +1,39 @@
+{
+  "id": "geonorge-addresses",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "no",
+  "plain": {
+    "name": "Norwegian addresses",
+    "gives": "Any Norwegian address by name: its street, number, place, municipality, and coordinates.",
+    "example": "Danmarksplass 1, 5058 Bergen",
+    "from": "Kartverket, through Geonorge",
+    "cadence": "When the register changes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Addresses from Kartverket (Geonorge)",
+  "terms": {
+    "url": "https://www.geonorge.no/en/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Norwegian addresses",
+    "source": {
+      "url": "https://ws.geonorge.no/adresser/v1/sok?sok=Danmarksplass&treffPerSide=1",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 86400
+    }
+  }
+}

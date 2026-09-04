@@ -1,0 +1,39 @@
+{
+  "id": "github-status",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "GitHub's status",
+    "gives": "Whether GitHub is up, and the words it uses for it.",
+    "example": "All Systems Operational",
+    "from": "GitHub's status page",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Status from githubstatus.com",
+  "terms": {
+    "url": "https://www.githubstatus.com/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "GitHub's status",
+    "source": {
+      "url": "https://www.githubstatus.com/api/v2/status.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 600
+    }
+  }
+}
