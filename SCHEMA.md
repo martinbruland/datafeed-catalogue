@@ -41,9 +41,11 @@ check refuses an index whose copies differ from the entries.
 
 ## The six plain fields
 
-Every word a person reads in simple mode comes from `plain`, and the check
-refuses an entry whose `plain` fields contain the words JSON, URL, API,
-key, or path:
+Every word a person reads in simple mode comes from `plain`. The app
+speaks OpenAPI's words since 2026-09-05, API, operation, parameter,
+header, request body, response, and property, so those are welcome; the
+check refuses the retired words subscription, item, marketplace, and
+dashboard:
 
 | Field | What it says |
 | --- | --- |

@@ -5,7 +5,7 @@ listing every entry once."""
 import json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FORBIDDEN = re.compile(r"\b(JSON|URL|API|key|keys|path|paths)\b", re.I)
+FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
 KINDS = {"source", "query", "template", "item"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
