@@ -175,6 +175,18 @@
       }
     },
     {
+      "id": "entur-journey-planner",
+      "name": "Departures in Norway",
+      "kind": "source",
+      "category": "transport",
+      "region": "no",
+      "version": 1,
+      "file": "entries/entur-journey-planner.json",
+      "example": "12 to Lægdene, leaves 21:10",
+      "from": "Entur, on behalf of Norway's public transport",
+      "gives": "Departures from any stop in Norway, every bus, tram, train, boat, and airport bus, with the live time when the operator reports it, and trips between two places."
+    },
+    {
       "id": "entur-places",
       "name": "Stops and places in Norway",
       "kind": "source",
