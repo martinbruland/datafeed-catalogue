@@ -1,7 +1,7 @@
 {
   "id": "catfact",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://catfact.ninja/fact",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://catfact.ninja/"
     },
     "extraction": [],
     "placement": {

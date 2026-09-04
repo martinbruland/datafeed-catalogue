@@ -1,7 +1,7 @@
 {
   "id": "nager-date",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -26,7 +26,8 @@
       "url": "https://date.nager.at/api/v3/NextPublicHolidays/NO",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://date.nager.at/Api"
     },
     "extraction": [],
     "placement": {

@@ -1,7 +1,7 @@
 {
   "id": "yahoo-finance",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "global",
   "plain": {
@@ -42,7 +42,8 @@
             "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://query1.finance.yahoo.com/v8/finance/chart/"
     },
     "extraction": [],
     "placement": {

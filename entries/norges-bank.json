@@ -1,7 +1,7 @@
 {
   "id": "norges-bank",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "no",
   "plain": {
@@ -35,7 +35,8 @@
           "value": "1"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://app.norges-bank.no/query/index.html"
     },
     "extraction": [],
     "placement": {

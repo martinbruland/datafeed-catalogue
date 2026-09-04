@@ -1,7 +1,7 @@
 {
   "id": "met-norway",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "global",
   "plain": {
@@ -42,7 +42,8 @@
             "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://api.met.no/weatherapi/locationforecast/2.0/documentation"
     },
     "extraction": [],
     "placement": {

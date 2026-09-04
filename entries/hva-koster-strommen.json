@@ -1,7 +1,7 @@
 {
   "id": "hva-koster-strommen",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "energy",
   "region": "no",
   "plain": {
@@ -26,7 +26,8 @@
       "url": "https://www.hvakosterstrommen.no/api/v1/prices/{today}_NO5.json",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://www.hvakosterstrommen.no/strompris-api"
     },
     "extraction": [],
     "placement": {

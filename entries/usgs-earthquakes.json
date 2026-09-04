@@ -1,7 +1,7 @@
 {
   "id": "usgs-earthquakes",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "nature",
   "region": "global",
   "plain": {
@@ -26,7 +26,8 @@
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php"
     },
     "extraction": [],
     "placement": {

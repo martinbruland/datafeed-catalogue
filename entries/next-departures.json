@@ -1,0 +1,129 @@
+{
+  "id": "next-departures",
+  "kind": "query",
+  "version": 1,
+  "category": "transport",
+  "region": "no",
+  "plain": {
+    "name": "Next departure",
+    "gives": "The next bus, tram, train, or boat from a stop: its line, where it goes, and when it leaves, live when the operator reports it.",
+    "example": "12 to Lægdene, 21:10",
+    "from": "Entur, on behalf of Norway's public transport",
+    "cadence": "Live, every minute.",
+    "asks": "Which stop, by its Entur identity; find it under Stops and places in Explore."
+  },
+  "questions": [
+    {
+      "name": "stop",
+      "label": "Stop",
+      "help": "The stop's identity from Entur, such as NSR:StopPlace:62356 for Bergen bus station; find yours under Stops and places.",
+      "type": "text",
+      "default": "NSR:StopPlace:62356"
+    }
+  ],
+  "attribution": "Departures from Entur (entur.org)",
+  "terms": {
+    "url": "https://developer.entur.org/pages-intro-authentication",
+    "checked": "2026-09-04",
+    "note": "Free and open; Entur asks for a client name header on every request."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Next from {stop}",
+    "source": {
+      "url": "https://api.entur.io/journey-planner/v3/graphql",
+      "method": "POST",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "ET-Client-Name",
+          "value": {
+            "literal": "martinbruland-datafeed"
+          }
+        },
+        {
+          "name": "Content-Type",
+          "value": {
+            "literal": "application/json"
+          }
+        }
+      ],
+      "docs": "https://developer.entur.org/pages-journeyplanner-shell",
+      "body": "{\"query\":\"{ stopPlace(id: \\\"{stop}\\\") { name estimatedCalls(numberOfDepartures: 1) { expectedDepartureTime destinationDisplay { frontText } serviceJourney { line { publicCode transportMode } } } } }\"}"
+    },
+    "extraction": [
+      {
+        "name": "line",
+        "path": [
+          "data",
+          "stopPlace",
+          "estimatedCalls",
+          0,
+          "serviceJourney",
+          "line",
+          "publicCode"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "to",
+        "path": [
+          "data",
+          "stopPlace",
+          "estimatedCalls",
+          0,
+          "destinationDisplay",
+          "frontText"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "leaves",
+        "path": [
+          "data",
+          "stopPlace",
+          "estimatedCalls",
+          0,
+          "expectedDepartureTime"
+        ],
+        "kind": "timestamp",
+        "format": {
+          "moment": {
+            "relative": true
+          }
+        }
+      },
+      {
+        "name": "stop",
+        "path": [
+          "data",
+          "stopPlace",
+          "name"
+        ],
+        "kind": "text"
+      }
+    ],
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "to"
+        },
+        "primary": {
+          "key": "leaves"
+        },
+        "secondary": {
+          "key": "line"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🚌"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 60
+    }
+  }
+}

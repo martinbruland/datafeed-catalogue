@@ -1,7 +1,7 @@
 {
   "id": "frankfurter",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "money",
   "region": "global",
   "plain": {
@@ -25,7 +25,8 @@
       "url": "https://api.frankfurter.dev/v2/rate/EUR/NOK",
       "method": "GET",
       "parameters": [],
-      "headers": []
+      "headers": [],
+      "docs": "https://frankfurter.dev/"
     },
     "extraction": [],
     "placement": {

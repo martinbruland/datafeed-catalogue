@@ -1,7 +1,7 @@
 {
   "id": "icanhazdadjoke",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -38,7 +38,8 @@
             "literal": "application/json"
           }
         }
-      ]
+      ],
+      "docs": "https://icanhazdadjoke.com/api"
     },
     "extraction": [],
     "placement": {

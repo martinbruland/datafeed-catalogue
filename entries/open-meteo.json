@@ -1,7 +1,7 @@
 {
   "id": "open-meteo",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "global",
   "plain": {
@@ -39,7 +39,8 @@
           "value": "temperature_2m,wind_speed_10m"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://open-meteo.com/en/docs"
     },
     "extraction": [],
     "placement": {

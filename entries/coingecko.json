@@ -1,7 +1,7 @@
 {
   "id": "coingecko",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "global",
   "plain": {
@@ -39,7 +39,8 @@
           "value": "true"
         }
       ],
-      "headers": []
+      "headers": [],
+      "docs": "https://docs.coingecko.com/reference/simple-price"
     },
     "extraction": [],
     "placement": {

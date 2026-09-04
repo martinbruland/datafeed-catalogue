@@ -1,7 +1,7 @@
 {
   "id": "entur-places",
   "kind": "source",
-  "version": 2,
+  "version": 3,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -42,7 +42,8 @@
             "literal": "martinbruland-datafeed"
           }
         }
-      ]
+      ],
+      "docs": "https://developer.entur.org/pages-geocoder-intro"
     },
     "extraction": [],
     "placement": {
