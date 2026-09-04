@@ -1,0 +1,39 @@
+{
+  "id": "frankfurter",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "global",
+  "plain": {
+    "name": "Exchange rates",
+    "gives": "The rate between any two of thirty currencies, and its history.",
+    "example": "1 EUR = 11.62 NOK",
+    "from": "Frankfurter, which relays the European Central Bank",
+    "cadence": "Once a working day, in the afternoon.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Rates from Frankfurter, relaying the European Central Bank",
+  "terms": {
+    "url": "https://frankfurter.dev/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Exchange rates",
+    "source": {
+      "url": "https://api.frankfurter.dev/v2/rate/EUR/NOK",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

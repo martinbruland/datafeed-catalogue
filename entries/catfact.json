@@ -1,0 +1,39 @@
+{
+  "id": "catfact",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Cat facts",
+    "gives": "One fact about cats at a time.",
+    "example": "Cats sleep 70 % of their lives.",
+    "from": "Cat Facts",
+    "cadence": "A new one every time.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Facts from catfact.ninja",
+  "terms": {
+    "url": "https://catfact.ninja/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Cat facts",
+    "source": {
+      "url": "https://catfact.ninja/fact",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

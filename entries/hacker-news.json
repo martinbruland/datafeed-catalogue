@@ -1,0 +1,39 @@
+{
+  "id": "hacker-news",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Hacker News",
+    "gives": "The top stories, a story's points and comments, or a person's karma.",
+    "example": "The top story: 412 points",
+    "from": "Hacker News",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Stories from Hacker News, through its public feed",
+  "terms": {
+    "url": "https://github.com/HackerNews/API",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Hacker News",
+    "source": {
+      "url": "https://hacker-news.firebaseio.com/v0/item/8863.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 600
+    }
+  }
+}

@@ -55,6 +55,30 @@
       }
     },
     {
+      "id": "brreg",
+      "name": "Norwegian companies",
+      "kind": "source",
+      "category": "money",
+      "region": "no",
+      "version": 1,
+      "file": "entries/brreg.json",
+      "example": "Equinor ASA, 22 000 employees",
+      "from": "The Brønnøysund Register Centre",
+      "gives": "Any company in the Norwegian register by its number: its name, address, kind, and how many people work there."
+    },
+    {
+      "id": "catfact",
+      "name": "Cat facts",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/catfact.json",
+      "example": "Cats sleep 70 % of their lives.",
+      "from": "Cat Facts",
+      "gives": "One fact about cats at a time."
+    },
+    {
       "id": "city-bikes-bergen",
       "name": "Bikes at my station",
       "kind": "query",
@@ -83,6 +107,18 @@
       "picture": {
         "emoji": "🚲"
       }
+    },
+    {
+      "id": "coingecko",
+      "name": "Crypto prices",
+      "kind": "source",
+      "category": "money",
+      "region": "global",
+      "version": 1,
+      "file": "entries/coingecko.json",
+      "example": "Bitcoin 1 012 300 kr",
+      "from": "CoinGecko",
+      "gives": "The price of any of thousands of coins in any currency, with the day's change."
     },
     {
       "id": "daily-joke",
@@ -166,6 +202,18 @@
       }
     },
     {
+      "id": "frankfurter",
+      "name": "Exchange rates",
+      "kind": "source",
+      "category": "money",
+      "region": "global",
+      "version": 1,
+      "file": "entries/frankfurter.json",
+      "example": "1 EUR = 11.62 NOK",
+      "from": "Frankfurter, which relays the European Central Bank",
+      "gives": "The rate between any two of thirty currencies, and its history."
+    },
+    {
       "id": "github-person",
       "name": "A person on GitHub",
       "kind": "query",
@@ -223,6 +271,18 @@
       "gives": "Anything public on GitHub: a person, a project, its releases, its issues."
     },
     {
+      "id": "hacker-news",
+      "name": "Hacker News",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/hacker-news.json",
+      "example": "The top story: 412 points",
+      "from": "Hacker News",
+      "gives": "The top stories, a story's points and comments, or a person's karma."
+    },
+    {
       "id": "hva-koster-strommen",
       "name": "Norwegian power prices",
       "kind": "source",
@@ -233,6 +293,18 @@
       "example": "Every hour's price",
       "from": "Hva koster strømmen",
       "gives": "The hourly power price for each of the five Norwegian price areas, today and tomorrow after 13:00."
+    },
+    {
+      "id": "icanhazdadjoke",
+      "name": "Dad jokes",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/icanhazdadjoke.json",
+      "example": "Why did the scarecrow win an award? He was outstanding in his field.",
+      "from": "icanhazdadjoke",
+      "gives": "One joke at a time, as text."
     },
     {
       "id": "met-norway",
@@ -289,6 +361,30 @@
       }
     },
     {
+      "id": "nilu",
+      "name": "Air quality in Norway",
+      "kind": "source",
+      "category": "weather",
+      "region": "no",
+      "version": 1,
+      "file": "entries/nilu.json",
+      "example": "12.4 µg/m³ in Bergen",
+      "from": "NILU, the Norwegian air research institute",
+      "gives": "The latest readings from Norway's air-quality stations: fine dust, nitrogen dioxide, ozone, by town."
+    },
+    {
+      "id": "nobel-prize",
+      "name": "Nobel Prizes",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/nobel-prize.json",
+      "example": "Physics 2025",
+      "from": "The Nobel Prize",
+      "gives": "Every Nobel Prize and laureate, by year and category."
+    },
+    {
       "id": "norges-bank-rate",
       "name": "Norges Bank's rate",
       "kind": "query",
@@ -331,6 +427,18 @@
       }
     },
     {
+      "id": "npm-registry",
+      "name": "npm downloads",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/npm-registry.json",
+      "example": "1 234 567 downloads last week",
+      "from": "The npm registry",
+      "gives": "How often a package on npm was downloaded in the last day, week, or month."
+    },
+    {
       "id": "number-with-caption",
       "name": "Number with caption",
       "kind": "template",
@@ -356,6 +464,18 @@
         "first": "12.4 µg/m³",
         "second": "Bergen"
       }
+    },
+    {
+      "id": "open-meteo",
+      "name": "Weather anywhere",
+      "kind": "source",
+      "category": "weather",
+      "region": "global",
+      "version": 1,
+      "file": "entries/open-meteo.json",
+      "example": "18.3 °C, wind 4 m/s",
+      "from": "Open-Meteo",
+      "gives": "Current weather and forecasts for any place on Earth: temperature, wind, rain, and more, no sign-up."
     },
     {
       "id": "picture-and-value",
@@ -423,6 +543,18 @@
       }
     },
     {
+      "id": "pypi",
+      "name": "Python packages",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/pypi.json",
+      "example": "requests 2.32.3",
+      "from": "The Python Package Index",
+      "gives": "The latest version, summary, and links of any package on the Python Package Index."
+    },
+    {
       "id": "rain-next-hour",
       "name": "Rain in the next hour",
       "kind": "query",
@@ -466,6 +598,30 @@
       "picture": {
         "emoji": "🌅"
       }
+    },
+    {
+      "id": "sunrise-sunset",
+      "name": "Sunrise and sunset",
+      "kind": "source",
+      "category": "nature",
+      "region": "global",
+      "version": 1,
+      "file": "entries/sunrise-sunset.json",
+      "example": "Sunrise 06:41, sunset 20:12",
+      "from": "Sunrise-Sunset.org",
+      "gives": "Sunrise, sunset, and the length of the day for any place and date."
+    },
+    {
+      "id": "themealdb",
+      "name": "A random meal",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/themealdb.json",
+      "example": "Chicken Handi",
+      "from": "TheMealDB",
+      "gives": "A random dish with its picture, ingredients, and recipe."
     },
     {
       "id": "two-values",
@@ -519,6 +675,18 @@
       "gives": "Every earthquake of the past hour, day, week, or month, as the survey records them."
     },
     {
+      "id": "varsom",
+      "name": "Avalanche warnings",
+      "kind": "source",
+      "category": "nature",
+      "region": "no",
+      "version": 1,
+      "file": "entries/varsom.json",
+      "example": "Danger level 3, considerable",
+      "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
+      "gives": "Today's avalanche danger level and its text for every Norwegian region."
+    },
+    {
       "id": "weather-now",
       "name": "Weather right now",
       "kind": "query",
@@ -547,6 +715,30 @@
       "picture": {
         "emoji": "🌥"
       }
+    },
+    {
+      "id": "where-the-iss-at",
+      "name": "The space station",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/where-the-iss-at.json",
+      "example": "Over the Pacific, 27 600 km/h",
+      "from": "Where the ISS at",
+      "gives": "Where the International Space Station is right now: its latitude, longitude, altitude, and speed."
+    },
+    {
+      "id": "wikipedia-pageviews",
+      "name": "Wikipedia page views",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/wikipedia-pageviews.json",
+      "example": "Norway: 4 512 views yesterday",
+      "from": "Wikimedia, who run Wikipedia",
+      "gives": "How many times a Wikipedia article was read on a day, in any language."
     }
   ]
 }

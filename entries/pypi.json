@@ -1,0 +1,46 @@
+{
+  "id": "pypi",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Python packages",
+    "gives": "The latest version, summary, and links of any package on the Python Package Index.",
+    "example": "requests 2.32.3",
+    "from": "The Python Package Index",
+    "cadence": "When a package is released.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Package data from pypi.org",
+  "terms": {
+    "url": "https://policies.python.org/pypi.org/Terms-of-Service/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Python packages",
+    "source": {
+      "url": "https://pypi.org/pypi/requests/json",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "id": "coingecko",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "global",
+  "plain": {
+    "name": "Crypto prices",
+    "gives": "The price of any of thousands of coins in any currency, with the day's change.",
+    "example": "Bitcoin 1 012 300 kr",
+    "from": "CoinGecko",
+    "cadence": "Every minute, within its free limit.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Prices from CoinGecko",
+  "terms": {
+    "url": "https://www.coingecko.com/en/api_terms",
+    "checked": "2026-09-04",
+    "note": "The free tier allows roughly thirty requests a minute."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Crypto prices",
+    "source": {
+      "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=nok&include_24hr_change=true",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 300
+    }
+  }
+}

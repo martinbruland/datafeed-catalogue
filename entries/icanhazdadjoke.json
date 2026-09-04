@@ -1,0 +1,52 @@
+{
+  "id": "icanhazdadjoke",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Dad jokes",
+    "gives": "One joke at a time, as text.",
+    "example": "Why did the scarecrow win an award? He was outstanding in his field.",
+    "from": "icanhazdadjoke",
+    "cadence": "A new one every time.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Jokes from icanhazdadjoke.com",
+  "terms": {
+    "url": "https://icanhazdadjoke.com/api",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Dad jokes",
+    "source": {
+      "url": "https://icanhazdadjoke.com/",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        },
+        {
+          "name": "Accept",
+          "value": {
+            "literal": "application/json"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "themealdb",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "A random meal",
+    "gives": "A random dish with its picture, ingredients, and recipe.",
+    "example": "Chicken Handi",
+    "from": "TheMealDB",
+    "cadence": "A new one every time.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Meals from TheMealDB",
+  "terms": {
+    "url": "https://www.themealdb.com/api.php",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "A random meal",
+    "source": {
+      "url": "https://www.themealdb.com/api/json/v1/1/random.php",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

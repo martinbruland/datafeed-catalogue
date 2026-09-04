@@ -1,0 +1,39 @@
+{
+  "id": "sunrise-sunset",
+  "kind": "source",
+  "version": 1,
+  "category": "nature",
+  "region": "global",
+  "plain": {
+    "name": "Sunrise and sunset",
+    "gives": "Sunrise, sunset, and the length of the day for any place and date.",
+    "example": "Sunrise 06:41, sunset 20:12",
+    "from": "Sunrise-Sunset.org",
+    "cadence": "Once a day.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Times from sunrise-sunset.org",
+  "terms": {
+    "url": "https://sunrise-sunset.org/api",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Sunrise and sunset",
+    "source": {
+      "url": "https://api.sunrise-sunset.org/v2?lat=60.39&lng=5.32&formatted=0",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}

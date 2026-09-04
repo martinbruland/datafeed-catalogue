@@ -1,0 +1,40 @@
+{
+  "id": "nilu",
+  "kind": "source",
+  "version": 1,
+  "category": "weather",
+  "region": "no",
+  "plain": {
+    "name": "Air quality in Norway",
+    "gives": "The latest readings from Norway's air-quality stations: fine dust, nitrogen dioxide, ozone, by town.",
+    "example": "12.4 µg/m³ in Bergen",
+    "from": "NILU, the Norwegian air research institute",
+    "cadence": "Every hour.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Air quality from NILU (api.nilu.no)",
+  "terms": {
+    "url": "https://api.nilu.no/",
+    "checked": "2026-09-04",
+    "note": "Data may be used with other data but not modified; api.nilu.no must be referenced where it is shown."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Air quality in Norway",
+    "source": {
+      "url": "https://api.nilu.no/aq/utd?areas=bergen&components=pm10",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 1800
+    }
+  }
+}

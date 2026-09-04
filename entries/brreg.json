@@ -1,0 +1,39 @@
+{
+  "id": "brreg",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "no",
+  "plain": {
+    "name": "Norwegian companies",
+    "gives": "Any company in the Norwegian register by its number: its name, address, kind, and how many people work there.",
+    "example": "Equinor ASA, 22 000 employees",
+    "from": "The Brønnøysund Register Centre",
+    "cadence": "When the register changes.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Company data from the Brønnøysund Register Centre",
+  "terms": {
+    "url": "https://www.brreg.no/produkter-og-tjenester/apne-data/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Norwegian companies",
+    "source": {
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 3600
+    }
+  }
+}
