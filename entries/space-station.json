@@ -1,6 +1,6 @@
 {
   "id": "space-station",
-  "kind": "query",
+  "kind": "operation",
   "version": 1,
   "category": "fun",
   "region": "global",

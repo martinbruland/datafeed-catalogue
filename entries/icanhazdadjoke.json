@@ -1,6 +1,6 @@
 {
   "id": "icanhazdadjoke",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "fun",
   "region": "global",

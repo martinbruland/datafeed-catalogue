@@ -1,6 +1,6 @@
 {
   "id": "rain-next-hour",
-  "kind": "query",
+  "kind": "operation",
   "version": 2,
   "category": "weather",
   "region": "no",

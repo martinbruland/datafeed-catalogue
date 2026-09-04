@@ -1,6 +1,6 @@
 {
   "id": "sunrise-sunset",
-  "kind": "source",
+  "kind": "api",
   "version": 3,
   "category": "nature",
   "region": "global",

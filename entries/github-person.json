@@ -1,6 +1,6 @@
 {
   "id": "github-person",
-  "kind": "query",
+  "kind": "operation",
   "version": 2,
   "category": "code",
   "region": "global",

@@ -1,6 +1,6 @@
 {
   "id": "weather-tomorrow",
-  "kind": "query",
+  "kind": "operation",
   "version": 2,
   "category": "weather",
   "region": "global",

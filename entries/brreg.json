@@ -1,6 +1,6 @@
 {
   "id": "brreg",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "money",
   "region": "no",

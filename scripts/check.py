@@ -6,7 +6,7 @@ import json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
-KINDS = {"source", "query", "template", "item"}
+KINDS = {"api", "operation", "template"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
 QUESTION_TYPES = {"text", "number", "choice", "location"}
@@ -29,7 +29,7 @@ def check_entry(path):
     if entry.get("id") != path.stem or not re.fullmatch(r"[a-z0-9-]+", path.stem):
         problems += fail(path.name, "id must equal the file name, lowercase with hyphens")
     if entry.get("kind") not in KINDS:
-        problems += fail(path.name, "kind must be source, query, template, or item (an older name for query)")
+        problems += fail(path.name, "kind must be api, operation, or template")
     if not isinstance(entry.get("version"), int):
         problems += fail(path.name, "version must be an integer")
     if entry.get("category") not in CATEGORIES:
@@ -72,9 +72,9 @@ def check_entry(path):
         for segment in key.get("path", []):
             if isinstance(segment, dict) and set(segment) != {"where", "is"}:
                 problems += fail(path.name, f"path segment {segment} must be a key, an index, or {{where, is}}")
-    if entry.get("kind") in {"query", "item"} and not definition.get("placement", {}).get("areas"):
+    if entry.get("kind") == "operation" and not definition.get("placement", {}).get("areas"):
         problems += fail(path.name, "a query entry needs placed areas, its suggested look")
-    if entry.get("kind") == "source" and (definition.get("extraction") or definition.get("placement", {}).get("areas")):
+    if entry.get("kind") == "api" and (definition.get("extraction") or definition.get("placement", {}).get("areas")):
         problems += fail(path.name, "a source entry is the connection alone: no extraction, no placed areas")
     return problems
 

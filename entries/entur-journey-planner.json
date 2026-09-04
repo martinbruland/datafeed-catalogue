@@ -1,6 +1,6 @@
 {
   "id": "entur-journey-planner",
-  "kind": "source",
+  "kind": "api",
   "version": 1,
   "category": "transport",
   "region": "no",

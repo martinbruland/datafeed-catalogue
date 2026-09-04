@@ -1,6 +1,6 @@
 {
   "id": "met-norway",
-  "kind": "source",
+  "kind": "api",
   "version": 3,
   "category": "weather",
   "region": "global",

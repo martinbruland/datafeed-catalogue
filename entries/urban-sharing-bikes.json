@@ -1,6 +1,6 @@
 {
   "id": "urban-sharing-bikes",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "transport",
   "region": "no",

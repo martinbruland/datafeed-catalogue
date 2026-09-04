@@ -1,6 +1,6 @@
 {
   "id": "coinbase",
-  "kind": "source",
+  "kind": "api",
   "version": 2,
   "category": "money",
   "region": "global",

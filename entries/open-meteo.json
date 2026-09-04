@@ -1,6 +1,6 @@
 {
   "id": "open-meteo",
-  "kind": "source",
+  "kind": "api",
   "version": 3,
   "category": "weather",
   "region": "global",
