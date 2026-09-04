@@ -1,0 +1,47 @@
+{
+  "id": "yahoo-finance",
+  "kind": "source",
+  "version": 1,
+  "category": "money",
+  "region": "global",
+  "plain": {
+    "name": "Stock prices",
+    "gives": "A share's latest price, the day's range, and its history, by ticker, Oslo included.",
+    "example": "EQNR.OL 312.40",
+    "from": "Yahoo Finance, through its unofficial chart feed",
+    "cadence": "Live in trading hours, delayed by the exchange's rules.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Prices from Yahoo Finance's public chart feed",
+  "terms": {
+    "url": "https://legal.yahoo.com/us/en/yahoo/terms/otos/index.html",
+    "checked": "2026-09-04",
+    "note": "Not a documented interface; Yahoo may change or close it."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Stock prices",
+    "source": {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQNR.OL?range=1d&interval=1d",
+      "method": "GET",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ]
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 900
+    }
+  }
+}

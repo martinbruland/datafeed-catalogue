@@ -1,0 +1,39 @@
+{
+  "id": "cloudflare-status",
+  "kind": "source",
+  "version": 1,
+  "category": "code",
+  "region": "global",
+  "plain": {
+    "name": "Cloudflare's status",
+    "gives": "Whether Cloudflare is up, and the words it uses for it.",
+    "example": "All Systems Operational",
+    "from": "Cloudflare's status page",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Status from cloudflarestatus.com",
+  "terms": {
+    "url": "https://www.cloudflarestatus.com/",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Cloudflare's status",
+    "source": {
+      "url": "https://www.cloudflarestatus.com/api/v2/status.json",
+      "method": "GET",
+      "parameters": [],
+      "headers": []
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 600
+    }
+  }
+}

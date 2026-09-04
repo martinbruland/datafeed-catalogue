@@ -109,6 +109,30 @@
       }
     },
     {
+      "id": "cloudflare-status",
+      "name": "Cloudflare's status",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/cloudflare-status.json",
+      "example": "All Systems Operational",
+      "from": "Cloudflare's status page",
+      "gives": "Whether Cloudflare is up, and the words it uses for it."
+    },
+    {
+      "id": "coinbase",
+      "name": "Coinbase prices",
+      "kind": "source",
+      "category": "money",
+      "region": "global",
+      "version": 1,
+      "file": "entries/coinbase.json",
+      "example": "BTC 1 012 300 NOK",
+      "from": "Coinbase",
+      "gives": "The spot price of a coin in any currency, from Coinbase."
+    },
+    {
       "id": "coingecko",
       "name": "Crypto prices",
       "kind": "source",
@@ -149,6 +173,18 @@
       "picture": {
         "emoji": "🌍"
       }
+    },
+    {
+      "id": "entur-places",
+      "name": "Stops and places in Norway",
+      "kind": "source",
+      "category": "transport",
+      "region": "no",
+      "version": 1,
+      "file": "entries/entur-places.json",
+      "example": "Danmarksplass, NSR:StopPlace:30826",
+      "from": "Entur, on behalf of Norway's public transport",
+      "gives": "Any stop, station, or place in Norway by name, with its identity for a departure board and its coordinates."
     },
     {
       "id": "everything",
@@ -214,6 +250,30 @@
       "gives": "The rate between any two of thirty currencies, and its history."
     },
     {
+      "id": "geonorge-addresses",
+      "name": "Norwegian addresses",
+      "kind": "source",
+      "category": "nature",
+      "region": "no",
+      "version": 1,
+      "file": "entries/geonorge-addresses.json",
+      "example": "Danmarksplass 1, 5058 Bergen",
+      "from": "Kartverket, through Geonorge",
+      "gives": "Any Norwegian address by name: its street, number, place, municipality, and coordinates."
+    },
+    {
+      "id": "geonorge-elevation",
+      "name": "Height above the sea",
+      "kind": "source",
+      "category": "nature",
+      "region": "no",
+      "version": 1,
+      "file": "entries/geonorge-elevation.json",
+      "example": "Ulriken: 643 m",
+      "from": "Kartverket, through Geonorge",
+      "gives": "The elevation of any point in Norway, from Kartverket's terrain model."
+    },
+    {
       "id": "github-person",
       "name": "A person on GitHub",
       "kind": "query",
@@ -257,6 +317,18 @@
       "picture": {
         "emoji": "⭐️"
       }
+    },
+    {
+      "id": "github-status",
+      "name": "GitHub's status",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/github-status.json",
+      "example": "All Systems Operational",
+      "from": "GitHub's status page",
+      "gives": "Whether GitHub is up, and the words it uses for it."
     },
     {
       "id": "github",
@@ -317,6 +389,18 @@
       "example": "Any value the forecast holds",
       "from": "The Norwegian Meteorological Institute",
       "gives": "Forecasts, nowcasts, sunrise and moon times, air quality, and weather warnings for any place, from the institute behind Yr."
+    },
+    {
+      "id": "minecraft-server",
+      "name": "A Minecraft server",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/minecraft-server.json",
+      "example": "hypixel.net: 41 202 online",
+      "from": "mcsrvstat.us",
+      "gives": "Whether a Minecraft server is up, how many are on, and its message of the day."
     },
     {
       "id": "moon-tonight",
@@ -478,6 +562,18 @@
       "gives": "Current weather and forecasts for any place on Earth: temperature, wind, rain, and more, no sign-up."
     },
     {
+      "id": "openai-status",
+      "name": "OpenAI's status",
+      "kind": "source",
+      "category": "code",
+      "region": "global",
+      "version": 1,
+      "file": "entries/openai-status.json",
+      "example": "All Systems Operational",
+      "from": "OpenAI's status page",
+      "gives": "Whether OpenAI's services are up, and the words it uses for it."
+    },
+    {
       "id": "picture-and-value",
       "name": "Picture and value",
       "kind": "template",
@@ -583,6 +679,18 @@
       "picture": {
         "emoji": "🛰"
       }
+    },
+    {
+      "id": "steam-players",
+      "name": "Players on Steam",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/steam-players.json",
+      "example": "Counter-Strike 2: 1 234 567 playing",
+      "from": "Steam",
+      "gives": "How many people are playing a Steam game right now, by its number."
     },
     {
       "id": "sun-today",
@@ -739,6 +847,18 @@
       "example": "Norway: 4 512 views yesterday",
       "from": "Wikimedia, who run Wikipedia",
       "gives": "How many times a Wikipedia article was read on a day, in any language."
+    },
+    {
+      "id": "yahoo-finance",
+      "name": "Stock prices",
+      "kind": "source",
+      "category": "money",
+      "region": "global",
+      "version": 1,
+      "file": "entries/yahoo-finance.json",
+      "example": "EQNR.OL 312.40",
+      "from": "Yahoo Finance, through its unofficial chart feed",
+      "gives": "A share's latest price, the day's range, and its history, by ticker, Oslo included."
     }
   ]
 }
