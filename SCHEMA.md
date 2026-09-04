@@ -18,7 +18,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | `attribution` | The text the app shows beside the source's name. |
 | `terms` | The URL of the source's terms, and the date they were checked. |
 | `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the look. |
-| `definition` | The item in the app's exchange form (`docs/ITEM.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
+| `definition` | The tile with its source and values in the app's exchange form, version 1, which the app reads as a query and its source (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
 
 ## A template's definition
 
