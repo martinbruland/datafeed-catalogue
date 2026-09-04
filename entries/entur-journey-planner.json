@@ -1,0 +1,55 @@
+{
+  "id": "entur-journey-planner",
+  "kind": "source",
+  "version": 1,
+  "category": "transport",
+  "region": "no",
+  "plain": {
+    "name": "Departures in Norway",
+    "gives": "Departures from any stop in Norway, every bus, tram, train, boat, and airport bus, with the live time when the operator reports it, and trips between two places.",
+    "example": "12 to Lægdene, leaves 21:10",
+    "from": "Entur, on behalf of Norway's public transport",
+    "cadence": "Live.",
+    "asks": "Nothing until you build a tile from it. The message it sends names Bergen bus station; put your own stop's Entur identity in its place, found under Stops and places."
+  },
+  "questions": [],
+  "attribution": "Departures from Entur (entur.org)",
+  "terms": {
+    "url": "https://developer.entur.org/pages-intro-authentication",
+    "checked": "2026-09-04",
+    "note": "Free and open; Entur asks for a client name header on every request."
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Departures in Norway",
+    "source": {
+      "url": "https://api.entur.io/journey-planner/v3/graphql",
+      "method": "POST",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "ET-Client-Name",
+          "value": {
+            "literal": "martinbruland-datafeed"
+          }
+        },
+        {
+          "name": "Content-Type",
+          "value": {
+            "literal": "application/json"
+          }
+        }
+      ],
+      "docs": "https://developer.entur.org/pages-journeyplanner-shell",
+      "body": "{\"query\":\"{ stopPlace(id: \\\"NSR:StopPlace:62356\\\") { name estimatedCalls(numberOfDepartures: 5) { expectedDepartureTime aimedDepartureTime realtime quay { publicCode } destinationDisplay { frontText } serviceJourney { line { publicCode transportMode } } } } }\"}"
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 60
+    }
+  }
+}
