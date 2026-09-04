@@ -62,6 +62,16 @@ a list whose field `where` equals `is`, compared as text, so a question's
 answer can choose the element: `["data", "stations", {"where":
 "station_id", "is": "{station}"}, "num_bikes_available"]`.
 
+## A source that pushes
+
+A definition's `source` may carry `"method": "WEBSOCKET"` or `"method":
+"EVENTS"`: the app keeps the connection open while the feed is on screen
+and each message that is JSON answers the query, so the tile updates as
+messages arrive; a message without the query's values is skipped. A
+`WEBSOCKET` source's `body` is sent once on opening, placeholders filled.
+Asked once, for a test or an ordinary update, a live source answers with
+its first message and the last to follow within a moment.
+
 ## A source that sends, and where it explains itself
 
 A definition's `source` may carry `"method": "POST"` with a `body`, JSON as

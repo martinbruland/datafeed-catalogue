@@ -1,0 +1,84 @@
+{
+  "id": "latest-wikipedia-edit",
+  "kind": "query",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "The latest Wikipedia edit",
+    "gives": "The article somebody just edited, on which Wikipedia, and who did it, changing as you watch.",
+    "example": "Norway · enwiki · Ola",
+    "from": "Wikimedia, who run Wikipedia",
+    "cadence": "Several times a second, while the feed is open.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "Recent changes from Wikimedia",
+  "terms": {
+    "url": "https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams",
+    "checked": "2026-09-05"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Latest Wikipedia edit",
+    "source": {
+      "url": "https://stream.wikimedia.org/v2/stream/recentchange",
+      "method": "EVENTS",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ],
+      "docs": "https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams"
+    },
+    "extraction": [
+      {
+        "name": "article",
+        "path": [
+          "title"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "wiki",
+        "path": [
+          "wiki"
+        ],
+        "kind": "text"
+      },
+      {
+        "name": "editor",
+        "path": [
+          "user"
+        ],
+        "kind": "text"
+      }
+    ],
+    "placement": {
+      "size": "large",
+      "areas": {
+        "primary": {
+          "key": "article"
+        },
+        "secondary": {
+          "key": "wiki"
+        },
+        "footer": {
+          "key": "editor"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "📝"
+          }
+        }
+      }
+    },
+    "refresh": {
+      "interval": 300
+    }
+  }
+}
