@@ -8,7 +8,12 @@
       "category": "weather",
       "region": "no",
       "version": 1,
-      "file": "entries/air-quality-norway.json"
+      "file": "entries/air-quality-norway.json",
+      "example": "12.4 µg/m³, low",
+      "from": "NILU, the Norwegian air research institute",
+      "picture": {
+        "emoji": "🌫"
+      }
     },
     {
       "id": "avalanche-warning",
@@ -17,7 +22,12 @@
       "category": "nature",
       "region": "no",
       "version": 1,
-      "file": "entries/avalanche-warning.json"
+      "file": "entries/avalanche-warning.json",
+      "example": "Level 2, Moderate",
+      "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
+      "picture": {
+        "emoji": "🏔"
+      }
     },
     {
       "id": "city-bikes-bergen",
@@ -26,7 +36,12 @@
       "category": "transport",
       "region": "no",
       "version": 2,
-      "file": "entries/city-bikes-bergen.json"
+      "file": "entries/city-bikes-bergen.json",
+      "example": "7 bikes, 5 docks",
+      "from": "Bergen Bysykkel",
+      "picture": {
+        "emoji": "🚲"
+      }
     },
     {
       "id": "city-bikes-oslo",
@@ -35,7 +50,12 @@
       "category": "transport",
       "region": "no",
       "version": 1,
-      "file": "entries/city-bikes-oslo.json"
+      "file": "entries/city-bikes-oslo.json",
+      "example": "7 bikes, 5 docks",
+      "from": "Oslo Bysykkel",
+      "picture": {
+        "emoji": "🚲"
+      }
     },
     {
       "id": "daily-joke",
@@ -44,7 +64,12 @@
       "category": "fun",
       "region": "global",
       "version": 1,
-      "file": "entries/daily-joke.json"
+      "file": "entries/daily-joke.json",
+      "example": "Why did the scarecrow win an award? He was outstanding in his field.",
+      "from": "icanhazdadjoke",
+      "picture": {
+        "emoji": "😄"
+      }
     },
     {
       "id": "earthquake-this-week",
@@ -53,7 +78,12 @@
       "category": "nature",
       "region": "global",
       "version": 1,
-      "file": "entries/earthquake-this-week.json"
+      "file": "entries/earthquake-this-week.json",
+      "example": "6.1 near Tonga",
+      "from": "The United States Geological Survey",
+      "picture": {
+        "emoji": "🌍"
+      }
     },
     {
       "id": "exchange-rate",
@@ -62,7 +92,12 @@
       "category": "money",
       "region": "global",
       "version": 1,
-      "file": "entries/exchange-rate.json"
+      "file": "entries/exchange-rate.json",
+      "example": "11.64 NOK",
+      "from": "Frankfurter, which relays the European Central Bank",
+      "picture": {
+        "emoji": "💱"
+      }
     },
     {
       "id": "github-person",
@@ -71,7 +106,12 @@
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/github-person.json"
+      "file": "entries/github-person.json",
+      "example": "128 followers, 24 repositories",
+      "from": "GitHub",
+      "picture": {
+        "illustration": "person"
+      }
     },
     {
       "id": "github-release",
@@ -80,7 +120,12 @@
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/github-release.json"
+      "file": "entries/github-release.json",
+      "example": "v2.4.1, 3 days ago",
+      "from": "GitHub",
+      "picture": {
+        "illustration": "shippingbox"
+      }
     },
     {
       "id": "github-repository",
@@ -89,7 +134,12 @@
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/github-repository.json"
+      "file": "entries/github-repository.json",
+      "example": "12 stars, 3 issues, pushed 2 hours ago",
+      "from": "GitHub",
+      "picture": {
+        "emoji": "⭐️"
+      }
     },
     {
       "id": "moon-tonight",
@@ -98,7 +148,12 @@
       "category": "nature",
       "region": "global",
       "version": 1,
-      "file": "entries/moon-tonight.json"
+      "file": "entries/moon-tonight.json",
+      "example": "252° round the cycle, rising 18:55",
+      "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "picture": {
+        "emoji": "🌙"
+      }
     },
     {
       "id": "next-public-holiday",
@@ -107,7 +162,12 @@
       "category": "fun",
       "region": "global",
       "version": 1,
-      "file": "entries/next-public-holiday.json"
+      "file": "entries/next-public-holiday.json",
+      "example": "Første juledag, in 3 months",
+      "from": "Nager.Date, a free public-holiday service",
+      "picture": {
+        "emoji": "🎉"
+      }
     },
     {
       "id": "norges-bank-rate",
@@ -116,7 +176,12 @@
       "category": "money",
       "region": "no",
       "version": 1,
-      "file": "entries/norges-bank-rate.json"
+      "file": "entries/norges-bank-rate.json",
+      "example": "9.30 kroner",
+      "from": "Norges Bank",
+      "picture": {
+        "emoji": "💱"
+      }
     },
     {
       "id": "npm-downloads",
@@ -125,7 +190,12 @@
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/npm-downloads.json"
+      "file": "entries/npm-downloads.json",
+      "example": "171 637 376 downloads",
+      "from": "The npm registry",
+      "picture": {
+        "illustration": "arrow.down.circle"
+      }
     },
     {
       "id": "power-price-norway",
@@ -134,7 +204,12 @@
       "category": "energy",
       "region": "no",
       "version": 1,
-      "file": "entries/power-price-norway.json"
+      "file": "entries/power-price-norway.json",
+      "example": "1.42 kr",
+      "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
+      "picture": {
+        "emoji": "⚡️"
+      }
     },
     {
       "id": "pypi-version",
@@ -143,7 +218,12 @@
       "category": "code",
       "region": "global",
       "version": 1,
-      "file": "entries/pypi-version.json"
+      "file": "entries/pypi-version.json",
+      "example": "2.34.2",
+      "from": "The Python Package Index",
+      "picture": {
+        "illustration": "cube"
+      }
     },
     {
       "id": "rain-next-hour",
@@ -152,7 +232,12 @@
       "category": "weather",
       "region": "no",
       "version": 1,
-      "file": "entries/rain-next-hour.json"
+      "file": "entries/rain-next-hour.json",
+      "example": "0.4 mm coming, 0.1 mm/h now",
+      "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "picture": {
+        "emoji": "🌧"
+      }
     },
     {
       "id": "space-station",
@@ -161,7 +246,12 @@
       "category": "fun",
       "region": "global",
       "version": 1,
-      "file": "entries/space-station.json"
+      "file": "entries/space-station.json",
+      "example": "51.2°, -12.8°, 27,600 km/h",
+      "from": "Where the ISS at",
+      "picture": {
+        "emoji": "🛰"
+      }
     },
     {
       "id": "sun-today",
@@ -170,7 +260,12 @@
       "category": "nature",
       "region": "global",
       "version": 1,
-      "file": "entries/sun-today.json"
+      "file": "entries/sun-today.json",
+      "example": "Up 06:41, down 20:32",
+      "from": "Sunrise-Sunset.org",
+      "picture": {
+        "emoji": "🌅"
+      }
     },
     {
       "id": "weather-now",
@@ -179,7 +274,12 @@
       "category": "weather",
       "region": "global",
       "version": 1,
-      "file": "entries/weather-now.json"
+      "file": "entries/weather-now.json",
+      "example": "14.2 °C, wind 3.4 m/s",
+      "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "picture": {
+        "emoji": "🌤"
+      }
     },
     {
       "id": "weather-tomorrow",
@@ -188,7 +288,12 @@
       "category": "weather",
       "region": "global",
       "version": 1,
-      "file": "entries/weather-tomorrow.json"
+      "file": "entries/weather-tomorrow.json",
+      "example": "11.8 °C, wind 5.2 m/s",
+      "from": "The Norwegian Meteorological Institute, who also make Yr",
+      "picture": {
+        "emoji": "🌥"
+      }
     }
   ]
 }

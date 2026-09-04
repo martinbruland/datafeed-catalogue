@@ -79,6 +79,16 @@ def main():
     for path in entries:
         problems += check_entry(path)
     index = json.loads((ROOT / "index.json").read_text())
+    # Every row carries the entry's example, its source in words, and its
+    # picture, so the app can show a tile as a preview without fetching it.
+    for row in index.get("entries", []):
+        entry = json.loads((ROOT / row["file"]).read_text()) if (ROOT / row.get("file", "")).exists() else {}
+        for field, expected in (("example", entry.get("plain", {}).get("example")), ("from", entry.get("plain", {}).get("from"))):
+            if row.get(field) != expected:
+                problems += fail("index.json", f"{row['id']}: {field} differs from the entry; regenerate the index")
+        picture = entry.get("definition", {}).get("placement", {}).get("areas", {}).get("picture", {}).get("picture")
+        if row.get("picture") != picture:
+            problems += fail("index.json", f"{row['id']}: picture differs from the entry; regenerate the index")
     listed = [row["id"] for row in index.get("entries", [])]
     on_disk = [path.stem for path in entries]
     if sorted(listed) != sorted(on_disk) or len(listed) != len(set(listed)):
