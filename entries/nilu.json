@@ -1,7 +1,7 @@
 {
   "id": "nilu",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "weather",
   "region": "no",
   "plain": {
@@ -23,9 +23,18 @@
     "schemaVersion": 1,
     "name": "Air quality in Norway",
     "source": {
-      "url": "https://api.nilu.no/aq/utd?areas=bergen&components=pm10",
+      "url": "https://api.nilu.no/aq/utd",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "areas",
+          "value": "bergen"
+        },
+        {
+          "name": "components",
+          "value": "pm10"
+        }
+      ],
       "headers": []
     },
     "extraction": [],

@@ -1,7 +1,7 @@
 {
   "id": "met-norway",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "weather",
   "region": "global",
   "plain": {
@@ -23,9 +23,18 @@
     "schemaVersion": 1,
     "name": "The Norwegian weather service",
     "source": {
-      "url": "https://api.met.no/weatherapi/locationforecast/2.0/compact?lat=60.39&lon=5.32",
+      "url": "https://api.met.no/weatherapi/locationforecast/2.0/compact",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "lat",
+          "value": "60.39"
+        },
+        {
+          "name": "lon",
+          "value": "5.32"
+        }
+      ],
       "headers": [
         {
           "name": "User-Agent",

@@ -1,7 +1,7 @@
 {
   "id": "nobel-prize",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
@@ -22,9 +22,18 @@
     "schemaVersion": 1,
     "name": "Nobel Prizes",
     "source": {
-      "url": "https://api.nobelprize.org/2.1/nobelPrizes?limit=1&sort=desc",
+      "url": "https://api.nobelprize.org/2.1/nobelPrizes",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "limit",
+          "value": "1"
+        },
+        {
+          "name": "sort",
+          "value": "desc"
+        }
+      ],
       "headers": []
     },
     "extraction": [],

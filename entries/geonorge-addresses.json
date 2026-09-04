@@ -1,7 +1,7 @@
 {
   "id": "geonorge-addresses",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "nature",
   "region": "no",
   "plain": {
@@ -22,9 +22,18 @@
     "schemaVersion": 1,
     "name": "Norwegian addresses",
     "source": {
-      "url": "https://ws.geonorge.no/adresser/v1/sok?sok=Danmarksplass&treffPerSide=1",
+      "url": "https://ws.geonorge.no/adresser/v1/sok",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "sok",
+          "value": "Danmarksplass"
+        },
+        {
+          "name": "treffPerSide",
+          "value": "1"
+        }
+      ],
       "headers": []
     },
     "extraction": [],

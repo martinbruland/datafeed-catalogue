@@ -1,7 +1,7 @@
 {
   "id": "entur-places",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -23,9 +23,18 @@
     "schemaVersion": 1,
     "name": "Stops and places in Norway",
     "source": {
-      "url": "https://api.entur.io/geocoder/v1/autocomplete?text=Danmarksplass&size=1",
+      "url": "https://api.entur.io/geocoder/v1/autocomplete",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "text",
+          "value": "Danmarksplass"
+        },
+        {
+          "name": "size",
+          "value": "1"
+        }
+      ],
       "headers": [
         {
           "name": "ET-Client-Name",

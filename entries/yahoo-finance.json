@@ -1,7 +1,7 @@
 {
   "id": "yahoo-finance",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "money",
   "region": "global",
   "plain": {
@@ -23,9 +23,18 @@
     "schemaVersion": 1,
     "name": "Stock prices",
     "source": {
-      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQNR.OL?range=1d&interval=1d",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQNR.OL",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "range",
+          "value": "1d"
+        },
+        {
+          "name": "interval",
+          "value": "1d"
+        }
+      ],
       "headers": [
         {
           "name": "User-Agent",

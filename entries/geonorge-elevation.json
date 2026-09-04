@@ -1,7 +1,7 @@
 {
   "id": "geonorge-elevation",
   "kind": "source",
-  "version": 1,
+  "version": 2,
   "category": "nature",
   "region": "no",
   "plain": {
@@ -22,9 +22,26 @@
     "schemaVersion": 1,
     "name": "Height above the sea",
     "source": {
-      "url": "https://ws.geonorge.no/hoydedata/v1/punkt?nord=60.39&ost=5.32&koordsys=4326&geojson=false",
+      "url": "https://ws.geonorge.no/hoydedata/v1/punkt",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "nord",
+          "value": "60.39"
+        },
+        {
+          "name": "ost",
+          "value": "5.32"
+        },
+        {
+          "name": "koordsys",
+          "value": "4326"
+        },
+        {
+          "name": "geojson",
+          "value": "false"
+        }
+      ],
       "headers": []
     },
     "extraction": [],
