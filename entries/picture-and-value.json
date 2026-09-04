@@ -1,0 +1,44 @@
+{
+  "id": "picture-and-value",
+  "kind": "template",
+  "version": 1,
+  "category": "look",
+  "region": "global",
+  "plain": {
+    "name": "Picture and value",
+    "gives": "A picture on the left, a value on the right, and a line saying what it is.",
+    "example": "🌤 Oslo · 18 °C",
+    "from": "Any source, through any query.",
+    "cadence": "With the query it wears.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "A look from the datafeed catalogue",
+  "terms": {
+    "url": "https://github.com/martinbruland/datafeed-catalogue",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "second"
+        },
+        "primary": {
+          "key": "first"
+        },
+        "picture": {
+          "picture": {
+            "emoji": "🌤"
+          }
+        }
+      }
+    }
+  },
+  "sample": {
+    "first": "18 °C",
+    "second": "Oslo"
+  }
+}

@@ -1,6 +1,6 @@
 {
   "id": "city-bikes-oslo",
-  "kind": "item",
+  "kind": "query",
   "version": 2,
   "category": "transport",
   "region": "no",

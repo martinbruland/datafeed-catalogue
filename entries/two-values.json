@@ -1,0 +1,39 @@
+{
+  "id": "two-values",
+  "kind": "template",
+  "version": 1,
+  "category": "look",
+  "region": "global",
+  "plain": {
+    "name": "Two values",
+    "gives": "A main value with a second one under it, such as a price and its change.",
+    "example": "98 200 · +1.2 %",
+    "from": "Any source, through any query.",
+    "cadence": "With the query it wears.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "A look from the datafeed catalogue",
+  "terms": {
+    "url": "https://github.com/martinbruland/datafeed-catalogue",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "primary": {
+          "key": "first"
+        },
+        "secondary": {
+          "key": "second"
+        }
+      }
+    }
+  },
+  "sample": {
+    "first": "98 200",
+    "second": "+1.2 %"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "number-with-caption",
+  "kind": "template",
+  "version": 1,
+  "category": "look",
+  "region": "global",
+  "plain": {
+    "name": "Number with caption",
+    "gives": "One value with a line above it saying what it is.",
+    "example": "Bergen · 12.4 µg/m³",
+    "from": "Any source, through any query.",
+    "cadence": "With the query it wears.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "A look from the datafeed catalogue",
+  "terms": {
+    "url": "https://github.com/martinbruland/datafeed-catalogue",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "placement": {
+      "size": "medium",
+      "areas": {
+        "title": {
+          "key": "second"
+        },
+        "primary": {
+          "key": "first"
+        }
+      }
+    }
+  },
+  "sample": {
+    "first": "12.4 µg/m³",
+    "second": "Bergen"
+  }
+}

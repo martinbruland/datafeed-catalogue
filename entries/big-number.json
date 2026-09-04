@@ -1,0 +1,35 @@
+{
+  "id": "big-number",
+  "kind": "template",
+  "version": 1,
+  "category": "look",
+  "region": "global",
+  "plain": {
+    "name": "Big number",
+    "gives": "One value, as large as the tile allows, and nothing else.",
+    "example": "1 234",
+    "from": "Any source, through any query.",
+    "cadence": "With the query it wears.",
+    "asks": "Nothing."
+  },
+  "questions": [],
+  "attribution": "A look from the datafeed catalogue",
+  "terms": {
+    "url": "https://github.com/martinbruland/datafeed-catalogue",
+    "checked": "2026-09-04"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "placement": {
+      "size": "small",
+      "areas": {
+        "primary": {
+          "key": "first"
+        }
+      }
+    }
+  },
+  "sample": {
+    "first": "1 234"
+  }
+}
