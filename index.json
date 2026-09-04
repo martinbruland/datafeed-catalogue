@@ -13,7 +13,8 @@
       "from": "NILU, the Norwegian air research institute",
       "picture": {
         "emoji": "🌫"
-      }
+      },
+      "gives": "The latest fine-dust reading for a Norwegian town and how the air is rated, from low to very high."
     },
     {
       "id": "avalanche-warning",
@@ -27,7 +28,8 @@
       "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
       "picture": {
         "emoji": "🏔"
-      }
+      },
+      "gives": "Today's avalanche danger level for a Norwegian mountain region, from 1 low to 5 very high, with the forecaster's headline."
     },
     {
       "id": "city-bikes-bergen",
@@ -41,7 +43,8 @@
       "from": "Bergen Bysykkel",
       "picture": {
         "emoji": "🚲"
-      }
+      },
+      "gives": "How many city bikes and free docks a Bergen Bysykkel station has right now."
     },
     {
       "id": "city-bikes-oslo",
@@ -55,7 +58,8 @@
       "from": "Oslo Bysykkel",
       "picture": {
         "emoji": "🚲"
-      }
+      },
+      "gives": "How many city bikes and free docks an Oslo Bysykkel station has right now."
     },
     {
       "id": "daily-joke",
@@ -69,7 +73,8 @@
       "from": "icanhazdadjoke",
       "picture": {
         "emoji": "😄"
-      }
+      },
+      "gives": "A new joke every hour, for the whole family."
     },
     {
       "id": "earthquake-this-week",
@@ -83,7 +88,8 @@
       "from": "The United States Geological Survey",
       "picture": {
         "emoji": "🌍"
-      }
+      },
+      "gives": "The strongest significant earthquake of the past seven days, and where it struck."
     },
     {
       "id": "exchange-rate",
@@ -97,7 +103,8 @@
       "from": "Frankfurter, which relays the European Central Bank",
       "picture": {
         "emoji": "💱"
-      }
+      },
+      "gives": "What one unit of a currency costs in another, from the European Central Bank's daily rates."
     },
     {
       "id": "github-person",
@@ -111,7 +118,8 @@
       "from": "GitHub",
       "picture": {
         "illustration": "person"
-      }
+      },
+      "gives": "How many follow a GitHub account, and how many public repositories it has."
     },
     {
       "id": "github-release",
@@ -125,7 +133,8 @@
       "from": "GitHub",
       "picture": {
         "illustration": "shippingbox"
-      }
+      },
+      "gives": "The newest release of a project on GitHub, and when it came out."
     },
     {
       "id": "github-repository",
@@ -139,7 +148,8 @@
       "from": "GitHub",
       "picture": {
         "emoji": "⭐️"
-      }
+      },
+      "gives": "How many stars a repository has, how many issues are open, and when it was last pushed to."
     },
     {
       "id": "moon-tonight",
@@ -153,7 +163,8 @@
       "from": "The Norwegian Meteorological Institute, who also make Yr",
       "picture": {
         "emoji": "🌙"
-      }
+      },
+      "gives": "Where the moon is in its cycle where you are, and when it rises."
     },
     {
       "id": "next-public-holiday",
@@ -167,7 +178,8 @@
       "from": "Nager.Date, a free public-holiday service",
       "picture": {
         "emoji": "🎉"
-      }
+      },
+      "gives": "The name and date of the next public holiday in a country."
     },
     {
       "id": "norges-bank-rate",
@@ -181,7 +193,8 @@
       "from": "Norges Bank",
       "picture": {
         "emoji": "💱"
-      }
+      },
+      "gives": "What one unit of a currency costs in kroner, at the central bank's daily rate."
     },
     {
       "id": "npm-downloads",
@@ -195,7 +208,8 @@
       "from": "The npm registry",
       "picture": {
         "illustration": "arrow.down.circle"
-      }
+      },
+      "gives": "How many times a JavaScript package was downloaded in the last week."
     },
     {
       "id": "power-price-norway",
@@ -209,7 +223,8 @@
       "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
       "picture": {
         "emoji": "⚡️"
-      }
+      },
+      "gives": "The price of electricity this hour in your part of Norway, in kroner per kilowatt hour."
     },
     {
       "id": "pypi-version",
@@ -223,7 +238,8 @@
       "from": "The Python Package Index",
       "picture": {
         "illustration": "cube"
-      }
+      },
+      "gives": "The newest version of a package on the Python package index."
     },
     {
       "id": "rain-next-hour",
@@ -237,7 +253,8 @@
       "from": "The Norwegian Meteorological Institute, who also make Yr",
       "picture": {
         "emoji": "🌧"
-      }
+      },
+      "gives": "How much rain is expected where you are in the coming hour, and how hard it falls right now."
     },
     {
       "id": "space-station",
@@ -251,7 +268,8 @@
       "from": "Where the ISS at",
       "picture": {
         "emoji": "🛰"
-      }
+      },
+      "gives": "The International Space Station's position over the Earth right now, and how fast it is going."
     },
     {
       "id": "sun-today",
@@ -265,7 +283,8 @@
       "from": "Sunrise-Sunset.org",
       "picture": {
         "emoji": "🌅"
-      }
+      },
+      "gives": "When the sun rises and sets where you are today, and how long the day is."
     },
     {
       "id": "weather-now",
@@ -279,7 +298,8 @@
       "from": "The Norwegian Meteorological Institute, who also make Yr",
       "picture": {
         "emoji": "🌤"
-      }
+      },
+      "gives": "The temperature and wind where you are, from the Norwegian weather service's forecast for this hour."
     },
     {
       "id": "weather-tomorrow",
@@ -293,7 +313,8 @@
       "from": "The Norwegian Meteorological Institute, who also make Yr",
       "picture": {
         "emoji": "🌥"
-      }
+      },
+      "gives": "The temperature and wind where you are, twenty-four hours from now."
     }
   ]
 }

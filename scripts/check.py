@@ -83,7 +83,7 @@ def main():
     # picture, so the app can show a tile as a preview without fetching it.
     for row in index.get("entries", []):
         entry = json.loads((ROOT / row["file"]).read_text()) if (ROOT / row.get("file", "")).exists() else {}
-        for field, expected in (("example", entry.get("plain", {}).get("example")), ("from", entry.get("plain", {}).get("from"))):
+        for field, expected in (("example", entry.get("plain", {}).get("example")), ("from", entry.get("plain", {}).get("from")), ("gives", entry.get("plain", {}).get("gives"))):
             if row.get(field) != expected:
                 problems += fail("index.json", f"{row['id']}: {field} differs from the entry; regenerate the index")
         picture = entry.get("definition", {}).get("placement", {}).get("areas", {}).get("picture", {}).get("picture")
