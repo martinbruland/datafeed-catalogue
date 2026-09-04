@@ -1,0 +1,47 @@
+{
+  "id": "wikimedia-stream",
+  "kind": "source",
+  "version": 1,
+  "category": "fun",
+  "region": "global",
+  "plain": {
+    "name": "Wikipedia edits, live",
+    "gives": "Every edit made to any Wikipedia, the moment it happens, as a stream that keeps coming.",
+    "example": "Norway · en.wikipedia · by Ola",
+    "from": "Wikimedia, who run Wikipedia",
+    "cadence": "Several times a second, while the feed is open.",
+    "asks": "Nothing until you build a tile from it."
+  },
+  "questions": [],
+  "attribution": "Recent changes from Wikimedia",
+  "terms": {
+    "url": "https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams",
+    "checked": "2026-09-05"
+  },
+  "definition": {
+    "schemaVersion": 1,
+    "name": "Wikipedia edits, live",
+    "source": {
+      "url": "https://stream.wikimedia.org/v2/stream/recentchange",
+      "method": "EVENTS",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "User-Agent",
+          "value": {
+            "literal": "datafeed/1.0 github.com/martinbruland/datafeed"
+          }
+        }
+      ],
+      "docs": "https://wikitech.wikimedia.org/wiki/Event_Platform/EventStreams"
+    },
+    "extraction": [],
+    "placement": {
+      "size": "medium",
+      "areas": {}
+    },
+    "refresh": {
+      "interval": 300
+    }
+  }
+}

@@ -886,6 +886,33 @@
       "example": "EQNR.OL 312.40",
       "from": "Yahoo Finance, through its unofficial chart feed",
       "gives": "A share's latest price, the day's range, and its history, by ticker, Oslo included."
+    },
+    {
+      "id": "wikimedia-stream",
+      "name": "Wikipedia edits, live",
+      "kind": "source",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/wikimedia-stream.json",
+      "example": "Norway · en.wikipedia · by Ola",
+      "from": "Wikimedia, who run Wikipedia",
+      "gives": "Every edit made to any Wikipedia, the moment it happens, as a stream that keeps coming."
+    },
+    {
+      "id": "latest-wikipedia-edit",
+      "name": "The latest Wikipedia edit",
+      "kind": "query",
+      "category": "fun",
+      "region": "global",
+      "version": 1,
+      "file": "entries/latest-wikipedia-edit.json",
+      "example": "Norway · enwiki · Ola",
+      "from": "Wikimedia, who run Wikipedia",
+      "gives": "The article somebody just edited, on which Wikipedia, and who did it, changing as you watch.",
+      "picture": {
+        "emoji": "📝"
+      }
     }
   ]
 }
