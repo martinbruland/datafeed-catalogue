@@ -1,12 +1,12 @@
 {
   "id": "entur-places",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Stops and places in Norway",
-    "gives": "Any stop, station, or place in Norway by name, with its identity for a departure board and its coordinates.",
+    "gives": "Any stop or station in Norway by name, with its identity for a departure board and its coordinates.",
     "example": "Danmarksplass, NSR:StopPlace:30826",
     "from": "Entur, on behalf of Norway's public transport",
     "cadence": "When the stop register changes.",
@@ -33,6 +33,10 @@
         {
           "name": "size",
           "value": "1"
+        },
+        {
+          "name": "layers",
+          "value": "venue"
         }
       ],
       "headers": [

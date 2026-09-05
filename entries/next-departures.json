@@ -1,7 +1,7 @@
 {
   "id": "next-departures",
   "kind": "operation",
-  "version": 1,
+  "version": 2,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -10,15 +10,25 @@
     "example": "12 to Lægdene, 21:10",
     "from": "Entur, on behalf of Norway's public transport",
     "cadence": "Live, every minute.",
-    "asks": "Which stop, by its Entur identity; find it under Stops and places in Explore."
+    "asks": "Which stop, by its name."
   },
   "questions": [
     {
       "name": "stop",
-      "label": "Stop",
-      "help": "The stop's identity from Entur, such as NSR:StopPlace:62356 for Bergen bus station; find yours under Stops and places.",
-      "type": "text",
-      "default": "NSR:StopPlace:62356"
+      "label": "Which stop?",
+      "help": "Type the stop's name, Danmarksplass or Bergen busstasjon; the app finds it in Stops and places.",
+      "type": "lookup",
+      "default": "Danmarksplass",
+      "lookup": {
+        "entry": "entur-places",
+        "parameter": "text",
+        "take": [
+          "features",
+          0,
+          "properties",
+          "id"
+        ]
+      }
     }
   ],
   "attribution": "Departures from Entur (entur.org)",
