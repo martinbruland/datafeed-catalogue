@@ -83,6 +83,19 @@ the content type. A `source` may carry `docs`, the address where the
 source explains itself, its documentation or an OpenAPI file, which the
 app shows in Explore and on a tile's detail.
 
+## A question answered by lookup
+
+A question of type `lookup` is answered in words and found in another
+entry's response: `"lookup": {"entry": "entur-places", "parameter":
+"text", "take": ["features", 0, "properties", "id"]}` calls the entry's
+API with what the person typed as the parameter `text`, and takes the
+property at `take` as the answer; `"match": [...]` instead of
+`parameter` matches the text against that property of a list the API
+answers whole. The question's placeholder stays in the definition and is
+filled when the API is called, so it may sit in the body or the URL. The
+app keeps the looked-up entry's API and an operation with the take
+property in the library, since the lookup calls it.
+
 ## Placeholders
 
 `{name}` in the definition's `source.url`, in a parameter's `value`, or in

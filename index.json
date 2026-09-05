@@ -192,11 +192,11 @@
       "kind": "api",
       "category": "transport",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/entur-places.json",
       "example": "Danmarksplass, NSR:StopPlace:30826",
       "from": "Entur, on behalf of Norway's public transport",
-      "gives": "Any stop, station, or place in Norway by name, with its identity for a departure board and its coordinates."
+      "gives": "Any stop or station in Norway by name, with its identity for a departure board and its coordinates."
     },
     {
       "id": "everything",
@@ -447,7 +447,7 @@
       "kind": "operation",
       "category": "transport",
       "region": "no",
-      "version": 1,
+      "version": 2,
       "file": "entries/next-departures.json",
       "example": "12 to Lægdene, 21:10",
       "from": "Entur, on behalf of Norway's public transport",

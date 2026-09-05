@@ -9,7 +9,7 @@ FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
 KINDS = {"api", "operation", "template"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
-QUESTION_TYPES = {"text", "number", "choice", "location"}
+QUESTION_TYPES = {"text", "number", "choice", "location", "lookup"}
 PLAIN = ["name", "gives", "example", "from", "cadence", "asks"]
 
 def fail(entry, message):
@@ -51,6 +51,12 @@ def check_entry(path):
         for field in ("name", "label", "help"):
             if not question.get(field):
                 problems += fail(path.name, f"question is missing {field}")
+        if question.get("type") == "lookup":
+            spec = question.get("lookup") or {}
+            if not spec.get("entry") or not (ROOT / "entries" / f"{spec.get('entry')}.json").exists():
+                problems += fail(path.name, f"question {question.get('name')} looks up an entry that does not exist")
+            if not isinstance(spec.get("take"), list):
+                problems += fail(path.name, f"question {question.get('name')} names no take path")
         if question.get("type") == "location":
             names |= {f"{question['name']}.lat", f"{question['name']}.lon"}
         else:
