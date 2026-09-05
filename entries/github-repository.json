@@ -1,12 +1,12 @@
 {
   "id": "github-repository",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "A repository on GitHub",
-    "gives": "How many stars a repository has, how many issues are open, and when it was last pushed to.",
+    "gives": "How a repository is doing: how many stars it has, how many issues are open, and when it was last pushed to.",
     "example": "12 stars, 3 issues, pushed 2 hours ago",
     "from": "GitHub",
     "cadence": "Whenever someone stars, opens an issue, or pushes.",

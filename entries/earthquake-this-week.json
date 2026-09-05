@@ -1,12 +1,12 @@
 {
   "id": "earthquake-this-week",
   "kind": "operation",
-  "version": 1,
+  "version": 2,
   "category": "nature",
   "region": "global",
   "plain": {
     "name": "The biggest earthquake this week",
-    "gives": "The strongest significant earthquake of the past seven days, and where it struck.",
+    "gives": "What shook the world this week: the strongest significant earthquake of the past seven days, and where it struck.",
     "example": "6.1 near Tonga",
     "from": "The United States Geological Survey",
     "cadence": "Updated every few minutes.",

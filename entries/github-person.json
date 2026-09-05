@@ -1,12 +1,12 @@
 {
   "id": "github-person",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "A person on GitHub",
-    "gives": "How many follow a GitHub account, and how many public repositories it has.",
+    "gives": "How an account is doing: how many follow it on GitHub, and how many public repositories it has.",
     "example": "128 followers, 24 repositories",
     "from": "GitHub",
     "cadence": "Updated about every hour.",

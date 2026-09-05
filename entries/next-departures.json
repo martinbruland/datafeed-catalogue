@@ -1,12 +1,12 @@
 {
   "id": "next-departures",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Next departure",
-    "gives": "The next bus, tram, train, or boat from a stop: its line, where it goes, and when it leaves, live when the operator reports it.",
+    "gives": "Whether to leave now: the next bus, tram, train, or boat from a stop, its line, where it goes, and when it leaves, live when the operator reports it.",
     "example": "12 to Lægdene, 21:10",
     "from": "Entur, on behalf of Norway's public transport",
     "cadence": "Live, every minute.",

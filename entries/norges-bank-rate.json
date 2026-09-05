@@ -1,12 +1,12 @@
 {
   "id": "norges-bank-rate",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "no",
   "plain": {
     "name": "Norges Bank's rate",
-    "gives": "What one unit of a currency costs in kroner, at the central bank's daily rate.",
+    "gives": "What your money is worth in kroner: what one unit of a currency costs, at the central bank's daily rate.",
     "example": "9.30 kroner",
     "from": "Norges Bank",
     "cadence": "Once every weekday afternoon.",

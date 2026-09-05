@@ -1,12 +1,12 @@
 {
   "id": "weather-now",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "global",
   "plain": {
     "name": "Weather right now",
-    "gives": "The temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
+    "gives": "What to wear: the temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
     "example": "14.2 °C, wind 3.4 m/s",
     "from": "The Norwegian Meteorological Institute, who also make Yr",
     "cadence": "Updated about every hour.",

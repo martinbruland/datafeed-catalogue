@@ -1,15 +1,15 @@
 {
   "id": "picture-and-value",
   "kind": "template",
-  "version": 1,
+  "version": 2,
   "category": "look",
   "region": "global",
   "plain": {
     "name": "Picture and value",
     "gives": "A picture on the left, a value on the right, and a line saying what it is.",
     "example": "🌤 Oslo · 18 °C",
-    "from": "Any source, through any query.",
-    "cadence": "With the query it wears.",
+    "from": "Any API, through any operation.",
+    "cadence": "With the operation it wears.",
     "asks": "Nothing."
   },
   "questions": [],

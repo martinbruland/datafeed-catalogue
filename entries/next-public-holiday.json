@@ -1,12 +1,12 @@
 {
   "id": "next-public-holiday",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "The next public holiday",
-    "gives": "The name and date of the next public holiday in a country.",
+    "gives": "When the next day off comes: the name and date of the next public holiday in a country.",
     "example": "Første juledag, in 3 months",
     "from": "Nager.Date, a free public-holiday service",
     "cadence": "Changes when a holiday passes.",

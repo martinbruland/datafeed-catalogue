@@ -1,12 +1,12 @@
 {
   "id": "sun-today",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "nature",
   "region": "global",
   "plain": {
     "name": "Sunrise and sunset",
-    "gives": "When the sun rises and sets where you are today, and how long the day is.",
+    "gives": "How long the day is: when the sun rises and sets where you are today.",
     "example": "Up 06:41, down 20:32",
     "from": "Sunrise-Sunset.org",
     "cadence": "Once a day.",

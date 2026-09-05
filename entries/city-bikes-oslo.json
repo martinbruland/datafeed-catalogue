@@ -1,12 +1,12 @@
 {
   "id": "city-bikes-oslo",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Bikes at my Oslo station",
-    "gives": "How many city bikes and free docks an Oslo Bysykkel station has right now.",
+    "gives": "Whether there is a bike waiting for you: how many city bikes and free docks an Oslo Bysykkel station has right now.",
     "example": "7 bikes, 5 docks",
     "from": "Oslo Bysykkel",
     "cadence": "Every few minutes, as bikes come and go.",

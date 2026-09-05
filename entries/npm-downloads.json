@@ -1,12 +1,12 @@
 {
   "id": "npm-downloads",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Downloads of a package",
-    "gives": "How many times a JavaScript package was downloaded in the last week.",
+    "gives": "How a package is doing: how many times a JavaScript package was downloaded in the last week.",
     "example": "171 637 376 downloads",
     "from": "The npm registry",
     "cadence": "Once a day.",

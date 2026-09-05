@@ -1,12 +1,12 @@
 {
   "id": "air-quality-norway",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "no",
   "plain": {
     "name": "Air quality now",
-    "gives": "The latest fine-dust reading for a Norwegian town and how the air is rated, from low to very high.",
+    "gives": "Whether to open the window or go for a run: the latest fine-dust reading for a Norwegian town, rated from low to very high.",
     "example": "12.4 µg/m³, low",
     "from": "NILU, the Norwegian air research institute",
     "cadence": "Every hour.",

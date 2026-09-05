@@ -1,12 +1,12 @@
 {
   "id": "weather-tomorrow",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "weather",
   "region": "global",
   "plain": {
     "name": "Weather this time tomorrow",
-    "gives": "The temperature and wind where you are, twenty-four hours from now.",
+    "gives": "What to plan for: the temperature and wind where you are, twenty-four hours from now.",
     "example": "11.8 °C, wind 5.2 m/s",
     "from": "The Norwegian Meteorological Institute, who also make Yr",
     "cadence": "Updated about every hour.",
