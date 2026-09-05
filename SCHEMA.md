@@ -2,7 +2,7 @@
 
 This document defines an entry of the catalogue: the fields every entry
 carries, the six plain-words fields a person reads, and the definition the
-app turns into an item.
+app turns into an API, a tile, or a layout.
 
 An entry is one JSON file in `entries/`, named by its id, with these keys:
 
@@ -12,23 +12,24 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | `kind` | `api`, `operation`, or `template`, the catalogue's three lists for the three questions (OpenAPI's words since 2026-09-05): an **api** is where the data comes from, the server alone, the URL with its headers and terms, with no extraction and no placed areas, and the app builds a tile from it; an **operation** is what intel, an API plus the properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any operation can wear. The app still reads `source`, `query`, and `item` from older catalogues. |
 | `version` | An integer, raised on every change, so the app can offer updates. |
 | `category` | One of `transport`, `energy`, `weather`, `nature`, `money`, `code`, `fun`. |
-| `region` | `no` for a Norwegian source, `global` otherwise. |
+| `region` | `no` for a Norwegian API, `global` otherwise. |
 | `plain` | The six fields a person reads, below. |
 | `questions` | What the app asks when the entry is added: `name`, `label`, `help`, `type` (`text`, `number`, `choice`, `location`), optional `choices`, optional `default`. Each `name` appears as `{name}` in the definition's URL or parameters. |
-| `attribution` | The text the app shows beside the source's name. |
-| `terms` | The URL of the source's terms, and the date they were checked. |
-| `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the look. |
-| `definition` | The tile with its source and values in the app's exchange form, version 1, which the app reads as a query and its source (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
+| `attribution` | The text the app shows beside the API's name. |
+| `terms` | The URL of the API's terms, and the date they were checked. |
+| `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the layout. |
+| `definition` | The tile with its API and properties in the app's exchange form, version 1, which the app reads as an operation and its API (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
 
 ## A template's definition
 
 A template's definition holds `schemaVersion` and `placement` alone. The
-placement's areas hold roles in place of the query's value names: `first`,
+placement's areas hold roles in place of the operation's property names: `first`,
 `second`, `third`, and `fourth`, starting at `first` with no gap, and a
-picture where the look has one. The app applies the look to a query by
-rank: the query's first value goes where `first` is, its second where
-`second` is, and so on; a query with fewer values than the look has
-roles leaves those areas empty. A template's category is `look`, it asks
+picture where the layout has one. The app applies the layout to an
+operation by rank: the operation's first property goes where `first` is,
+its second where `second` is, and so on; an operation with fewer
+properties than the layout has roles leaves those areas empty. A
+template's category is `look`, the key the app reads, it asks
 nothing, and its `from` and `cadence` say so in words.
 
 ## The index
@@ -50,9 +51,9 @@ dashboard:
 | Field | What it says |
 | --- | --- |
 | `name` | What the person calls it, as a title. |
-| `gives` | One sentence on what the person gets. |
+| `gives` | One sentence that opens with what the person decides from it, then says what the value is: "The power price before you run the wash: the price of electricity this hour…". |
 | `example` | The values as they will appear on the tile. |
-| `from` | The source, named as a person would name it. |
+| `from` | The API, named as a person would name it. |
 | `cadence` | How often it changes. |
 | `asks` | The questions the entry will ask, in one sentence, or "Nothing." |
 
@@ -61,26 +62,26 @@ dashboard:
 A path segment is a key or an index. It may also be an object,
 `{"where": "station_id", "is": "175"}`, which picks the first element of
 a list whose field `where` equals `is`, compared as text, so a question's
-answer can choose the element: `["data", "stations", {"where":
+answer to a question can choose the element: `["data", "stations", {"where":
 "station_id", "is": "{station}"}, "num_bikes_available"]`.
 
-## A source that pushes
+## An API that pushes
 
-A definition's `source` may carry `"method": "WEBSOCKET"` or `"method":
+A definition's `source` key, the API, may carry `"method": "WEBSOCKET"` or `"method":
 "EVENTS"`: the app keeps the connection open while the feed is on screen
-and each message that is JSON answers the query, so the tile updates as
-messages arrive; a message without the query's values is skipped. A
-`WEBSOCKET` source's `body` is sent once on opening, placeholders filled.
-Asked once, for a test or an ordinary update, a live source answers with
+and each message that is JSON is a response to the operation, so the tile
+updates as messages arrive; a message without the operation's properties
+is skipped. A `WEBSOCKET` API's `body` is sent once on opening, placeholders filled.
+Called once, for a test or an ordinary update, a live API responds with
 its first message and the last to follow within a moment.
 
-## A source that sends, and where it explains itself
+## An API that sends, and where it explains itself
 
-A definition's `source` may carry `"method": "POST"` with a `body`, JSON as
+A definition's `source` key may carry `"method": "POST"` with a `body`, JSON as
 text, which the app sends with the request; a question's `{name}` in the
-body is filled the way it is in the address, and the headers should name
-the content type. A `source` may carry `docs`, the address where the
-source explains itself, its documentation or an OpenAPI file, which the
+body is filled the way it is in the URL, and the headers should name
+the content type. The API may carry `docs`, the URL where the
+API explains itself, its documentation or an OpenAPI file, which the
 app shows in Explore and on a tile's detail.
 
 ## A question answered by lookup
