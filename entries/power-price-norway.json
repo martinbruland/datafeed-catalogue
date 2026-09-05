@@ -1,7 +1,7 @@
 {
   "id": "power-price-norway",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "energy",
   "region": "no",
   "plain": {
@@ -83,5 +83,9 @@
     "refresh": {
       "interval": 3600
     }
+  },
+  "explains": {
+    "now": "What one kilowatt-hour costs this hour, in kroner, before grid fees and taxes.",
+    "from": "The hour the price applies from."
   }
 }
