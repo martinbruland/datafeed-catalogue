@@ -1,12 +1,12 @@
 {
   "id": "power-price-norway",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "energy",
   "region": "no",
   "plain": {
     "name": "Power price now",
-    "gives": "The price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
+    "gives": "The power price before you run the wash: the price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
     "example": "1.42 kr",
     "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
     "cadence": "A new price every hour; tomorrow's prices arrive around 13:00.",

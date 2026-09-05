@@ -1,12 +1,12 @@
 {
   "id": "daily-joke",
   "kind": "operation",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "A dad joke",
-    "gives": "A new joke every hour, for the whole family.",
+    "gives": "Something to tell at the table: a new dad joke every hour, for the whole family.",
     "example": "Why did the scarecrow win an award? He was outstanding in his field.",
     "from": "icanhazdadjoke",
     "cadence": "A new one every hour.",

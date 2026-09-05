@@ -1,12 +1,12 @@
 {
   "id": "moon-tonight",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "nature",
   "region": "global",
   "plain": {
     "name": "The moon tonight",
-    "gives": "Where the moon is in its cycle where you are, and when it rises.",
+    "gives": "Whether to layout up tonight: where the moon is in its cycle where you are, and when it rises.",
     "example": "252° round the cycle, rising 18:55",
     "from": "The Norwegian Meteorological Institute, who also make Yr",
     "cadence": "Once a day.",

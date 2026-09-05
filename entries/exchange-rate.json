@@ -1,12 +1,12 @@
 {
   "id": "exchange-rate",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "global",
   "plain": {
     "name": "Exchange rate",
-    "gives": "What one unit of a currency costs in another, from the European Central Bank's daily rates.",
+    "gives": "What your money is worth abroad: what one unit of a currency costs in another, from the European Central Bank's daily rates.",
     "example": "11.64 NOK",
     "from": "Frankfurter, which relays the European Central Bank",
     "cadence": "Once every weekday afternoon.",

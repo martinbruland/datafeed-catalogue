@@ -1,15 +1,15 @@
 {
   "id": "number-with-caption",
   "kind": "template",
-  "version": 1,
+  "version": 2,
   "category": "look",
   "region": "global",
   "plain": {
     "name": "Number with caption",
     "gives": "One value with a line above it saying what it is.",
     "example": "Bergen · 12.4 µg/m³",
-    "from": "Any source, through any query.",
-    "cadence": "With the query it wears.",
+    "from": "Any API, through any operation.",
+    "cadence": "With the operation it wears.",
     "asks": "Nothing."
   },
   "questions": [],

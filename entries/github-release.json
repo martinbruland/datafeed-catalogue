@@ -1,12 +1,12 @@
 {
   "id": "github-release",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Latest release of a project",
-    "gives": "The newest release of a project on GitHub, and when it came out.",
+    "gives": "Whether there is a new version to install: the newest release of a project on GitHub, and when it came out.",
     "example": "v2.4.1, 3 days ago",
     "from": "GitHub",
     "cadence": "Updated about every hour.",

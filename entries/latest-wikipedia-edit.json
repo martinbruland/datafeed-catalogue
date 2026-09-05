@@ -1,12 +1,12 @@
 {
   "id": "latest-wikipedia-edit",
   "kind": "operation",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "The latest Wikipedia edit",
-    "gives": "The article somebody just edited, on which Wikipedia, and who did it, changing as you watch.",
+    "gives": "A window onto the world's editing: the article somebody just changed, on which Wikipedia, and who did it, changing as you watch.",
     "example": "Norway · enwiki · Ola",
     "from": "Wikimedia, who run Wikipedia",
     "cadence": "Several times a second, while the feed is open.",

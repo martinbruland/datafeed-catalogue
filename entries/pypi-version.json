@@ -1,12 +1,12 @@
 {
   "id": "pypi-version",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Latest version of a Python package",
-    "gives": "The newest version of a package on the Python package index.",
+    "gives": "Whether there is a new version to install: the newest version of a package on the Python package index.",
     "example": "2.34.2",
     "from": "The Python Package Index",
     "cadence": "Changes when a version is published.",

@@ -1,7 +1,7 @@
 {
   "id": "entur-journey-planner",
   "kind": "api",
-  "version": 1,
+  "version": 2,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -10,7 +10,7 @@
     "example": "12 to Lægdene, leaves 21:10",
     "from": "Entur, on behalf of Norway's public transport",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it. The message it sends names Bergen bus station; put your own stop's Entur identity in its place, found under Stops and places."
+    "asks": "Nothing until you build a tile from it. Its request body names Bergen bus station; put your own stop's Entur identity in its place, found in Stops and places."
   },
   "questions": [],
   "attribution": "Departures from Entur (entur.org)",

@@ -1,15 +1,15 @@
 {
   "id": "big-number",
   "kind": "template",
-  "version": 1,
+  "version": 2,
   "category": "look",
   "region": "global",
   "plain": {
     "name": "Big number",
     "gives": "One value, as large as the tile allows, and nothing else.",
     "example": "1 234",
-    "from": "Any source, through any query.",
-    "cadence": "With the query it wears.",
+    "from": "Any API, through any operation.",
+    "cadence": "With the operation it wears.",
     "asks": "Nothing."
   },
   "questions": [],
