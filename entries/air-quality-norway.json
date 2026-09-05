@@ -1,7 +1,7 @@
 {
   "id": "air-quality-norway",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "weather",
   "region": "no",
   "plain": {
@@ -105,5 +105,10 @@
     "refresh": {
       "interval": 1800
     }
+  },
+  "explains": {
+    "value": "The fine dust in the air right now, micrograms per cubic metre; under 25 is low.",
+    "station": "The measuring station nearest the town.",
+    "at": "When the reading was taken."
   }
 }

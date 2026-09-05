@@ -18,6 +18,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | `attribution` | The text the app shows beside the API's name. |
 | `terms` | The URL of the API's terms, and the date they were checked. |
 | `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the layout. |
+| `explains` | Optional: one plain sentence per property, by the property's `name` in the definition's extraction, shown in the builder beside the property's sample when the API's own documentation says nothing: `{"now": "What one kilowatt-hour costs this hour…"}`. |
 | `definition` | The tile with its API and properties in the app's exchange form, version 1, which the app reads as an operation and its API (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
 
 ## A template's definition
