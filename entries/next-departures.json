@@ -1,7 +1,7 @@
 {
   "id": "next-departures",
   "kind": "operation",
-  "version": 4,
+  "version": 5,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -10,25 +10,15 @@
     "example": "12 to Lægdene, 21:10",
     "from": "Entur Journey Planner",
     "cadence": "Every minute; real-time data where available.",
-    "asks": "A stop name."
+    "asks": "An Entur stop ID."
   },
   "questions": [
     {
       "name": "stop",
-      "label": "Stop",
-      "help": "Enter a stop name, such as Danmarksplass. Entur finds its stop ID.",
-      "type": "lookup",
-      "default": "Danmarksplass",
-      "lookup": {
-        "entry": "entur-places",
-        "parameter": "text",
-        "take": [
-          "features",
-          0,
-          "properties",
-          "id"
-        ]
-      }
+      "label": "Stop ID",
+      "help": "Enter an Entur stop ID, such as NSR:StopPlace:61380 for Danmarks plass in Bergen.",
+      "type": "text",
+      "default": "NSR:StopPlace:61380"
     }
   ],
   "attribution": "Departures from Entur (entur.org)",
@@ -39,7 +29,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Next from {stop}",
+    "name": "Next departure",
     "source": {
       "url": "https://api.entur.io/journey-planner/v3/graphql",
       "method": "POST",
