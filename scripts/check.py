@@ -9,7 +9,7 @@ FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
 KINDS = {"api", "operation", "template"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
-QUESTION_TYPES = {"text", "number", "choice", "location", "lookup"}
+QUESTION_TYPES = {"text", "number", "choice", "location"}
 PLAIN = ["name", "gives", "example", "from", "cadence", "asks"]
 
 def fail(entry, message):
@@ -43,20 +43,18 @@ def check_entry(path):
             problems += fail(path.name, f"plain.{field} is missing")
         elif FORBIDDEN.search(value):
             problems += fail(path.name, f"plain.{field} uses a forbidden word: {value!r}")
+    if any("lookup" in parameter for parameter in entry.get("definition", {}).get("source", {}).get("parameters", [])):
+        problems += fail(path.name, "parameters cannot reference another operation")
     questions = entry.get("questions", [])
     names = set()
     for question in questions:
+        if "lookup" in question:
+            problems += fail(path.name, "questions cannot reference another entry")
         if question.get("type") not in QUESTION_TYPES:
             problems += fail(path.name, f"question {question.get('name')} has an unknown type")
         for field in ("name", "label", "help"):
             if not question.get(field):
                 problems += fail(path.name, f"question is missing {field}")
-        if question.get("type") == "lookup":
-            spec = question.get("lookup") or {}
-            if not spec.get("entry") or not (ROOT / "entries" / f"{spec.get('entry')}.json").exists():
-                problems += fail(path.name, f"question {question.get('name')} looks up an entry that does not exist")
-            if not isinstance(spec.get("take"), list):
-                problems += fail(path.name, f"question {question.get('name')} names no take path")
         if question.get("type") == "location":
             names |= {f"{question['name']}.lat", f"{question['name']}.lon"}
         else:
