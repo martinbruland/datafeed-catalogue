@@ -1,22 +1,22 @@
 {
   "id": "city-bikes-oslo",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Bikes at my Oslo station",
-    "gives": "Whether there is a bike waiting for you: how many city bikes and free docks an Oslo Bysykkel station has right now.",
+    "gives": "Available bikes and free docks at an Oslo Bysykkel station.",
     "example": "7 bikes, 5 docks",
-    "from": "Oslo Bysykkel",
-    "cadence": "Every few minutes, as bikes come and go.",
-    "asks": "Which station, by its number."
+    "from": "Urban Sharing GBFS",
+    "cadence": "Every few minutes.",
+    "asks": "A station ID."
   },
   "questions": [
     {
       "name": "station",
       "label": "Station",
-      "help": "The station's number, shown in the Bysykkel app; Aker brygge is 377.",
+      "help": "Enter the station ID shown in the Bysykkel app.",
       "type": "number",
       "default": "377"
     }

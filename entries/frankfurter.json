@@ -1,16 +1,16 @@
 {
   "id": "frankfurter",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "money",
   "region": "global",
   "plain": {
-    "name": "Exchange rates",
-    "gives": "The rate between any two of thirty currencies, and its history.",
+    "name": "Frankfurter",
+    "gives": "Currency exchange rates and historical rates.",
     "example": "1 EUR = 11.62 NOK",
-    "from": "Frankfurter, which relays the European Central Bank",
-    "cadence": "Once a working day, in the afternoon.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Frankfurter",
+    "cadence": "Weekday afternoons.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Rates from Frankfurter, relaying the European Central Bank",
@@ -20,11 +20,20 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Exchange rates",
+    "name": "Frankfurter",
     "source": {
-      "url": "https://api.frankfurter.dev/v2/rate/EUR/NOK",
+      "url": "https://api.frankfurter.dev/v2/rate/{from}/{to}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "from",
+          "value": "EUR"
+        },
+        {
+          "name": "to",
+          "value": "NOK"
+        }
+      ],
       "headers": [],
       "docs": "https://api.frankfurter.dev/v2/openapi.json"
     },

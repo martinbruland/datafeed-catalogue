@@ -1,16 +1,16 @@
 {
   "id": "geonorge-elevation",
   "kind": "api",
-  "version": 4,
+  "version": 5,
   "category": "nature",
   "region": "no",
   "plain": {
-    "name": "Height above the sea",
-    "gives": "The elevation of any point in Norway, from Kartverket's terrain model.",
+    "name": "Geonorge Elevation",
+    "gives": "Terrain elevation for coordinates in Norway.",
     "example": "Ulriken: 643 m",
-    "from": "Kartverket, through Geonorge",
-    "cadence": "Never; the ground stays put.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Geonorge Elevation",
+    "cadence": "When the terrain dataset is updated.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Elevation from Kartverket (Geonorge)",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Height above the sea",
+    "name": "Geonorge Elevation",
     "source": {
       "url": "https://ws.geonorge.no/hoydedata/v1/punkt",
       "method": "GET",

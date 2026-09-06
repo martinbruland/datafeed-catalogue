@@ -1,16 +1,16 @@
 {
   "id": "met-norway",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "weather",
   "region": "global",
   "plain": {
-    "name": "The Norwegian weather service",
-    "gives": "Forecasts, nowcasts, sunrise and moon times, air quality, and weather warnings for any place, from the institute behind Yr.",
+    "name": "MET Norway",
+    "gives": "Weather forecasts from the Norwegian Meteorological Institute.",
     "example": "Any value the forecast holds",
-    "from": "The Norwegian Meteorological Institute",
-    "cadence": "Hourly forecasts, nowcasts every five minutes.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "MET Norway",
+    "cadence": "Forecasts update hourly.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Weather data from MET Norway, licensed CC BY 4.0",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "The Norwegian weather service",
+    "name": "MET Norway",
     "source": {
       "url": "https://api.met.no/weatherapi/locationforecast/2.0/compact",
       "method": "GET",

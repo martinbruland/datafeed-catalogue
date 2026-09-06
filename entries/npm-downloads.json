@@ -1,22 +1,22 @@
 {
   "id": "npm-downloads",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Downloads of a package",
-    "gives": "How a package is doing: how many times a JavaScript package was downloaded in the last week.",
+    "gives": "Downloads of an npm package during the past week.",
     "example": "171 637 376 downloads",
-    "from": "The npm registry",
-    "cadence": "Once a day.",
-    "asks": "The package's name."
+    "from": "npm Downloads",
+    "cadence": "Daily.",
+    "asks": "A package name."
   },
   "questions": [
     {
       "name": "package",
       "label": "Package",
-      "help": "The package's name on npm, such as react.",
+      "help": "Enter the package name, such as react.",
       "type": "text",
       "default": "react"
     }

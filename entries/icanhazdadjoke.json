@@ -1,16 +1,16 @@
 {
   "id": "icanhazdadjoke",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Dad jokes",
-    "gives": "One joke at a time, as text.",
+    "name": "icanhazdadjoke",
+    "gives": "Random dad jokes.",
     "example": "Why did the scarecrow win an award? He was outstanding in his field.",
     "from": "icanhazdadjoke",
-    "cadence": "A new one every time.",
-    "asks": "Nothing until you build a tile from it."
+    "cadence": "A new result with each request.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Jokes from icanhazdadjoke.com",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Dad jokes",
+    "name": "icanhazdadjoke",
     "source": {
       "url": "https://icanhazdadjoke.com/",
       "method": "GET",

@@ -1,16 +1,16 @@
 {
   "id": "usgs-earthquakes",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "nature",
   "region": "global",
   "plain": {
-    "name": "Earthquakes from the USGS",
-    "gives": "Every earthquake of the past hour, day, week, or month, as the survey records them.",
+    "name": "USGS Earthquakes",
+    "gives": "Earthquake magnitudes, locations, and times reported by the USGS.",
     "example": "Magnitude, place, and time of each quake",
-    "from": "The United States Geological Survey",
+    "from": "USGS Earthquakes",
     "cadence": "Every few minutes.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Earthquake data from the USGS, in the public domain",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Earthquakes from the USGS",
+    "name": "USGS Earthquakes",
     "source": {
       "url": "https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_week.geojson",
       "method": "GET",

@@ -1,22 +1,22 @@
 {
   "id": "github-person",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "A person on GitHub",
-    "gives": "How an account is doing: how many follow it on GitHub, and how many public repositories it has.",
+    "gives": "A GitHub account’s follower count and public repository count.",
     "example": "128 followers, 24 repositories",
-    "from": "GitHub",
+    "from": "GitHub REST API",
     "cadence": "Updated about every hour.",
-    "asks": "The account's name."
+    "asks": "A GitHub username."
   },
   "questions": [
     {
       "name": "user",
       "label": "Account",
-      "help": "The name in the account's address, such as octocat.",
+      "help": "Enter a GitHub username, such as octocat.",
       "type": "text",
       "default": "octocat"
     }

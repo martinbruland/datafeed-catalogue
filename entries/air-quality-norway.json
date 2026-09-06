@@ -1,22 +1,22 @@
 {
   "id": "air-quality-norway",
   "kind": "operation",
-  "version": 4,
+  "version": 5,
   "category": "weather",
   "region": "no",
   "plain": {
     "name": "Air quality now",
-    "gives": "Whether to open the window or go for a run: the latest fine-dust reading for a Norwegian town, rated from low to very high.",
+    "gives": "Latest fine-dust measurement and air quality rating for a Norwegian town.",
     "example": "12.4 µg/m³, low",
-    "from": "NILU, the Norwegian air research institute",
+    "from": "NILU Air Quality",
     "cadence": "Every hour.",
-    "asks": "Which town."
+    "asks": "A town."
   },
   "questions": [
     {
       "name": "area",
       "label": "Town",
-      "help": "The town as NILU names it, in lowercase: bergen, oslo, trondheim, stavanger, tromsø, drammen, kristiansand.",
+      "help": "Choose the town to measure.",
       "type": "choice",
       "choices": [
         "bergen",
@@ -107,8 +107,8 @@
     }
   },
   "explains": {
-    "value": "The fine dust in the air right now, micrograms per cubic metre; under 25 is low.",
-    "station": "The measuring station nearest the town.",
-    "at": "When the reading was taken."
+    "value": "Fine-dust concentration in µg/m³.",
+    "station": "The station reporting this measurement.",
+    "at": "Time of the measurement."
   }
 }

@@ -1,16 +1,16 @@
 {
   "id": "hva-koster-strommen",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "energy",
   "region": "no",
   "plain": {
-    "name": "Norwegian power prices",
-    "gives": "The hourly power price for each of the five Norwegian price areas, today and tomorrow after 13:00.",
+    "name": "Hva koster strømmen",
+    "gives": "Hourly electricity prices for Norway’s five price areas.",
     "example": "Every hour's price",
     "from": "Hva koster strømmen",
-    "cadence": "Once a day, the next day's prices in the afternoon.",
-    "asks": "Nothing until you build a tile from it."
+    "cadence": "Daily; next-day prices arrive in the afternoon.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Power prices from hvakosterstrommen.no",
@@ -21,11 +21,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Norwegian power prices",
+    "name": "Hva koster strømmen",
     "source": {
-      "url": "https://www.hvakosterstrommen.no/api/v1/prices/{today}_NO5.json",
+      "url": "https://www.hvakosterstrommen.no/api/v1/prices/{today}_{area}.json",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "area",
+          "value": "NO5"
+        }
+      ],
       "headers": [],
       "docs": "https://www.hvakosterstrommen.no/strompris-api"
     },

@@ -1,16 +1,16 @@
 {
   "id": "varsom",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "nature",
   "region": "no",
   "plain": {
-    "name": "Avalanche warnings",
-    "gives": "Today's avalanche danger level and its text for every Norwegian region.",
+    "name": "Varsom Avalanche Forecast",
+    "gives": "Avalanche danger levels and forecast summaries for Norwegian regions.",
     "example": "Danger level 3, considerable",
-    "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
-    "cadence": "Once a day in the season.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Varsom Avalanche Forecast",
+    "cadence": "Daily during forecast season.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Avalanche warnings from NVE and Varsom",
@@ -20,11 +20,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Avalanche warnings",
+    "name": "Varsom Avalanche Forecast",
     "source": {
-      "url": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.2/api/AvalancheWarningByRegion/Simple/3003/2/2026-09-04/2026-09-04",
+      "url": "https://api01.nve.no/hydrology/forecast/avalanche/v6.3.2/api/AvalancheWarningByRegion/Simple/{region}/2/{today-iso}/{today-iso}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "region",
+          "value": "3003"
+        }
+      ],
       "headers": [],
       "docs": "https://api.nve.no/doc/avalanche-forecast/"
     },

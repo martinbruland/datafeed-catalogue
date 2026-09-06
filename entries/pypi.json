@@ -1,16 +1,16 @@
 {
   "id": "pypi",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
-    "name": "Python packages",
-    "gives": "The latest version, summary, and links of any package on the Python Package Index.",
+    "name": "PyPI",
+    "gives": "Python package versions, descriptions, and project links.",
     "example": "requests 2.32.3",
-    "from": "The Python Package Index",
+    "from": "PyPI",
     "cadence": "When a package is released.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Package data from pypi.org",
@@ -20,11 +20,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Python packages",
+    "name": "PyPI",
     "source": {
-      "url": "https://pypi.org/pypi/requests/json",
+      "url": "https://pypi.org/pypi/{package}/json",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "package",
+          "value": "requests"
+        }
+      ],
       "headers": [
         {
           "name": "User-Agent",

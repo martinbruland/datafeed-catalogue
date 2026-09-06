@@ -1,16 +1,16 @@
 {
   "id": "urban-sharing-bikes",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "transport",
   "region": "no",
   "plain": {
-    "name": "City bikes in Norway",
-    "gives": "Every station of Bergen, Oslo, and Trondheim Bysykkel, with its bikes and docks right now.",
+    "name": "Urban Sharing GBFS",
+    "gives": "Available bikes and docks at city bike stations.",
     "example": "Bikes and docks at any station",
-    "from": "Urban Sharing, who run the Bysykkel systems",
+    "from": "Urban Sharing GBFS",
     "cadence": "Every few minutes.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Live station data from Urban Sharing, licensed NLOD 2.0",
@@ -21,11 +21,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "City bikes in Norway",
+    "name": "Urban Sharing GBFS",
     "source": {
-      "url": "https://gbfs.urbansharing.com/bergenbysykkel.no/station_status.json",
+      "url": "https://gbfs.urbansharing.com/{system}/station_status.json",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "system",
+          "value": "bergenbysykkel.no"
+        }
+      ],
       "headers": [
         {
           "name": "Client-Identifier",

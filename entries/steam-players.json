@@ -1,16 +1,16 @@
 {
   "id": "steam-players",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Players on Steam",
-    "gives": "How many people are playing a Steam game right now, by its number.",
+    "name": "Steam Player Count",
+    "gives": "Current player counts for Steam games.",
     "example": "Counter-Strike 2: 1 234 567 playing",
-    "from": "Steam",
+    "from": "Steam Player Count",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Player counts from Steam",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Players on Steam",
+    "name": "Steam Player Count",
     "source": {
       "url": "https://api.steampowered.com/ISteamUserStats/GetNumberOfCurrentPlayers/v1/",
       "method": "GET",

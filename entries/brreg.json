@@ -1,16 +1,16 @@
 {
   "id": "brreg",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "no",
   "plain": {
-    "name": "Norwegian companies",
-    "gives": "Any company in the Norwegian register by its number: its name, address, kind, and how many people work there.",
+    "name": "Brønnøysund Register Centre",
+    "gives": "Norwegian company records, including names, addresses, and organisation numbers.",
     "example": "Equinor ASA, 22 000 employees",
-    "from": "The Brønnøysund Register Centre",
+    "from": "Brønnøysund Register Centre",
     "cadence": "When the register changes.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Company data from the Brønnøysund Register Centre",
@@ -20,11 +20,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Norwegian companies",
+    "name": "Brønnøysund Register Centre",
     "source": {
-      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/923609016",
+      "url": "https://data.brreg.no/enhetsregisteret/api/enheter/{organisation}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "organisation",
+          "value": "923609016"
+        }
+      ],
       "headers": [],
       "docs": "https://data.brreg.no/enhetsregisteret/api/dokumentasjon/no/index.html"
     },

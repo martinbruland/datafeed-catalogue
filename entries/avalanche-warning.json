@@ -1,22 +1,22 @@
 {
   "id": "avalanche-warning",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "nature",
   "region": "no",
   "plain": {
     "name": "Avalanche danger today",
-    "gives": "Whether the mountain is safe today: the avalanche danger for a Norwegian region, from 1 low to 5 very high, with the forecaster's headline.",
+    "gives": "Regional avalanche danger level, from 1 to 5, and the forecaster’s summary.",
     "example": "Level 2, Moderate",
-    "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
-    "cadence": "Once a day in season, around 16:00 for the next day; no rating in summer.",
-    "asks": "Which region."
+    "from": "Varsom Avalanche Forecast",
+    "cadence": "Daily during forecast season, usually around 16:00 for the next day.",
+    "asks": "A forecast region."
   },
   "questions": [
     {
       "name": "region",
       "label": "Region",
-      "help": "The avalanche region as Varsom names it.",
+      "help": "Choose a Varsom forecast region by its numeric ID.",
       "type": "choice",
       "choices": [
         "3003",

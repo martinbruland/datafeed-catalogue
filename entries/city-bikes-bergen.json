@@ -1,22 +1,22 @@
 {
   "id": "city-bikes-bergen",
   "kind": "operation",
-  "version": 4,
+  "version": 5,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Bikes at my station",
-    "gives": "Whether there is a bike waiting for you: how many city bikes and free docks a Bergen Bysykkel station has right now.",
+    "gives": "Available bikes and free docks at a Bergen Bysykkel station.",
     "example": "7 bikes, 5 docks",
-    "from": "Bergen Bysykkel",
-    "cadence": "Every few minutes, as bikes come and go.",
-    "asks": "Which station, by its number."
+    "from": "Urban Sharing GBFS",
+    "cadence": "Every few minutes.",
+    "asks": "A station ID."
   },
   "questions": [
     {
       "name": "station",
       "label": "Station",
-      "help": "The station's number, shown on the station and in the Bysykkel app; Torgallmenningen is 36.",
+      "help": "Enter the station ID shown in the Bysykkel app.",
       "type": "number",
       "default": "36"
     }

@@ -1,16 +1,16 @@
 {
   "id": "catfact",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Cat facts",
-    "gives": "One fact about cats at a time.",
+    "name": "Cat Facts",
+    "gives": "Random facts about cats.",
     "example": "Cats sleep 70 % of their lives.",
     "from": "Cat Facts",
-    "cadence": "A new one every time.",
-    "asks": "Nothing until you build a tile from it."
+    "cadence": "A new result with each request.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Facts from catfact.ninja",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Cat facts",
+    "name": "Cat Facts",
     "source": {
       "url": "https://catfact.ninja/fact",
       "method": "GET",

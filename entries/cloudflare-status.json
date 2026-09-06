@@ -1,16 +1,16 @@
 {
   "id": "cloudflare-status",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
-    "name": "Cloudflare's status",
-    "gives": "Whether Cloudflare is up, and the words it uses for it.",
+    "name": "Cloudflare Status",
+    "gives": "Current service status reported by Cloudflare.",
     "example": "All Systems Operational",
-    "from": "Cloudflare's status page",
+    "from": "Cloudflare Status",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Status from cloudflarestatus.com",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Cloudflare's status",
+    "name": "Cloudflare Status",
     "source": {
       "url": "https://www.cloudflarestatus.com/api/v2/status.json",
       "method": "GET",

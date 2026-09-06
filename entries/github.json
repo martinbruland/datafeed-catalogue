@@ -1,16 +1,16 @@
 {
   "id": "github",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
-    "name": "GitHub",
-    "gives": "Anything public on GitHub: a person, a project, its releases, its issues.",
+    "name": "GitHub REST API",
+    "gives": "GitHub repositories, accounts, releases, and issues.",
     "example": "Stars, issues, releases, followers",
-    "from": "GitHub",
-    "cadence": "Live, within sixty requests an hour without signing in.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "GitHub REST API",
+    "cadence": "Current data; 60 requests per hour without authentication.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Public data from GitHub, within its public rate limit",
@@ -21,11 +21,20 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "GitHub",
+    "name": "GitHub REST API",
     "source": {
-      "url": "https://api.github.com/repos/apple/swift",
+      "url": "https://api.github.com/repos/{owner}/{repository}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "owner",
+          "value": "apple"
+        },
+        {
+          "name": "repository",
+          "value": "swift"
+        }
+      ],
       "headers": [
         {
           "name": "User-Agent",

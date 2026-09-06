@@ -1,15 +1,15 @@
 {
   "id": "everything",
   "kind": "template",
-  "version": 2,
+  "version": 3,
   "category": "look",
   "region": "global",
   "plain": {
     "name": "Everything",
-    "gives": "Four values with their names: a title, a main value, a second value, and a footer.",
+    "gives": "Four labelled values: title, main value, secondary value, and footer.",
     "example": "Bikes at Torget · 7 · 3 free docks · updated just now",
-    "from": "Any API, through any operation.",
-    "cadence": "With the operation it wears.",
+    "from": "Any operation.",
+    "cadence": "Updates with the operation.",
     "asks": "Nothing."
   },
   "questions": [],

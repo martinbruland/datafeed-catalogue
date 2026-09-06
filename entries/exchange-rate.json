@@ -1,22 +1,22 @@
 {
   "id": "exchange-rate",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "money",
   "region": "global",
   "plain": {
     "name": "Exchange rate",
-    "gives": "What your money is worth abroad: what one unit of a currency costs in another, from the European Central Bank's daily rates.",
+    "gives": "The value of one currency in another, using daily exchange rates.",
     "example": "11.64 NOK",
-    "from": "Frankfurter, which relays the European Central Bank",
-    "cadence": "Once every weekday afternoon.",
-    "asks": "Which two currencies."
+    "from": "Frankfurter",
+    "cadence": "Weekday afternoons.",
+    "asks": "A source and target currency."
   },
   "questions": [
     {
       "name": "from",
       "label": "From",
-      "help": "The currency you have, as three letters.",
+      "help": "Choose the source currency.",
       "type": "choice",
       "choices": [
         "EUR",
@@ -33,7 +33,7 @@
     {
       "name": "to",
       "label": "To",
-      "help": "The currency you want, as three letters.",
+      "help": "Choose the target currency.",
       "type": "choice",
       "choices": [
         "NOK",

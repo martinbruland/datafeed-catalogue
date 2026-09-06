@@ -51,8 +51,8 @@ dashboard:
 
 | Field | What it says |
 | --- | --- |
-| `name` | What the person calls it, as a title. |
-| `gives` | One sentence that opens with what the person decides from it, then says what the value is: "The power price before you run the wash: the price of electricity this hour…". |
+| `name` | A concise title. For APIs, use the provider or product name, adding a short scope only when needed to distinguish endpoints. |
+| `gives` | One short description of the available data or layout. State what it contains; avoid lifestyle advice, introductions, and promotional claims. |
 | `example` | The values as they will appear on the tile. |
 | `from` | The API, named as a person would name it. |
 | `cadence` | How often it changes. |
@@ -105,3 +105,18 @@ a header's `value` is replaced by the answer to the question `name`. A
 `location` question answers two placeholders, `{name.lat}` and
 `{name.lon}`. `{today}` is today's date as `YYYY/MM-DD`, and `{today-iso}`
 as `YYYY-MM-DD`, in the person's time zone.
+
+
+## Route parameters
+
+Keep variable route segments as named placeholders, for example
+`https://api.coinbase.com/v2/prices/{pair}/spot`. Supply a sample value
+in `source.parameters`, such as `{"name": "pair", "value": "BTC-NOK"}`,
+or obtain it from a question named `pair`. The app keeps the template
+on the API and the value on each operation, so different pairs reuse
+one API. Fixed endpoint segments remain literal. Parameters without a
+URL placeholder become query parameters. Built-in date placeholders
+are resolved when the entry is added.
+
+Write question help as one brief instruction with an example where useful.
+Use property help to explain units or meaning, without repeating its label.

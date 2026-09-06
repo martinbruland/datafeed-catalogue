@@ -1,22 +1,22 @@
 {
   "id": "pypi-version",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Latest version of a Python package",
-    "gives": "Whether there is a new version to install: the newest version of a package on the Python package index.",
+    "gives": "The latest published version of a Python package.",
     "example": "2.34.2",
-    "from": "The Python Package Index",
-    "cadence": "Changes when a version is published.",
-    "asks": "The package's name."
+    "from": "PyPI",
+    "cadence": "When a version is published.",
+    "asks": "A package name."
   },
   "questions": [
     {
       "name": "package",
       "label": "Package",
-      "help": "The package's name on PyPI, such as requests.",
+      "help": "Enter the PyPI package name, such as requests.",
       "type": "text",
       "default": "requests"
     }

@@ -1,16 +1,16 @@
 {
   "id": "yahoo-finance",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "money",
   "region": "global",
   "plain": {
-    "name": "Stock prices",
-    "gives": "A share's latest price, the day's range, and its history, by ticker, Oslo included.",
+    "name": "Yahoo Finance",
+    "gives": "Stock prices and price history from an unofficial Yahoo Finance feed.",
     "example": "EQNR.OL 312.40",
-    "from": "Yahoo Finance, through its unofficial chart feed",
-    "cadence": "Live in trading hours, delayed by the exchange's rules.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Yahoo Finance",
+    "cadence": "During trading hours; exchange delays apply.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Prices from Yahoo Finance's public chart feed",
@@ -21,9 +21,9 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Stock prices",
+    "name": "Yahoo Finance",
     "source": {
-      "url": "https://query1.finance.yahoo.com/v8/finance/chart/EQNR.OL",
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/{symbol}",
       "method": "GET",
       "parameters": [
         {
@@ -33,6 +33,10 @@
         {
           "name": "interval",
           "value": "1d"
+        },
+        {
+          "name": "symbol",
+          "value": "EQNR.OL"
         }
       ],
       "headers": [

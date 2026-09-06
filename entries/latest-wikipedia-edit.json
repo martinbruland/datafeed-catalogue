@@ -1,15 +1,15 @@
 {
   "id": "latest-wikipedia-edit",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "The latest Wikipedia edit",
-    "gives": "A window onto the world's editing: the article somebody just changed, on which Wikipedia, and who did it, changing as you watch.",
+    "gives": "The latest page change, its Wikipedia edition, and the editor’s name.",
     "example": "Norway · enwiki · Ola",
-    "from": "Wikimedia, who run Wikipedia",
-    "cadence": "Several times a second, while the feed is open.",
+    "from": "Wikimedia EventStreams",
+    "cadence": "Continuous updates while the feed is open.",
     "asks": "Nothing."
   },
   "questions": [],
