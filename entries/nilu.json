@@ -1,16 +1,16 @@
 {
   "id": "nilu",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "weather",
   "region": "no",
   "plain": {
-    "name": "Air quality in Norway",
-    "gives": "The latest readings from Norway's air-quality stations: fine dust, nitrogen dioxide, ozone, by town.",
+    "name": "NILU Air Quality",
+    "gives": "Air quality measurements from Norwegian monitoring stations.",
     "example": "12.4 µg/m³ in Bergen",
-    "from": "NILU, the Norwegian air research institute",
+    "from": "NILU Air Quality",
     "cadence": "Every hour.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Air quality from NILU (api.nilu.no)",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Air quality in Norway",
+    "name": "NILU Air Quality",
     "source": {
       "url": "https://api.nilu.no/aq/utd",
       "method": "GET",

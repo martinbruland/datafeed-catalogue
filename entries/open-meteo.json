@@ -1,16 +1,16 @@
 {
   "id": "open-meteo",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "weather",
   "region": "global",
   "plain": {
-    "name": "Weather anywhere",
-    "gives": "Current weather and forecasts for any place on Earth: temperature, wind, rain, and more, no sign-up.",
+    "name": "Open-Meteo",
+    "gives": "Current weather and forecasts by location.",
     "example": "18.3 °C, wind 4 m/s",
     "from": "Open-Meteo",
     "cadence": "Every hour.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Weather from Open-Meteo",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Weather anywhere",
+    "name": "Open-Meteo",
     "source": {
       "url": "https://api.open-meteo.com/v1/forecast",
       "method": "GET",

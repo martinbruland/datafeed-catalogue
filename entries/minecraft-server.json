@@ -1,16 +1,16 @@
 {
   "id": "minecraft-server",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "A Minecraft server",
-    "gives": "Whether a Minecraft server is up, how many are on, and its message of the day.",
+    "name": "Minecraft Server Status",
+    "gives": "Minecraft server availability, player counts, and server messages.",
     "example": "hypixel.net: 41 202 online",
-    "from": "mcsrvstat.us",
+    "from": "Minecraft Server Status",
     "cadence": "Every few minutes.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Server status from mcsrvstat.us",
@@ -20,11 +20,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "A Minecraft server",
+    "name": "Minecraft Server Status",
     "source": {
-      "url": "https://api.mcsrvstat.us/3/hypixel.net",
+      "url": "https://api.mcsrvstat.us/3/{server}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "server",
+          "value": "hypixel.net"
+        }
+      ],
       "headers": [],
       "docs": "https://api.mcsrvstat.us/"
     },

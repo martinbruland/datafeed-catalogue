@@ -1,22 +1,22 @@
 {
   "id": "power-price-norway",
   "kind": "operation",
-  "version": 4,
+  "version": 5,
   "category": "energy",
   "region": "no",
   "plain": {
     "name": "Power price now",
-    "gives": "The power price before you run the wash: the price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
+    "gives": "This hour’s electricity price in your Norwegian price area, in NOK per kWh.",
     "example": "1.42 kr",
-    "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
-    "cadence": "A new price every hour; tomorrow's prices arrive around 13:00.",
-    "asks": "Which price area you live in."
+    "from": "Hva koster strømmen",
+    "cadence": "Hourly prices; next-day prices arrive around 13:00.",
+    "asks": "A Norwegian price area."
   },
   "questions": [
     {
       "name": "area",
       "label": "Price area",
-      "help": "Norway has five: NO1 east, NO2 south, NO3 mid, NO4 north, NO5 west.",
+      "help": "NO1: east · NO2: south · NO3: central · NO4: north · NO5: west.",
       "type": "choice",
       "choices": [
         "NO1",
@@ -85,7 +85,7 @@
     }
   },
   "explains": {
-    "now": "What one kilowatt-hour costs this hour, in kroner, before grid fees and taxes.",
-    "from": "The hour the price applies from."
+    "now": "Price per kWh in NOK, before grid fees and taxes.",
+    "from": "Start of the hour this price applies to."
   }
 }

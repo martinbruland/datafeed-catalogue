@@ -70,8 +70,13 @@ def check_entry(path):
         if required not in definition:
             problems += fail(path.name, f"definition is missing {required}")
     used = placeholders(definition) - {"today", "today-iso"}
-    if used - names:
-        problems += fail(path.name, f"placeholders without a question: {sorted(used - names)}")
+    source = definition.get("source", {})
+    route_names = placeholders(source.get("url", "")) - {"today", "today-iso"}
+    defaults = {parameter.get("name") for parameter in source.get("parameters", [])
+                if isinstance(parameter.get("value"), str) and parameter["value"]}
+    declared = names | (route_names & defaults)
+    if used - declared:
+        problems += fail(path.name, f"placeholders without a question or route default: {sorted(used - declared)}")
     if names - used:
         problems += fail(path.name, f"questions never used: {sorted(names - used)}")
     for key in definition.get("extraction", []):

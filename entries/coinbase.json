@@ -1,16 +1,16 @@
 {
   "id": "coinbase",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "money",
   "region": "global",
   "plain": {
-    "name": "Coinbase prices",
-    "gives": "The spot price of a coin in any currency, from Coinbase.",
+    "name": "Coinbase Prices",
+    "gives": "Cryptocurrency spot prices by currency pair.",
     "example": "BTC 1 012 300 NOK",
-    "from": "Coinbase",
+    "from": "Coinbase Prices",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Prices from Coinbase",
@@ -20,11 +20,16 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Coinbase prices",
+    "name": "Coinbase Prices",
     "source": {
-      "url": "https://api.coinbase.com/v2/prices/BTC-NOK/spot",
+      "url": "https://api.coinbase.com/v2/prices/{pair}/spot",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "pair",
+          "value": "BTC-NOK"
+        }
+      ],
       "headers": [],
       "docs": "https://docs.cdp.coinbase.com/coinbase-app/docs/api-prices"
     },

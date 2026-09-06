@@ -1,22 +1,22 @@
 {
   "id": "next-departures",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "transport",
   "region": "no",
   "plain": {
     "name": "Next departure",
-    "gives": "Whether to leave now: the next bus, tram, train, or boat from a stop, its line, where it goes, and when it leaves, live when the operator reports it.",
+    "gives": "The next departure from a Norwegian stop, including line, destination, and expected time.",
     "example": "12 to Lægdene, 21:10",
-    "from": "Entur, on behalf of Norway's public transport",
-    "cadence": "Live, every minute.",
-    "asks": "Which stop, by its name."
+    "from": "Entur Journey Planner",
+    "cadence": "Every minute; real-time data where available.",
+    "asks": "A stop name."
   },
   "questions": [
     {
       "name": "stop",
-      "label": "Which stop?",
-      "help": "Type the stop's name, Danmarksplass or Bergen busstasjon; the app finds it in Stops and places.",
+      "label": "Stop",
+      "help": "Enter a stop name, such as Danmarksplass. Entur finds its stop ID.",
       "type": "lookup",
       "default": "Danmarksplass",
       "lookup": {

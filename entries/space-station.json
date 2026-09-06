@@ -1,15 +1,15 @@
 {
   "id": "space-station",
   "kind": "operation",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "Where the space station is",
-    "gives": "Where the space station is right now, over the Earth, and how fast it is going.",
+    "gives": "The International Space Station’s current coordinates and speed.",
     "example": "51.2°, -12.8°, 27,600 km/h",
     "from": "Where the ISS at",
-    "cadence": "Every second, if you keep pulling.",
+    "cadence": "Position changes continuously.",
     "asks": "Nothing."
   },
   "questions": [],

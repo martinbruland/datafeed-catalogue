@@ -1,16 +1,16 @@
 {
   "id": "coingecko",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "money",
   "region": "global",
   "plain": {
-    "name": "Crypto prices",
-    "gives": "The price of any of thousands of coins in any currency, with the day's change.",
+    "name": "CoinGecko",
+    "gives": "Cryptocurrency prices and daily price changes.",
     "example": "Bitcoin 1 012 300 kr",
     "from": "CoinGecko",
-    "cadence": "Every minute, within its free limit.",
-    "asks": "Nothing until you build a tile from it."
+    "cadence": "Every minute, subject to API limits.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Prices from CoinGecko",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Crypto prices",
+    "name": "CoinGecko",
     "source": {
       "url": "https://api.coingecko.com/api/v3/simple/price",
       "method": "GET",

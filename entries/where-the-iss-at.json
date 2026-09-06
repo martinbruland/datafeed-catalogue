@@ -1,16 +1,16 @@
 {
   "id": "where-the-iss-at",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "The space station",
-    "gives": "Where the International Space Station is right now: its latitude, longitude, altitude, and speed.",
+    "name": "Where the ISS at",
+    "gives": "The International Space Station’s position, altitude, and speed.",
     "example": "Over the Pacific, 27 600 km/h",
     "from": "Where the ISS at",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Position from wheretheiss.at",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "The space station",
+    "name": "Where the ISS at",
     "source": {
       "url": "https://api.wheretheiss.at/v1/satellites/25544",
       "method": "GET",

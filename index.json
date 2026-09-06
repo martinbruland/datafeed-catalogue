@@ -7,11 +7,11 @@
       "kind": "operation",
       "category": "weather",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/air-quality-norway.json",
       "example": "12.4 µg/m³, low",
-      "from": "NILU, the Norwegian air research institute",
-      "gives": "Whether to open the window or go for a run: the latest fine-dust reading for a Norwegian town, rated from low to very high.",
+      "from": "NILU Air Quality",
+      "gives": "Latest fine-dust measurement and air quality rating for a Norwegian town.",
       "picture": {
         "emoji": "🌫"
       }
@@ -22,11 +22,11 @@
       "kind": "operation",
       "category": "nature",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/avalanche-warning.json",
       "example": "Level 2, Moderate",
-      "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
-      "gives": "Whether the mountain is safe today: the avalanche danger for a Norwegian region, from 1 low to 5 very high, with the forecaster's headline.",
+      "from": "Varsom Avalanche Forecast",
+      "gives": "Regional avalanche danger level, from 1 to 5, and the forecaster’s summary.",
       "picture": {
         "emoji": "🏔"
       }
@@ -37,11 +37,11 @@
       "kind": "template",
       "category": "look",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/big-number.json",
       "example": "1 234",
-      "from": "Any API, through any operation.",
-      "gives": "One value, as large as the tile allows, and nothing else.",
+      "from": "Any operation.",
+      "gives": "One large value.",
       "placement": {
         "size": "small",
         "areas": {
@@ -56,27 +56,27 @@
     },
     {
       "id": "brreg",
-      "name": "Norwegian companies",
+      "name": "Brønnøysund Register Centre",
       "kind": "api",
       "category": "money",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/brreg.json",
       "example": "Equinor ASA, 22 000 employees",
-      "from": "The Brønnøysund Register Centre",
-      "gives": "Any company in the Norwegian register by its number: its name, address, kind, and how many people work there."
+      "from": "Brønnøysund Register Centre",
+      "gives": "Norwegian company records, including names, addresses, and organisation numbers."
     },
     {
       "id": "catfact",
-      "name": "Cat facts",
+      "name": "Cat Facts",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/catfact.json",
       "example": "Cats sleep 70 % of their lives.",
       "from": "Cat Facts",
-      "gives": "One fact about cats at a time."
+      "gives": "Random facts about cats."
     },
     {
       "id": "city-bikes-bergen",
@@ -84,11 +84,11 @@
       "kind": "operation",
       "category": "transport",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/city-bikes-bergen.json",
       "example": "7 bikes, 5 docks",
-      "from": "Bergen Bysykkel",
-      "gives": "Whether there is a bike waiting for you: how many city bikes and free docks a Bergen Bysykkel station has right now.",
+      "from": "Urban Sharing GBFS",
+      "gives": "Available bikes and free docks at a Bergen Bysykkel station.",
       "picture": {
         "emoji": "🚲"
       }
@@ -99,50 +99,50 @@
       "kind": "operation",
       "category": "transport",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/city-bikes-oslo.json",
       "example": "7 bikes, 5 docks",
-      "from": "Oslo Bysykkel",
-      "gives": "Whether there is a bike waiting for you: how many city bikes and free docks an Oslo Bysykkel station has right now.",
+      "from": "Urban Sharing GBFS",
+      "gives": "Available bikes and free docks at an Oslo Bysykkel station.",
       "picture": {
         "emoji": "🚲"
       }
     },
     {
       "id": "cloudflare-status",
-      "name": "Cloudflare's status",
+      "name": "Cloudflare Status",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/cloudflare-status.json",
       "example": "All Systems Operational",
-      "from": "Cloudflare's status page",
-      "gives": "Whether Cloudflare is up, and the words it uses for it."
+      "from": "Cloudflare Status",
+      "gives": "Current service status reported by Cloudflare."
     },
     {
       "id": "coinbase",
-      "name": "Coinbase prices",
-      "kind": "api",
-      "category": "money",
-      "region": "global",
-      "version": 2,
-      "file": "entries/coinbase.json",
-      "example": "BTC 1 012 300 NOK",
-      "from": "Coinbase",
-      "gives": "The spot price of a coin in any currency, from Coinbase."
-    },
-    {
-      "id": "coingecko",
-      "name": "Crypto prices",
+      "name": "Coinbase Prices",
       "kind": "api",
       "category": "money",
       "region": "global",
       "version": 3,
+      "file": "entries/coinbase.json",
+      "example": "BTC 1 012 300 NOK",
+      "from": "Coinbase Prices",
+      "gives": "Cryptocurrency spot prices by currency pair."
+    },
+    {
+      "id": "coingecko",
+      "name": "CoinGecko",
+      "kind": "api",
+      "category": "money",
+      "region": "global",
+      "version": 4,
       "file": "entries/coingecko.json",
       "example": "Bitcoin 1 012 300 kr",
       "from": "CoinGecko",
-      "gives": "The price of any of thousands of coins in any currency, with the day's change."
+      "gives": "Cryptocurrency prices and daily price changes."
     },
     {
       "id": "daily-joke",
@@ -150,11 +150,11 @@
       "kind": "operation",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/daily-joke.json",
       "example": "Why did the scarecrow win an award? He was outstanding in his field.",
       "from": "icanhazdadjoke",
-      "gives": "Something to tell at the table: a new dad joke every hour, for the whole family.",
+      "gives": "A random dad joke, updated hourly.",
       "picture": {
         "emoji": "😄"
       }
@@ -165,38 +165,38 @@
       "kind": "operation",
       "category": "nature",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/earthquake-this-week.json",
       "example": "6.1 near Tonga",
-      "from": "The United States Geological Survey",
-      "gives": "What shook the world this week: the strongest significant earthquake of the past seven days, and where it struck.",
+      "from": "USGS Earthquakes",
+      "gives": "The strongest significant earthquake recorded in the past seven days.",
       "picture": {
         "emoji": "🌍"
       }
     },
     {
       "id": "entur-journey-planner",
-      "name": "Departures in Norway",
+      "name": "Entur Journey Planner",
       "kind": "api",
       "category": "transport",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/entur-journey-planner.json",
       "example": "12 to Lægdene, leaves 21:10",
-      "from": "Entur, on behalf of Norway's public transport",
-      "gives": "Departures from any stop in Norway, every bus, tram, train, boat, and airport bus, with the live time when the operator reports it, and trips between two places."
+      "from": "Entur Journey Planner",
+      "gives": "Journey planning and departures for public transport in Norway."
     },
     {
       "id": "entur-places",
-      "name": "Stops and places in Norway",
+      "name": "Entur Geocoder",
       "kind": "api",
       "category": "transport",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/entur-places.json",
       "example": "Danmarksplass, NSR:StopPlace:30826",
-      "from": "Entur, on behalf of Norway's public transport",
-      "gives": "Any stop or station in Norway by name, with its identity for a departure board and its coordinates."
+      "from": "Entur Geocoder",
+      "gives": "Search Norwegian stops and places by name to find their IDs and coordinates."
     },
     {
       "id": "everything",
@@ -204,11 +204,11 @@
       "kind": "template",
       "category": "look",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/everything.json",
       "example": "Bikes at Torget · 7 · 3 free docks · updated just now",
-      "from": "Any API, through any operation.",
-      "gives": "Four values with their names: a title, a main value, a second value, and a footer.",
+      "from": "Any operation.",
+      "gives": "Four labelled values: title, main value, secondary value, and footer.",
       "placement": {
         "size": "large",
         "areas": {
@@ -240,50 +240,50 @@
       "kind": "operation",
       "category": "money",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/exchange-rate.json",
       "example": "11.64 NOK",
-      "from": "Frankfurter, which relays the European Central Bank",
-      "gives": "What your money is worth abroad: what one unit of a currency costs in another, from the European Central Bank's daily rates.",
+      "from": "Frankfurter",
+      "gives": "The value of one currency in another, using daily exchange rates.",
       "picture": {
         "emoji": "💱"
       }
     },
     {
       "id": "frankfurter",
-      "name": "Exchange rates",
+      "name": "Frankfurter",
       "kind": "api",
       "category": "money",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/frankfurter.json",
       "example": "1 EUR = 11.62 NOK",
-      "from": "Frankfurter, which relays the European Central Bank",
-      "gives": "The rate between any two of thirty currencies, and its history."
+      "from": "Frankfurter",
+      "gives": "Currency exchange rates and historical rates."
     },
     {
       "id": "geonorge-addresses",
-      "name": "Norwegian addresses",
+      "name": "Geonorge Addresses",
       "kind": "api",
       "category": "nature",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/geonorge-addresses.json",
       "example": "Danmarksplass 1, 5058 Bergen",
-      "from": "Kartverket, through Geonorge",
-      "gives": "Any Norwegian address by name: its street, number, place, municipality, and coordinates."
+      "from": "Geonorge Addresses",
+      "gives": "Norwegian street addresses, municipalities, and coordinates."
     },
     {
       "id": "geonorge-elevation",
-      "name": "Height above the sea",
+      "name": "Geonorge Elevation",
       "kind": "api",
       "category": "nature",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/geonorge-elevation.json",
       "example": "Ulriken: 643 m",
-      "from": "Kartverket, through Geonorge",
-      "gives": "The elevation of any point in Norway, from Kartverket's terrain model."
+      "from": "Geonorge Elevation",
+      "gives": "Terrain elevation for coordinates in Norway."
     },
     {
       "id": "github-person",
@@ -291,11 +291,11 @@
       "kind": "operation",
       "category": "code",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/github-person.json",
       "example": "128 followers, 24 repositories",
-      "from": "GitHub",
-      "gives": "How an account is doing: how many follow it on GitHub, and how many public repositories it has.",
+      "from": "GitHub REST API",
+      "gives": "A GitHub account’s follower count and public repository count.",
       "picture": {
         "illustration": "person"
       }
@@ -306,11 +306,11 @@
       "kind": "operation",
       "category": "code",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/github-release.json",
       "example": "v2.4.1, 3 days ago",
-      "from": "GitHub",
-      "gives": "Whether there is a new version to install: the newest release of a project on GitHub, and when it came out.",
+      "from": "GitHub REST API",
+      "gives": "A GitHub repository’s latest release and publication date.",
       "picture": {
         "illustration": "shippingbox"
       }
@@ -321,38 +321,38 @@
       "kind": "operation",
       "category": "code",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/github-repository.json",
       "example": "12 stars, 3 issues, pushed 2 hours ago",
-      "from": "GitHub",
-      "gives": "How a repository is doing: how many stars it has, how many issues are open, and when it was last pushed to.",
+      "from": "GitHub REST API",
+      "gives": "A GitHub repository’s stars, open issues, and latest push time.",
       "picture": {
         "emoji": "⭐️"
       }
     },
     {
       "id": "github-status",
-      "name": "GitHub's status",
+      "name": "GitHub Status",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/github-status.json",
       "example": "All Systems Operational",
-      "from": "GitHub's status page",
-      "gives": "Whether GitHub is up, and the words it uses for it."
+      "from": "GitHub Status",
+      "gives": "Current service status reported by GitHub."
     },
     {
       "id": "github",
-      "name": "GitHub",
+      "name": "GitHub REST API",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/github.json",
       "example": "Stars, issues, releases, followers",
-      "from": "GitHub",
-      "gives": "Anything public on GitHub: a person, a project, its releases, its issues."
+      "from": "GitHub REST API",
+      "gives": "GitHub repositories, accounts, releases, and issues."
     },
     {
       "id": "hacker-news",
@@ -360,59 +360,59 @@
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/hacker-news.json",
       "example": "The top story: 412 points",
       "from": "Hacker News",
-      "gives": "The top stories, a story's points and comments, or a person's karma."
+      "gives": "Hacker News stories, comments, and user profiles."
     },
     {
       "id": "hva-koster-strommen",
-      "name": "Norwegian power prices",
+      "name": "Hva koster strømmen",
       "kind": "api",
       "category": "energy",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/hva-koster-strommen.json",
       "example": "Every hour's price",
       "from": "Hva koster strømmen",
-      "gives": "The hourly power price for each of the five Norwegian price areas, today and tomorrow after 13:00."
+      "gives": "Hourly electricity prices for Norway’s five price areas."
     },
     {
       "id": "icanhazdadjoke",
-      "name": "Dad jokes",
+      "name": "icanhazdadjoke",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/icanhazdadjoke.json",
       "example": "Why did the scarecrow win an award? He was outstanding in his field.",
       "from": "icanhazdadjoke",
-      "gives": "One joke at a time, as text."
+      "gives": "Random dad jokes."
     },
     {
       "id": "met-norway",
-      "name": "The Norwegian weather service",
+      "name": "MET Norway",
       "kind": "api",
       "category": "weather",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/met-norway.json",
       "example": "Any value the forecast holds",
-      "from": "The Norwegian Meteorological Institute",
-      "gives": "Forecasts, nowcasts, sunrise and moon times, air quality, and weather warnings for any place, from the institute behind Yr."
+      "from": "MET Norway",
+      "gives": "Weather forecasts from the Norwegian Meteorological Institute."
     },
     {
       "id": "minecraft-server",
-      "name": "A Minecraft server",
+      "name": "Minecraft Server Status",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/minecraft-server.json",
       "example": "hypixel.net: 41 202 online",
-      "from": "mcsrvstat.us",
-      "gives": "Whether a Minecraft server is up, how many are on, and its message of the day."
+      "from": "Minecraft Server Status",
+      "gives": "Minecraft server availability, player counts, and server messages."
     },
     {
       "id": "moon-tonight",
@@ -420,26 +420,26 @@
       "kind": "operation",
       "category": "nature",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/moon-tonight.json",
       "example": "252° round the cycle, rising 18:55",
-      "from": "The Norwegian Meteorological Institute, who also make Yr",
-      "gives": "Whether to layout up tonight: where the moon is in its cycle where you are, and when it rises.",
+      "from": "MET Norway",
+      "gives": "Moon phase and moonrise time for your chosen location.",
       "picture": {
         "emoji": "🌙"
       }
     },
     {
       "id": "nager-date",
-      "name": "Public holidays",
+      "name": "Nager.Date",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/nager-date.json",
       "example": "Name and date of each holiday",
-      "from": "Nager.Date, a free public-holiday service",
-      "gives": "The public holidays of a hundred countries, this year and next."
+      "from": "Nager.Date",
+      "gives": "Public holiday dates and names by country."
     },
     {
       "id": "next-departures",
@@ -447,11 +447,11 @@
       "kind": "operation",
       "category": "transport",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/next-departures.json",
       "example": "12 to Lægdene, 21:10",
-      "from": "Entur, on behalf of Norway's public transport",
-      "gives": "Whether to leave now: the next bus, tram, train, or boat from a stop, its line, where it goes, and when it leaves, live when the operator reports it.",
+      "from": "Entur Journey Planner",
+      "gives": "The next departure from a Norwegian stop, including line, destination, and expected time.",
       "picture": {
         "emoji": "🚌"
       }
@@ -462,38 +462,38 @@
       "kind": "operation",
       "category": "fun",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/next-public-holiday.json",
       "example": "Første juledag, in 3 months",
-      "from": "Nager.Date, a free public-holiday service",
-      "gives": "When the next day off comes: the name and date of the next public holiday in a country.",
+      "from": "Nager.Date",
+      "gives": "The name and date of the next public holiday in your chosen country.",
       "picture": {
         "emoji": "🎉"
       }
     },
     {
       "id": "nilu",
-      "name": "Air quality in Norway",
+      "name": "NILU Air Quality",
       "kind": "api",
       "category": "weather",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/nilu.json",
       "example": "12.4 µg/m³ in Bergen",
-      "from": "NILU, the Norwegian air research institute",
-      "gives": "The latest readings from Norway's air-quality stations: fine dust, nitrogen dioxide, ozone, by town."
+      "from": "NILU Air Quality",
+      "gives": "Air quality measurements from Norwegian monitoring stations."
     },
     {
       "id": "nobel-prize",
-      "name": "Nobel Prizes",
+      "name": "Nobel Prize API",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/nobel-prize.json",
       "example": "Physics 2025",
-      "from": "The Nobel Prize",
-      "gives": "Every Nobel Prize and laureate, by year and category."
+      "from": "Nobel Prize API",
+      "gives": "Nobel Prizes and laureates by year and category."
     },
     {
       "id": "norges-bank-rate",
@@ -501,26 +501,26 @@
       "kind": "operation",
       "category": "money",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/norges-bank-rate.json",
       "example": "9.30 kroner",
-      "from": "Norges Bank",
-      "gives": "What your money is worth in kroner: what one unit of a currency costs, at the central bank's daily rate.",
+      "from": "Norges Bank Exchange Rates",
+      "gives": "The value of one unit of your chosen currency in Norwegian kroner.",
       "picture": {
         "emoji": "💱"
       }
     },
     {
       "id": "norges-bank",
-      "name": "Norges Bank's exchange rates",
+      "name": "Norges Bank Exchange Rates",
       "kind": "api",
       "category": "money",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/norges-bank.json",
       "example": "Any currency against the krone",
-      "from": "Norges Bank",
-      "gives": "Every exchange rate the central bank publishes, per day, in the SDMX form."
+      "from": "Norges Bank Exchange Rates",
+      "gives": "Daily currency exchange rates published by Norges Bank."
     },
     {
       "id": "npm-downloads",
@@ -528,26 +528,26 @@
       "kind": "operation",
       "category": "code",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/npm-downloads.json",
       "example": "171 637 376 downloads",
-      "from": "The npm registry",
-      "gives": "How a package is doing: how many times a JavaScript package was downloaded in the last week.",
+      "from": "npm Downloads",
+      "gives": "Downloads of an npm package during the past week.",
       "picture": {
         "illustration": "arrow.down.circle"
       }
     },
     {
       "id": "npm-registry",
-      "name": "npm downloads",
+      "name": "npm Downloads",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/npm-registry.json",
       "example": "1 234 567 downloads last week",
-      "from": "The npm registry",
-      "gives": "How often a package on npm was downloaded in the last day, week, or month."
+      "from": "npm Downloads",
+      "gives": "npm package download counts by period."
     },
     {
       "id": "number-with-caption",
@@ -555,11 +555,11 @@
       "kind": "template",
       "category": "look",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/number-with-caption.json",
       "example": "Bergen · 12.4 µg/m³",
-      "from": "Any API, through any operation.",
-      "gives": "One value with a line above it saying what it is.",
+      "from": "Any operation.",
+      "gives": "One value with a caption above it.",
       "placement": {
         "size": "medium",
         "areas": {
@@ -578,27 +578,27 @@
     },
     {
       "id": "open-meteo",
-      "name": "Weather anywhere",
+      "name": "Open-Meteo",
       "kind": "api",
       "category": "weather",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/open-meteo.json",
       "example": "18.3 °C, wind 4 m/s",
       "from": "Open-Meteo",
-      "gives": "Current weather and forecasts for any place on Earth: temperature, wind, rain, and more, no sign-up."
+      "gives": "Current weather and forecasts by location."
     },
     {
       "id": "openai-status",
-      "name": "OpenAI's status",
+      "name": "OpenAI Status",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/openai-status.json",
       "example": "All Systems Operational",
-      "from": "OpenAI's status page",
-      "gives": "Whether OpenAI's services are up, and the words it uses for it."
+      "from": "OpenAI Status",
+      "gives": "Current service status reported by OpenAI."
     },
     {
       "id": "picture-and-value",
@@ -606,11 +606,11 @@
       "kind": "template",
       "category": "look",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/picture-and-value.json",
       "example": "🌤 Oslo · 18 °C",
-      "from": "Any API, through any operation.",
-      "gives": "A picture on the left, a value on the right, and a line saying what it is.",
+      "from": "Any operation.",
+      "gives": "A picture beside a value and its caption.",
       "picture": {
         "emoji": "🌤"
       },
@@ -641,11 +641,11 @@
       "kind": "operation",
       "category": "energy",
       "region": "no",
-      "version": 4,
+      "version": 5,
       "file": "entries/power-price-norway.json",
       "example": "1.42 kr",
-      "from": "Hva koster strømmen, which relays Nord Pool's day-ahead prices",
-      "gives": "The power price before you run the wash: the price of electricity this hour in your part of Norway, in kroner per kilowatt hour.",
+      "from": "Hva koster strømmen",
+      "gives": "This hour’s electricity price in your Norwegian price area, in NOK per kWh.",
       "picture": {
         "emoji": "⚡️"
       }
@@ -656,26 +656,26 @@
       "kind": "operation",
       "category": "code",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/pypi-version.json",
       "example": "2.34.2",
-      "from": "The Python Package Index",
-      "gives": "Whether there is a new version to install: the newest version of a package on the Python package index.",
+      "from": "PyPI",
+      "gives": "The latest published version of a Python package.",
       "picture": {
         "illustration": "cube"
       }
     },
     {
       "id": "pypi",
-      "name": "Python packages",
+      "name": "PyPI",
       "kind": "api",
       "category": "code",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/pypi.json",
       "example": "requests 2.32.3",
-      "from": "The Python Package Index",
-      "gives": "The latest version, summary, and links of any package on the Python Package Index."
+      "from": "PyPI",
+      "gives": "Python package versions, descriptions, and project links."
     },
     {
       "id": "rain-next-hour",
@@ -683,11 +683,11 @@
       "kind": "operation",
       "category": "weather",
       "region": "no",
-      "version": 3,
+      "version": 4,
       "file": "entries/rain-next-hour.json",
       "example": "0.4 mm coming, 0.1 mm/h now",
-      "from": "The Norwegian Meteorological Institute, who also make Yr",
-      "gives": "Whether to take the umbrella: how much rain is expected where you are in the coming hour, and how hard it falls right now.",
+      "from": "MET Norway",
+      "gives": "Expected rainfall in the next hour and the current rainfall rate.",
       "picture": {
         "emoji": "🌧"
       }
@@ -698,26 +698,26 @@
       "kind": "operation",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/space-station.json",
       "example": "51.2°, -12.8°, 27,600 km/h",
       "from": "Where the ISS at",
-      "gives": "Where the space station is right now, over the Earth, and how fast it is going.",
+      "gives": "The International Space Station’s current coordinates and speed.",
       "picture": {
         "emoji": "🛰"
       }
     },
     {
       "id": "steam-players",
-      "name": "Players on Steam",
+      "name": "Steam Player Count",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/steam-players.json",
       "example": "Counter-Strike 2: 1 234 567 playing",
-      "from": "Steam",
-      "gives": "How many people are playing a Steam game right now, by its number."
+      "from": "Steam Player Count",
+      "gives": "Current player counts for Steam games."
     },
     {
       "id": "sun-today",
@@ -725,38 +725,38 @@
       "kind": "operation",
       "category": "nature",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/sun-today.json",
       "example": "Up 06:41, down 20:32",
       "from": "Sunrise-Sunset.org",
-      "gives": "How long the day is: when the sun rises and sets where you are today.",
+      "gives": "Today’s sunrise and sunset times for your chosen location.",
       "picture": {
         "emoji": "🌅"
       }
     },
     {
       "id": "sunrise-sunset",
-      "name": "Sunrise and sunset",
+      "name": "Sunrise-Sunset.org",
       "kind": "api",
       "category": "nature",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/sunrise-sunset.json",
       "example": "Sunrise 06:41, sunset 20:12",
       "from": "Sunrise-Sunset.org",
-      "gives": "Sunrise, sunset, and the length of the day for any place and date."
+      "gives": "Sunrise, sunset, and day length by location and date."
     },
     {
       "id": "themealdb",
-      "name": "A random meal",
+      "name": "TheMealDB",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/themealdb.json",
       "example": "Chicken Handi",
       "from": "TheMealDB",
-      "gives": "A random dish with its picture, ingredients, and recipe."
+      "gives": "Random recipes with ingredients and pictures."
     },
     {
       "id": "two-values",
@@ -764,11 +764,11 @@
       "kind": "template",
       "category": "look",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/two-values.json",
       "example": "98 200 · +1.2 %",
-      "from": "Any API, through any operation.",
-      "gives": "A main value with a second one under it, such as a price and its change.",
+      "from": "Any operation.",
+      "gives": "A main value with a second value below it.",
       "placement": {
         "size": "medium",
         "areas": {
@@ -787,39 +787,39 @@
     },
     {
       "id": "urban-sharing-bikes",
-      "name": "City bikes in Norway",
+      "name": "Urban Sharing GBFS",
       "kind": "api",
       "category": "transport",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/urban-sharing-bikes.json",
       "example": "Bikes and docks at any station",
-      "from": "Urban Sharing, who run the Bysykkel systems",
-      "gives": "Every station of Bergen, Oslo, and Trondheim Bysykkel, with its bikes and docks right now."
+      "from": "Urban Sharing GBFS",
+      "gives": "Available bikes and docks at city bike stations."
     },
     {
       "id": "usgs-earthquakes",
-      "name": "Earthquakes from the USGS",
+      "name": "USGS Earthquakes",
       "kind": "api",
       "category": "nature",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/usgs-earthquakes.json",
       "example": "Magnitude, place, and time of each quake",
-      "from": "The United States Geological Survey",
-      "gives": "Every earthquake of the past hour, day, week, or month, as the survey records them."
+      "from": "USGS Earthquakes",
+      "gives": "Earthquake magnitudes, locations, and times reported by the USGS."
     },
     {
       "id": "varsom",
-      "name": "Avalanche warnings",
+      "name": "Varsom Avalanche Forecast",
       "kind": "api",
       "category": "nature",
       "region": "no",
-      "version": 2,
+      "version": 3,
       "file": "entries/varsom.json",
       "example": "Danger level 3, considerable",
-      "from": "The Norwegian Water Resources and Energy Directorate, who run Varsom",
-      "gives": "Today's avalanche danger level and its text for every Norwegian region."
+      "from": "Varsom Avalanche Forecast",
+      "gives": "Avalanche danger levels and forecast summaries for Norwegian regions."
     },
     {
       "id": "weather-now",
@@ -827,11 +827,11 @@
       "kind": "operation",
       "category": "weather",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/weather-now.json",
       "example": "14.2 °C, wind 3.4 m/s",
-      "from": "The Norwegian Meteorological Institute, who also make Yr",
-      "gives": "What to wear: the temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
+      "from": "MET Norway",
+      "gives": "Forecast temperature and wind for the current hour at your chosen location.",
       "picture": {
         "emoji": "🌤"
       }
@@ -842,62 +842,62 @@
       "kind": "operation",
       "category": "weather",
       "region": "global",
-      "version": 3,
+      "version": 4,
       "file": "entries/weather-tomorrow.json",
       "example": "11.8 °C, wind 5.2 m/s",
-      "from": "The Norwegian Meteorological Institute, who also make Yr",
-      "gives": "What to plan for: the temperature and wind where you are, twenty-four hours from now.",
+      "from": "MET Norway",
+      "gives": "Forecast temperature and wind at your chosen location in 24 hours.",
       "picture": {
         "emoji": "🌥"
       }
     },
     {
       "id": "where-the-iss-at",
-      "name": "The space station",
+      "name": "Where the ISS at",
       "kind": "api",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/where-the-iss-at.json",
       "example": "Over the Pacific, 27 600 km/h",
       "from": "Where the ISS at",
-      "gives": "Where the International Space Station is right now: its latitude, longitude, altitude, and speed."
+      "gives": "The International Space Station’s position, altitude, and speed."
     },
     {
       "id": "wikipedia-pageviews",
-      "name": "Wikipedia page views",
+      "name": "Wikimedia Pageviews",
+      "kind": "api",
+      "category": "fun",
+      "region": "global",
+      "version": 3,
+      "file": "entries/wikipedia-pageviews.json",
+      "example": "Norway: 4 512 views yesterday",
+      "from": "Wikimedia Pageviews",
+      "gives": "Daily view counts for Wikipedia articles."
+    },
+    {
+      "id": "yahoo-finance",
+      "name": "Yahoo Finance",
+      "kind": "api",
+      "category": "money",
+      "region": "global",
+      "version": 4,
+      "file": "entries/yahoo-finance.json",
+      "example": "EQNR.OL 312.40",
+      "from": "Yahoo Finance",
+      "gives": "Stock prices and price history from an unofficial Yahoo Finance feed."
+    },
+    {
+      "id": "wikimedia-stream",
+      "name": "Wikimedia EventStreams",
       "kind": "api",
       "category": "fun",
       "region": "global",
       "version": 2,
-      "file": "entries/wikipedia-pageviews.json",
-      "example": "Norway: 4 512 views yesterday",
-      "from": "Wikimedia, who run Wikipedia",
-      "gives": "How many times a Wikipedia article was read on a day, in any language."
-    },
-    {
-      "id": "yahoo-finance",
-      "name": "Stock prices",
-      "kind": "api",
-      "category": "money",
-      "region": "global",
-      "version": 3,
-      "file": "entries/yahoo-finance.json",
-      "example": "EQNR.OL 312.40",
-      "from": "Yahoo Finance, through its unofficial chart feed",
-      "gives": "A share's latest price, the day's range, and its history, by ticker, Oslo included."
-    },
-    {
-      "id": "wikimedia-stream",
-      "name": "Wikipedia edits, live",
-      "kind": "api",
-      "category": "fun",
-      "region": "global",
-      "version": 1,
       "file": "entries/wikimedia-stream.json",
       "example": "Norway · en.wikipedia · by Ola",
-      "from": "Wikimedia, who run Wikipedia",
-      "gives": "Every edit made to any Wikipedia, the moment it happens, as a stream that keeps coming."
+      "from": "Wikimedia EventStreams",
+      "gives": "A live stream of changes to Wikimedia pages."
     },
     {
       "id": "latest-wikipedia-edit",
@@ -905,11 +905,11 @@
       "kind": "operation",
       "category": "fun",
       "region": "global",
-      "version": 2,
+      "version": 3,
       "file": "entries/latest-wikipedia-edit.json",
       "example": "Norway · enwiki · Ola",
-      "from": "Wikimedia, who run Wikipedia",
-      "gives": "A window onto the world's editing: the article somebody just changed, on which Wikipedia, and who did it, changing as you watch.",
+      "from": "Wikimedia EventStreams",
+      "gives": "The latest page change, its Wikipedia edition, and the editor’s name.",
       "picture": {
         "emoji": "📝"
       }

@@ -1,16 +1,16 @@
 {
   "id": "geonorge-addresses",
   "kind": "api",
-  "version": 4,
+  "version": 5,
   "category": "nature",
   "region": "no",
   "plain": {
-    "name": "Norwegian addresses",
-    "gives": "Any Norwegian address by name: its street, number, place, municipality, and coordinates.",
+    "name": "Geonorge Addresses",
+    "gives": "Norwegian street addresses, municipalities, and coordinates.",
     "example": "Danmarksplass 1, 5058 Bergen",
-    "from": "Kartverket, through Geonorge",
+    "from": "Geonorge Addresses",
     "cadence": "When the register changes.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Addresses from Kartverket (Geonorge)",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Norwegian addresses",
+    "name": "Geonorge Addresses",
     "source": {
       "url": "https://ws.geonorge.no/adresser/v1/sok",
       "method": "GET",

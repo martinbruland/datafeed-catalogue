@@ -1,22 +1,22 @@
 {
   "id": "next-public-holiday",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "fun",
   "region": "global",
   "plain": {
     "name": "The next public holiday",
-    "gives": "When the next day off comes: the name and date of the next public holiday in a country.",
+    "gives": "The name and date of the next public holiday in your chosen country.",
     "example": "Første juledag, in 3 months",
-    "from": "Nager.Date, a free public-holiday service",
-    "cadence": "Changes when a holiday passes.",
-    "asks": "Which country."
+    "from": "Nager.Date",
+    "cadence": "After each public holiday.",
+    "asks": "A country."
   },
   "questions": [
     {
       "name": "country",
       "label": "Country",
-      "help": "The country whose holidays count.",
+      "help": "Choose the country whose holidays to show.",
       "type": "choice",
       "choices": [
         "NO",

@@ -1,16 +1,16 @@
 {
   "id": "norges-bank",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "money",
   "region": "no",
   "plain": {
-    "name": "Norges Bank's exchange rates",
-    "gives": "Every exchange rate the central bank publishes, per day, in the SDMX form.",
+    "name": "Norges Bank Exchange Rates",
+    "gives": "Daily currency exchange rates published by Norges Bank.",
     "example": "Any currency against the krone",
-    "from": "Norges Bank",
-    "cadence": "Once every weekday afternoon.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Norges Bank Exchange Rates",
+    "cadence": "Weekday afternoons.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Exchange rates from Norges Bank, used with attribution",
@@ -21,9 +21,9 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Norges Bank's exchange rates",
+    "name": "Norges Bank Exchange Rates",
     "source": {
-      "url": "https://data.norges-bank.no/api/data/EXR/B.USD.NOK.SP",
+      "url": "https://data.norges-bank.no/api/data/EXR/B.{currency}.NOK.SP",
       "method": "GET",
       "parameters": [
         {
@@ -33,6 +33,10 @@
         {
           "name": "lastNObservations",
           "value": "1"
+        },
+        {
+          "name": "currency",
+          "value": "USD"
         }
       ],
       "headers": [],

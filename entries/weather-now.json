@@ -1,22 +1,22 @@
 {
   "id": "weather-now",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "weather",
   "region": "global",
   "plain": {
     "name": "Weather right now",
-    "gives": "What to wear: the temperature and wind where you are, from the Norwegian weather service's forecast for this hour.",
+    "gives": "Forecast temperature and wind for the current hour at your chosen location.",
     "example": "14.2 °C, wind 3.4 m/s",
-    "from": "The Norwegian Meteorological Institute, who also make Yr",
+    "from": "MET Norway",
     "cadence": "Updated about every hour.",
-    "asks": "The place, as a point on the map."
+    "asks": "A location."
   },
   "questions": [
     {
       "name": "place",
       "label": "Place",
-      "help": "Where the weather is read; your current location by default.",
+      "help": "Enter a place or coordinates, or use the location button if enabled.",
       "type": "location"
     }
   ],

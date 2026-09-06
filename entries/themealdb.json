@@ -1,16 +1,16 @@
 {
   "id": "themealdb",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "A random meal",
-    "gives": "A random dish with its picture, ingredients, and recipe.",
+    "name": "TheMealDB",
+    "gives": "Random recipes with ingredients and pictures.",
     "example": "Chicken Handi",
     "from": "TheMealDB",
-    "cadence": "A new one every time.",
-    "asks": "Nothing until you build a tile from it."
+    "cadence": "A new result with each request.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Meals from TheMealDB",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "A random meal",
+    "name": "TheMealDB",
     "source": {
       "url": "https://www.themealdb.com/api/json/v1/1/random.php",
       "method": "GET",

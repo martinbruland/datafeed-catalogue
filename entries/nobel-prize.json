@@ -1,16 +1,16 @@
 {
   "id": "nobel-prize",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Nobel Prizes",
-    "gives": "Every Nobel Prize and laureate, by year and category.",
+    "name": "Nobel Prize API",
+    "gives": "Nobel Prizes and laureates by year and category.",
     "example": "Physics 2025",
-    "from": "The Nobel Prize",
+    "from": "Nobel Prize API",
     "cadence": "When a prize is announced.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Prize data from nobelprize.org",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Nobel Prizes",
+    "name": "Nobel Prize API",
     "source": {
       "url": "https://api.nobelprize.org/2.1/nobelPrizes",
       "method": "GET",

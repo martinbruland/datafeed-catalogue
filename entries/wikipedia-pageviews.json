@@ -1,16 +1,16 @@
 {
   "id": "wikipedia-pageviews",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Wikipedia page views",
-    "gives": "How many times a Wikipedia article was read on a day, in any language.",
+    "name": "Wikimedia Pageviews",
+    "gives": "Daily view counts for Wikipedia articles.",
     "example": "Norway: 4 512 views yesterday",
-    "from": "Wikimedia, who run Wikipedia",
-    "cadence": "Once a day, the day after.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Wikimedia Pageviews",
+    "cadence": "Daily, for the previous day.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Page views from Wikimedia",
@@ -20,11 +20,28 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Wikipedia page views",
+    "name": "Wikimedia Pageviews",
     "source": {
-      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Norway/daily/2026080100/2026080200",
+      "url": "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/{project}/all-access/all-agents/{article}/daily/{start}/{end}",
       "method": "GET",
-      "parameters": [],
+      "parameters": [
+        {
+          "name": "project",
+          "value": "en.wikipedia"
+        },
+        {
+          "name": "article",
+          "value": "Norway"
+        },
+        {
+          "name": "start",
+          "value": "2026080100"
+        },
+        {
+          "name": "end",
+          "value": "2026080200"
+        }
+      ],
       "headers": [
         {
           "name": "User-Agent",

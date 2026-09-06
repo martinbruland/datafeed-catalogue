@@ -1,29 +1,29 @@
 {
   "id": "github-release",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "code",
   "region": "global",
   "plain": {
     "name": "Latest release of a project",
-    "gives": "Whether there is a new version to install: the newest release of a project on GitHub, and when it came out.",
+    "gives": "A GitHub repository’s latest release and publication date.",
     "example": "v2.4.1, 3 days ago",
-    "from": "GitHub",
+    "from": "GitHub REST API",
     "cadence": "Updated about every hour.",
-    "asks": "The project's owner and name."
+    "asks": "A repository owner and name."
   },
   "questions": [
     {
       "name": "owner",
       "label": "Owner",
-      "help": "The account that owns the project, such as apple.",
+      "help": "Enter the GitHub account or organisation that owns the repository.",
       "type": "text",
       "default": "apple"
     },
     {
       "name": "repo",
       "label": "Project",
-      "help": "The project's name, such as swift.",
+      "help": "Enter the repository name, such as swift.",
       "type": "text",
       "default": "swift"
     }

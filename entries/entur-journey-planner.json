@@ -1,16 +1,16 @@
 {
   "id": "entur-journey-planner",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "transport",
   "region": "no",
   "plain": {
-    "name": "Departures in Norway",
-    "gives": "Departures from any stop in Norway, every bus, tram, train, boat, and airport bus, with the live time when the operator reports it, and trips between two places.",
+    "name": "Entur Journey Planner",
+    "gives": "Journey planning and departures for public transport in Norway.",
     "example": "12 to Lægdene, leaves 21:10",
-    "from": "Entur, on behalf of Norway's public transport",
+    "from": "Entur Journey Planner",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it. Its request body names Bergen bus station; put your own stop's Entur identity in its place, found in Stops and places."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Departures from Entur (entur.org)",
@@ -21,7 +21,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Departures in Norway",
+    "name": "Entur Journey Planner",
     "source": {
       "url": "https://api.entur.io/journey-planner/v3/graphql",
       "method": "POST",

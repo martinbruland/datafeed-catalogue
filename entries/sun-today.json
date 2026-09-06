@@ -1,22 +1,22 @@
 {
   "id": "sun-today",
   "kind": "operation",
-  "version": 3,
+  "version": 4,
   "category": "nature",
   "region": "global",
   "plain": {
     "name": "Sunrise and sunset",
-    "gives": "How long the day is: when the sun rises and sets where you are today.",
+    "gives": "Today’s sunrise and sunset times for your chosen location.",
     "example": "Up 06:41, down 20:32",
     "from": "Sunrise-Sunset.org",
-    "cadence": "Once a day.",
-    "asks": "The place, as a point on the map."
+    "cadence": "Daily.",
+    "asks": "A location."
   },
   "questions": [
     {
       "name": "place",
       "label": "Place",
-      "help": "Where the sun is watched; your current location by default.",
+      "help": "Enter a place or coordinates, or use the location button if enabled.",
       "type": "location"
     }
   ],

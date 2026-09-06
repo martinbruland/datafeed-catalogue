@@ -1,16 +1,16 @@
 {
   "id": "github-status",
   "kind": "api",
-  "version": 2,
+  "version": 3,
   "category": "code",
   "region": "global",
   "plain": {
-    "name": "GitHub's status",
-    "gives": "Whether GitHub is up, and the words it uses for it.",
+    "name": "GitHub Status",
+    "gives": "Current service status reported by GitHub.",
     "example": "All Systems Operational",
-    "from": "GitHub's status page",
+    "from": "GitHub Status",
     "cadence": "Live.",
-    "asks": "Nothing until you build a tile from it."
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Status from githubstatus.com",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "GitHub's status",
+    "name": "GitHub Status",
     "source": {
       "url": "https://www.githubstatus.com/api/v2/status.json",
       "method": "GET",

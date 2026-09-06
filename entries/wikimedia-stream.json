@@ -1,16 +1,16 @@
 {
   "id": "wikimedia-stream",
   "kind": "api",
-  "version": 1,
+  "version": 2,
   "category": "fun",
   "region": "global",
   "plain": {
-    "name": "Wikipedia edits, live",
-    "gives": "Every edit made to any Wikipedia, the moment it happens, as a stream that keeps coming.",
+    "name": "Wikimedia EventStreams",
+    "gives": "A live stream of changes to Wikimedia pages.",
     "example": "Norway · en.wikipedia · by Ola",
-    "from": "Wikimedia, who run Wikipedia",
-    "cadence": "Several times a second, while the feed is open.",
-    "asks": "Nothing until you build a tile from it."
+    "from": "Wikimedia EventStreams",
+    "cadence": "Continuous updates while the feed is open.",
+    "asks": "Configure parameters in the builder."
   },
   "questions": [],
   "attribution": "Recent changes from Wikimedia",
@@ -20,7 +20,7 @@
   },
   "definition": {
     "schemaVersion": 1,
-    "name": "Wikipedia edits, live",
+    "name": "Wikimedia EventStreams",
     "source": {
       "url": "https://stream.wikimedia.org/v2/stream/recentchange",
       "method": "EVENTS",
