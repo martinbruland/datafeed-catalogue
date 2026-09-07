@@ -1,7 +1,7 @@
 {
   "id": "next-departures",
-  "kind": "operation",
-  "version": 6,
+  "kind": "result",
+  "version": 7,
   "category": "transport",
   "region": "no",
   "plain": {

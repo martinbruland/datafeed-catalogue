@@ -5,10 +5,9 @@ listing every entry once."""
 import json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
-# "operation" is the word written before 2026-09-07; the app reads it
-# as "result" and new entries use the new word.
-KINDS = {"api", "result", "template", "operation"}
+FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard|operations?|catalogue)\b", re.I)
+# Older kinds remain readable in the app; published entries use current names.
+KINDS = {"api", "result", "template"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
 QUESTION_TYPES = {"text", "number", "choice", "location"}
@@ -46,7 +45,7 @@ def check_entry(path):
         elif FORBIDDEN.search(value):
             problems += fail(path.name, f"plain.{field} uses a forbidden word: {value!r}")
     if any("lookup" in parameter for parameter in entry.get("definition", {}).get("source", {}).get("parameters", [])):
-        problems += fail(path.name, "parameters cannot reference another operation")
+        problems += fail(path.name, "parameters cannot reference another endpoint")
     questions = entry.get("questions", [])
     names = set()
     for question in questions:
@@ -92,7 +91,7 @@ def check_entry(path):
         if header.get("name", "").lower() == "content-type":
             problems += fail(path.name, "Content-Type belongs to the call; the app sets it")
     if entry.get("kind") == "api" and (definition.get("extraction") or definition.get("placement", {}).get("areas")):
-        problems += fail(path.name, "a source entry is the connection alone: no extraction, no placed areas")
+        problems += fail(path.name, "an API entry is the service alone: no extraction, no placed areas")
     return problems
 
 def check_template(path, entry):

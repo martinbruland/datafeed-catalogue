@@ -1,7 +1,7 @@
 {
   "id": "github-repository",
-  "kind": "operation",
-  "version": 5,
+  "kind": "result",
+  "version": 6,
   "category": "code",
   "region": "global",
   "plain": {

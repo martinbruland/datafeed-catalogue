@@ -1,7 +1,7 @@
 {
   "id": "next-public-holiday",
-  "kind": "operation",
-  "version": 4,
+  "kind": "result",
+  "version": 5,
   "category": "fun",
   "region": "global",
   "plain": {

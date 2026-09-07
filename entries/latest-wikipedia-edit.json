@@ -1,7 +1,7 @@
 {
   "id": "latest-wikipedia-edit",
-  "kind": "operation",
-  "version": 3,
+  "kind": "result",
+  "version": 4,
   "category": "fun",
   "region": "global",
   "plain": {
