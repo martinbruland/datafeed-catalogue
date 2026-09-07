@@ -1,7 +1,7 @@
 {
   "id": "next-departures",
   "kind": "operation",
-  "version": 5,
+  "version": 6,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -39,12 +39,6 @@
           "name": "ET-Client-Name",
           "value": {
             "literal": "martinbruland-datafeed"
-          }
-        },
-        {
-          "name": "Content-Type",
-          "value": {
-            "literal": "application/json"
           }
         }
       ],

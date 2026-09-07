@@ -1,7 +1,7 @@
 {
   "id": "entur-journey-planner",
   "kind": "api",
-  "version": 3,
+  "version": 4,
   "category": "transport",
   "region": "no",
   "plain": {
@@ -31,12 +31,6 @@
           "name": "ET-Client-Name",
           "value": {
             "literal": "martinbruland-datafeed"
-          }
-        },
-        {
-          "name": "Content-Type",
-          "value": {
-            "literal": "application/json"
           }
         }
       ],

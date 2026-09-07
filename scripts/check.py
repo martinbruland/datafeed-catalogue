@@ -6,7 +6,9 @@ import json, re, sys, pathlib
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FORBIDDEN = re.compile(r"\b(subscription|item|marketplace|dashboard)\b", re.I)
-KINDS = {"api", "operation", "template"}
+# "operation" is the word written before 2026-09-07; the app reads it
+# as "result" and new entries use the new word.
+KINDS = {"api", "result", "template", "operation"}
 CATEGORIES = {"transport", "energy", "weather", "nature", "money", "code", "fun", "look"}
 ROLES = ["first", "second", "third", "fourth"]
 QUESTION_TYPES = {"text", "number", "choice", "location"}
@@ -29,7 +31,7 @@ def check_entry(path):
     if entry.get("id") != path.stem or not re.fullmatch(r"[a-z0-9-]+", path.stem):
         problems += fail(path.name, "id must equal the file name, lowercase with hyphens")
     if entry.get("kind") not in KINDS:
-        problems += fail(path.name, "kind must be api, operation, or template")
+        problems += fail(path.name, "kind must be api, result, or template")
     if not isinstance(entry.get("version"), int):
         problems += fail(path.name, "version must be an integer")
     if entry.get("category") not in CATEGORIES:
@@ -81,8 +83,14 @@ def check_entry(path):
         for segment in key.get("path", []):
             if isinstance(segment, dict) and set(segment) != {"where", "is"}:
                 problems += fail(path.name, f"path segment {segment} must be a key, an index, or {{where, is}}")
-    if entry.get("kind") == "operation" and not definition.get("placement", {}).get("areas"):
+    if entry.get("kind") in ("result", "operation") and not definition.get("placement", {}).get("areas"):
         problems += fail(path.name, "a query entry needs placed areas, its suggested look")
+    # A header that describes the request body belongs to the call, not to
+    # the service; the app sets Content-Type for a POST that has none, and
+    # a service split by it would be stored twice (2026-09-07).
+    for header in definition.get("source", {}).get("headers", []):
+        if header.get("name", "").lower() == "content-type":
+            problems += fail(path.name, "Content-Type belongs to the call; the app sets it")
     if entry.get("kind") == "api" and (definition.get("extraction") or definition.get("placement", {}).get("areas")):
         problems += fail(path.name, "a source entry is the connection alone: no extraction, no placed areas")
     return problems
