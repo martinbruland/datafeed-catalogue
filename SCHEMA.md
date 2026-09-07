@@ -9,7 +9,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | Key | What it holds |
 | --- | --- |
 | `id` | Lowercase letters, digits, and hyphens; the file's name. |
-| `kind` | `api`, `operation`, or `template`, the catalogue's three lists for the three questions (OpenAPI's words since 2026-09-05): an **api** is where the data comes from, the server alone, the URL with its headers and terms, with no extraction and no placed areas, and the app builds a tile from it; an **operation** is what intel, an API plus the properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any operation can wear. The app still reads `source`, `query`, and `item` from older catalogues. |
+| `kind` | `api`, `result`, or `template`, the catalogue's three lists (the four layers since 2026-09-07): an **api** is the service the data comes from, its base URL with the headers and terms it uses on every call, with no extraction and no placed areas, and the app builds a tile from it; a **result** is one whole call of a service with the properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any result can wear. The app still reads `operation`, `source`, `query`, and `item` from older catalogues. |
 | `version` | An integer, raised on every change, so the app can offer updates. |
 | `category` | One of `transport`, `energy`, `weather`, `nature`, `money`, `code`, `fun`. |
 | `region` | `no` for a Norwegian API, `global` otherwise. |
@@ -20,6 +20,24 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the layout. |
 | `explains` | Optional: one plain sentence per property, by the property's `name` in the definition's extraction, shown in the builder beside the property's sample when the API's own documentation says nothing: `{"now": "What one kilowatt-hour costs this hour…"}`. |
 | `definition` | The tile with its API and properties in the app's exchange form, version 1, which the app reads as an operation and its API (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
+
+## One service, many calls
+
+An entry's `definition.source.url` is a whole address; the app divides it
+at the host, keeping the service as an API and the rest as the endpoint's
+path (2026-09-07). Two entries whose scheme, host, and headers agree are
+therefore one API in the person's library, with a call each, and the key
+that service needs is held once.
+
+Two rules follow, and the check enforces the first:
+
+- A header that describes the request body, `Content-Type`, belongs to the
+  call, not to the service. The app sets it for a POST that carries none.
+  An entry that writes it would split its service in two.
+- A header the service wants on every call, such as `User-Agent` or a
+  client name, belongs on every entry of that service, spelled the same
+  way. An entry that omits one its siblings carry becomes a second
+  service.
 
 ## A template's definition
 
