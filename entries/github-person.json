@@ -1,7 +1,7 @@
 {
   "id": "github-person",
-  "kind": "operation",
-  "version": 4,
+  "kind": "result",
+  "version": 5,
   "category": "code",
   "region": "global",
   "plain": {

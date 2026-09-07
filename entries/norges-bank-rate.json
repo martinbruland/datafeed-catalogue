@@ -1,7 +1,7 @@
 {
   "id": "norges-bank-rate",
-  "kind": "operation",
-  "version": 4,
+  "kind": "result",
+  "version": 5,
   "category": "money",
   "region": "no",
   "plain": {

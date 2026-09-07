@@ -1,7 +1,7 @@
 {
   "id": "exchange-rate",
-  "kind": "operation",
-  "version": 4,
+  "kind": "result",
+  "version": 5,
   "category": "money",
   "region": "global",
   "plain": {

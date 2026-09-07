@@ -1,7 +1,7 @@
 {
   "id": "weather-now",
-  "kind": "operation",
-  "version": 4,
+  "kind": "result",
+  "version": 5,
   "category": "weather",
   "region": "global",
   "plain": {

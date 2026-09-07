@@ -1,19 +1,19 @@
 {
   "id": "picture-and-value",
   "kind": "template",
-  "version": 3,
+  "version": 4,
   "category": "look",
   "region": "global",
   "plain": {
     "name": "Picture and value",
     "gives": "A picture beside a value and its caption.",
     "example": "🌤 Oslo · 18 °C",
-    "from": "Any operation.",
-    "cadence": "Updates with the operation.",
+    "from": "Any result.",
+    "cadence": "Updates with the result.",
     "asks": "Nothing."
   },
   "questions": [],
-  "attribution": "A look from the datafeed catalogue",
+  "attribution": "A layout from Explore",
   "terms": {
     "url": "https://github.com/martinbruland/datafeed-catalogue",
     "checked": "2026-09-04"

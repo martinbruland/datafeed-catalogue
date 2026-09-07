@@ -9,7 +9,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | Key | What it holds |
 | --- | --- |
 | `id` | Lowercase letters, digits, and hyphens; the file's name. |
-| `kind` | `api`, `result`, or `template`, the catalogue's three lists (the four layers since 2026-09-07): an **api** is the service the data comes from, its base URL with the headers and terms it uses on every call, with no extraction and no placed areas, and the app builds a tile from it; a **result** is one whole call of a service with the properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any result can wear. The app still reads `operation`, `source`, `query`, and `item` from older catalogues. |
+| `kind` | `api`, `result`, or `template`, the catalogue's three lists (the four layers since 2026-09-07): an **API** is the service the data comes from, its base URL with the headers and terms it uses on every call, with no extraction and no placed areas, and the app builds a tile from it; a **result** carries its endpoint and API with properties picked and formatted, with a suggested layout in its placement, added to the feed as it is or adjusted first; a **template** is how it is presented, a layout alone, which any result can wear. The app still reads `operation`, `source`, `query`, and `item` from older catalogues. |
 | `version` | An integer, raised on every change, so the app can offer updates. |
 | `category` | One of `transport`, `energy`, `weather`, `nature`, `money`, `code`, `fun`. |
 | `region` | `no` for a Norwegian API, `global` otherwise. |
@@ -19,7 +19,7 @@ An entry is one JSON file in `entries/`, named by its id, with these keys:
 | `terms` | The URL of the API's terms, and the date they were checked. |
 | `sample` | A template alone: one example value per role its areas use, `{"first": "12.4 µg/m³", "second": "Bergen"}`, so the app can preview the layout. |
 | `explains` | Optional: one plain sentence per property, by the property's `name` in the definition's extraction, shown in the builder beside the property's sample when the API's own documentation says nothing: `{"now": "What one kilowatt-hour costs this hour…"}`. |
-| `definition` | The tile with its API and properties in the app's exchange form, version 1, which the app reads as an operation and its API (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
+| `definition` | The tile with its API and properties in the app's exchange form, version 1, which the app reads as an API, endpoint, result, and tile (`docs/TILE.md` in the app repository), with `{name}` placeholders where a question's answer goes. `id`, `createdAt`, `position`, and `lastResult` are absent; the app assigns them. |
 
 ## One service, many calls
 
@@ -42,11 +42,11 @@ Two rules follow, and the check enforces the first:
 ## A template's definition
 
 A template's definition holds `schemaVersion` and `placement` alone. The
-placement's areas hold roles in place of the operation's property names: `first`,
+placement's areas hold roles in place of the result's property names: `first`,
 `second`, `third`, and `fourth`, starting at `first` with no gap, and a
 picture where the layout has one. The app applies the layout to an
-operation by rank: the operation's first property goes where `first` is,
-its second where `second` is, and so on; an operation with fewer
+result by rank: the result's first property goes where `first` is,
+its second where `second` is, and so on; a result with fewer
 properties than the layout has roles leaves those areas empty. A
 template's category is `look`, the key the app reads, it asks
 nothing, and its `from` and `cadence` say so in words.
@@ -62,7 +62,7 @@ check refuses an index whose copies differ from the entries.
 ## The six plain fields
 
 Every word a person reads in simple mode comes from `plain`. The app
-speaks OpenAPI's words since 2026-09-05, API, operation, parameter,
+speaks OpenAPI's words since 2026-09-05, API, Endpoint, Result, and Tile for the layers, and parameter,
 header, request body, response, and property, so those are welcome; the
 check refuses the retired words subscription, item, marketplace, and
 dashboard:
@@ -88,8 +88,8 @@ answer to a question can choose the element: `["data", "stations", {"where":
 
 A definition's `source` key, the API, may carry `"method": "WEBSOCKET"` or `"method":
 "EVENTS"`: the app keeps the connection open while the feed is on screen
-and each message that is JSON is a response to the operation, so the tile
-updates as messages arrive; a message without the operation's properties
+and each message that is JSON is a response to the result, so the tile
+updates as messages arrive; a message without the result's properties
 is skipped. A `WEBSOCKET` API's `body` is sent once on opening, placeholders filled.
 Called once, for a test or an ordinary update, a live API responds with
 its first message and the last to follow within a moment.
@@ -98,8 +98,7 @@ its first message and the last to follow within a moment.
 
 A definition's `source` key may carry `"method": "POST"` with a `body`, JSON as
 text, which the app sends with the request; a question's `{name}` in the
-body is filled the way it is in the URL, and the headers should name
-the content type. The API may carry `docs`, the URL where the
+body is filled the way it is in the URL, and the app sets the content type. The API may carry `docs`, the URL where the
 API explains itself, its documentation or an OpenAPI file, which the
 app shows in Explore and on a tile's detail.
 
@@ -118,7 +117,7 @@ Keep variable route segments as named placeholders, for example
 `https://api.coinbase.com/v2/prices/{pair}/spot`. Supply a sample value
 in `source.parameters`, such as `{"name": "pair", "value": "BTC-NOK"}`,
 or obtain it from a question named `pair`. The app keeps the template
-on the API and the value on each operation, so different pairs reuse
+and its parameter values on the endpoint under its API, so different pairs reuse
 one API. Fixed endpoint segments remain literal. Parameters without a
 URL placeholder become query parameters. Built-in date placeholders
 are resolved when the entry is added.
